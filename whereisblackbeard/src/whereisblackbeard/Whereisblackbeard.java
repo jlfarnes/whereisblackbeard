@@ -7,7 +7,7 @@ package whereisblackbeard;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public class Whereisblackbeard {
 
@@ -16,6 +16,9 @@ public class Whereisblackbeard {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        
     }
     
 }
