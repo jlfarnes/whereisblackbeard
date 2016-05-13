@@ -117,7 +117,10 @@ public class Player {
         }
         return true;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Player{" + "playerName=" + playerName + ", playerChar=" + playerChar + ", playerBonus=" + playerBonus + ", playerDiplomacy=" + playerDiplomacy + ", playerCunning=" + playerCunning + ", playerStrength=" + playerStrength + '}';
+    }
     
 }
