@@ -9,57 +9,79 @@ import java.util.Objects;
 
 /**
  *
- * @author josephclark
+ * @author jlfarnes
  */
-public class Scene {
+public class Player {
     
-    private String locType;
-    private int locLockLevel;
-    private int playerUnlockLevel;
-    private String sceneType;
+    private String playerName ;
+    private String playerChar;
+    private int playerBonus;
+    private int playerDiplomacy;
+    private int playerCunning;
+    private int playerStrength;
 
-    public Scene() {
+    public Player() {
+    }
+    
+    
+
+    public String getPlayerName() {
+        return playerName;
     }
 
-    public String getLocType() {
-        return locType;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
-    public void setLocType(String locType) {
-        this.locType = locType;
+    public String getPlayerChar() {
+        return playerChar;
     }
 
-    public int getLocLockLevel() {
-        return locLockLevel;
+    public void setPlayerChar(String playerChar) {
+        this.playerChar = playerChar;
     }
 
-    public void setLocLockLevel(int locLockLevel) {
-        this.locLockLevel = locLockLevel;
+    public int getPlayerBonus() {
+        return playerBonus;
     }
 
-    public int getPlayerUnlockLevel() {
-        return playerUnlockLevel;
+    public void setPlayerBonus(int playerBonus) {
+        this.playerBonus = playerBonus;
     }
 
-    public void setPlayerUnlockLevel(int playerUnlockLevel) {
-        this.playerUnlockLevel = playerUnlockLevel;
+    public int getPlayerDiplomacy() {
+        return playerDiplomacy;
     }
 
-    public String getSceneType() {
-        return sceneType;
+    public void setPlayerDiplomacy(int playerDiplomacy) {
+        this.playerDiplomacy = playerDiplomacy;
     }
 
-    public void setSceneType(String sceneType) {
-        this.sceneType = sceneType;
+    public int getPlayerCunning() {
+        return playerCunning;
+    }
+
+    public void setPlayerCunning(int playerCunning) {
+        this.playerCunning = playerCunning;
+    }
+
+    public int getPlayerStrength() {
+        return playerStrength;
+    }
+
+    public void setPlayerStrength(int playerStrength) {
+        this.playerStrength = playerStrength;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.locType);
-        hash = 97 * hash + this.locLockLevel;
-        hash = 97 * hash + this.playerUnlockLevel;
-        hash = 97 * hash + Objects.hashCode(this.sceneType);
+        hash = 71 * hash + Objects.hashCode(this.playerName);
+        hash = 71 * hash + Objects.hashCode(this.playerChar);
+        hash = 71 * hash + this.playerBonus;
+        hash = 71 * hash + this.playerDiplomacy;
+        hash = 71 * hash + this.playerCunning;
+        hash = 71 * hash + this.playerStrength;
         return hash;
     }
 
@@ -74,17 +96,23 @@ public class Scene {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Scene other = (Scene) obj;
-        if (this.locLockLevel != other.locLockLevel) {
+        final Player other = (Player) obj;
+        if (this.playerBonus != other.playerBonus) {
             return false;
         }
-        if (this.playerUnlockLevel != other.playerUnlockLevel) {
+        if (this.playerDiplomacy != other.playerDiplomacy) {
             return false;
         }
-        if (!Objects.equals(this.locType, other.locType)) {
+        if (this.playerCunning != other.playerCunning) {
             return false;
         }
-        if (!Objects.equals(this.sceneType, other.sceneType)) {
+        if (this.playerStrength != other.playerStrength) {
+            return false;
+        }
+        if (!Objects.equals(this.playerName, other.playerName)) {
+            return false;
+        }
+        if (!Objects.equals(this.playerChar, other.playerChar)) {
             return false;
         }
         return true;
@@ -92,7 +120,7 @@ public class Scene {
 
     @Override
     public String toString() {
-        return "Scene{" + "locType=" + locType + ", locLockLevel=" + locLockLevel + ", playerUnlockLevel=" + playerUnlockLevel + ", sceneType=" + sceneType + '}';
+        return "Player{" + "playerName=" + playerName + ", playerChar=" + playerChar + ", playerBonus=" + playerBonus + ", playerDiplomacy=" + playerDiplomacy + ", playerCunning=" + playerCunning + ", playerStrength=" + playerStrength + '}';
     }
-      
+    
 }
