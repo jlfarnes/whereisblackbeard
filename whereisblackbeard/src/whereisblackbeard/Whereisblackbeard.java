@@ -5,6 +5,8 @@
  */
 package whereisblackbeard;
 
+import byui.cit260.whereisblackbeard.model.Player;
+
 /**
  *
  * @author 8440p
@@ -16,6 +18,17 @@ public class Whereisblackbeard {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Player playerOne = new Player();
+        
+        playerOne.setPlayerName("Player 1");
+        playerOne.setPlayerChar("John");
+        playerOne.setPlayerBonus(5);
+        playerOne.setPlayerDiplomacy(5);
+        playerOne.setPlayerCunning(5);
+        playerOne.setPlayerStrength(5);
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
     }
     
 }
