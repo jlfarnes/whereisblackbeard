@@ -51,7 +51,7 @@ public class Whereisblackbeard {
         sceneOne.setSceneType("Type");
         
         String sceneInfo = sceneOne.toString();
-        System.out.println(sceneInfo);
+        System.out.println(sceneInfo); // jlfarnes: fixed from playerInfo to sceneInfo
         
         
         // Author: Joseph Clark
