@@ -6,12 +6,17 @@
 package whereisblackbeard;
 
 import byui.cit260.whereisblackbeard.model.Armory;
-import byui.cit260.whereisblackbeard.model.Player;
-import byui.cit260.whereisblackbeard.model.Scene;
 import byui.cit260.whereisblackbeard.model.Character;
 import byui.cit260.whereisblackbeard.model.DryDock;
 import byui.cit260.whereisblackbeard.model.JobsBoard;
+import byui.cit260.whereisblackbeard.model.Location;
+import byui.cit260.whereisblackbeard.model.Map;
 import byui.cit260.whereisblackbeard.model.Market;
+import byui.cit260.whereisblackbeard.model.Player;
+import byui.cit260.whereisblackbeard.model.PlayerInventory;
+import byui.cit260.whereisblackbeard.model.Scene;
+import byui.cit260.whereisblackbeard.model.Ship;
+import byui.cit260.whereisblackbeard.model.ShipInventory;
 
 /**
  *
@@ -46,7 +51,7 @@ public class Whereisblackbeard {
         sceneOne.setSceneType("Type");
         
         String sceneInfo = sceneOne.toString();
-        System.out.println(playerInfo);
+        System.out.println(sceneInfo);
         
         
         // Author: Joseph Clark
@@ -104,6 +109,59 @@ public class Whereisblackbeard {
         
         String armoryInfo = armoryOne.toString();
         System.out.println(armoryInfo);
+        
+        
+        // Author: Jacob Farnes
+        Location locOne = new Location();
+        
+        locOne.setVisited(1);
+        locOne.setChallengeSolved(2);
+        locOne.setAttribute(9);
+        
+        String locInfo = locOne.toString();
+        System.out.println(locInfo);
+        
+        // Author: Jacob Farnes
+        Map mapOne = new Map();
+        
+        mapOne.setLocName("Deadman's Cove");
+        mapOne.setRows(3);
+        mapOne.setCols(3);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
+
+        // Author: Jacob Farnes
+        PlayerInventory playerInvOne = new PlayerInventory();
+        
+        playerInvOne.setWeaponLevel(1);
+        playerInvOne.setGoldCount(125);
+        playerInvOne.setAccessories("none");
+        
+        String playerInvInfo = playerInvOne.toString();
+        System.out.println(playerInvInfo);
+        
+        // Author: Jacob Farnes
+        Ship shipOne = new Ship();
+        
+        shipOne.setDescription("Santa Maria");
+        shipOne.setHullHealth(1000);
+        shipOne.setSailSize(100);
+        shipOne.setCrewCapacity(5);
+        shipOne.setShipSize(500);
+        
+        String shipInfo = shipOne.toString();
+        System.out.println(shipInfo);
+        
+        // Author: Jacob Farnes
+        ShipInventory shipInvOne = new ShipInventory();
+        
+        shipInvOne.setCannonBalls(5);
+        shipInvOne.setWaterGallons(12);
+        shipInvOne.setFoodUnits(35);
+        
+        String shipInvInfo = shipInvOne.toString();
+        System.out.println(shipInvInfo);
     }
         
 }
