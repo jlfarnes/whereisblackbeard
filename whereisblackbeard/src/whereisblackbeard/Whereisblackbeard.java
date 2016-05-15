@@ -5,18 +5,18 @@
  */
 package whereisblackbeard;
 
-import byui.cit260.whereisblackbeard.model.Armory;
-import byui.cit260.whereisblackbeard.model.Character;
-import byui.cit260.whereisblackbeard.model.DryDock;
-import byui.cit260.whereisblackbeard.model.JobsBoard;
-import byui.cit260.whereisblackbeard.model.Location;
-import byui.cit260.whereisblackbeard.model.Map;
-import byui.cit260.whereisblackbeard.model.Market;
-import byui.cit260.whereisblackbeard.model.Player;
-import byui.cit260.whereisblackbeard.model.PlayerInventory;
-import byui.cit260.whereisblackbeard.model.Scene;
-import byui.cit260.whereisblackbeard.model.Ship;
-import byui.cit260.whereisblackbeard.model.ShipInventory;
+import byui.cit260.whereisblackbeard.model.Armory;          // Author: Joseph Clark
+import byui.cit260.whereisblackbeard.model.Character;       // Author: Joseph Clark
+import byui.cit260.whereisblackbeard.model.DryDock;         // Author: Joseph Clark
+import byui.cit260.whereisblackbeard.model.JobsBoard;       // Author: Joseph Clark
+import byui.cit260.whereisblackbeard.model.Location;        // Author: Jacob Farnes
+import byui.cit260.whereisblackbeard.model.Map;             // Author: Jacob Farnes
+import byui.cit260.whereisblackbeard.model.Market;          // Author: Joseph Clark
+import byui.cit260.whereisblackbeard.model.Player;          // Author: Jacob Farnes & Joseph Clark
+import byui.cit260.whereisblackbeard.model.PlayerInventory; // Author: Jacob Farnes
+import byui.cit260.whereisblackbeard.model.Scene;           // Author: Jacob Farnes
+import byui.cit260.whereisblackbeard.model.Ship;            // Author: Jacob Farnes
+import byui.cit260.whereisblackbeard.model.ShipInventory;   // Author: Jacob Farnes
 
 /**
  *
