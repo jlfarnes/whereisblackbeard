@@ -5,13 +5,14 @@
  */
 package byui.cit260.whereisblackbeard.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author josephclark
  */
-public class Armory {
+public class Armory implements Serializable {
     
     private int cannonBallsForSale;
     private int handWeaponsLevel;

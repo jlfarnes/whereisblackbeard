@@ -5,13 +5,14 @@
  */
 package byui.cit260.whereisblackbeard.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author 8440p
  */
-public class Ship {
+public class Ship implements Serializable {
     
     private String description;
     private int hullHealth;

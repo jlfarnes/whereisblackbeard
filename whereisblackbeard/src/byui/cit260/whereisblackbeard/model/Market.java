@@ -6,13 +6,14 @@
 package byui.cit260.whereisblackbeard.model;
 
 //import java.io.Serializable;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author josephclark
  */
-public class Market {
+public class Market implements Serializable {
     
     private String foodForSale;
     private String waterForSale;

@@ -5,11 +5,13 @@
  */
 package byui.cit260.whereisblackbeard.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author 8440p
  */
-public class Location {
+public class Location implements Serializable {
     
     private int visited;
     private int challengeSolved;

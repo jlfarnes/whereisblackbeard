@@ -5,11 +5,13 @@
  */
 package byui.cit260.whereisblackbeard.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author 8440p
  */
-public class ShipInventory {
+public class ShipInventory implements Serializable {
     
     private int cannonBalls;
     private int waterGallons;

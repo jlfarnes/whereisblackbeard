@@ -6,13 +6,14 @@
 package byui.cit260.whereisblackbeard.model;
 
 //import java.io.Serializable;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author josephclark
  */
-public class JobsBoard {
+public class JobsBoard implements Serializable {
     
     private int randJobs;
     private int goToJobScene;
