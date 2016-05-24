@@ -23,7 +23,7 @@ public class DryDockControls {
     // Remove gold if player has enough
     // Send player to job board scene if not enough gold
     
-    // Give player upgrade (speed)
+    // Give player upgrade (speed, hull health)
     
     // Exit
     

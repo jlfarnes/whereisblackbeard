@@ -11,4 +11,7 @@ package byui.cit260.whereisblackbeard.control.Scene;
  */
 public class GoToMapPosition {
     
+    // Deduct resources from player
+    // Go to selected location
+    
 }

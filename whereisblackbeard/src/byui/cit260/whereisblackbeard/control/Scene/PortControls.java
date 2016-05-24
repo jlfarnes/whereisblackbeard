@@ -11,4 +11,9 @@ package byui.cit260.whereisblackbeard.control.Scene;
  */
 public class PortControls {
     
+    // Draw town scene
+    
+    // Ask player if they want to go to the market, armory, jobs board or dry dock
+    
+    
 }
