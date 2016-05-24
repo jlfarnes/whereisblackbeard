@@ -11,4 +11,12 @@ package byui.cit260.whereisblackbeard.control.Menu;
  */
 public class QuitControls {
     
+    // Ask if player wants to quit
+    
+    // Ask if player wants to save before they quit if game loaded
+    
+    // Ask if the player really wants to quit or just og to the main menu
+    
+    // Quit
+    
 }

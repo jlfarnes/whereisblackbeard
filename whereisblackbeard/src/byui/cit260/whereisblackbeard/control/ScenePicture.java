@@ -11,4 +11,8 @@ package byui.cit260.whereisblackbeard.control;
  */
 public class ScenePicture {
     
+    // Draw scene function with bounds
+    
+    // Make ASCII scenes here to be drawn
+    
 }

@@ -11,4 +11,18 @@ package byui.cit260.whereisblackbeard.control;
  */
 public class GameInfo {
     
+    // Draw Player name
+    
+    // Draw Water Gallons
+    
+    // Draw Food Units
+    
+    // Draw Cannon Balls
+    
+    // Draw playerGold
+    
+    // Draw player location
+    
+    // Draw sublocation if in store (Armory, DryDock, Market)
+    
 }

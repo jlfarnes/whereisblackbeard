@@ -11,4 +11,14 @@ package byui.cit260.whereisblackbeard.control;
  */
 public class GameScreen {
     
+    // Instance main menu
+    
+    // Start Game GUI
+        // Call ScenePicture
+        // Call GameInfo
+        // Call GameText
+        // Call GameControls
+    
+    // Call map function
+    
 }

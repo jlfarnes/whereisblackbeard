@@ -11,4 +11,6 @@ package byui.cit260.whereisblackbeard.control;
  */
 public class GameControls {
     
+    // Draw Controls at bottom
+    
 }

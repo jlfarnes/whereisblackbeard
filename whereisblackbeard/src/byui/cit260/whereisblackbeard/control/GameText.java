@@ -11,4 +11,7 @@ package byui.cit260.whereisblackbeard.control;
  */
 public class GameText {
     
+    // Draw text feedback function with bounds
+    
+    
 }

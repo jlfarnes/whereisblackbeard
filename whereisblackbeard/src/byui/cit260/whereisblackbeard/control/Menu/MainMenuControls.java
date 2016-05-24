@@ -11,4 +11,18 @@ package byui.cit260.whereisblackbeard.control.Menu;
  */
 public class MainMenuControls {
     
+    // Draw Main Menu screen
+    
+    // Ask player what to do
+    
+    // Call New Game function
+    
+    // Call Load Game funtion
+    
+    // Call Save game function
+    
+    // Call Help menu
+    
+    // Call Quit function
+    
 }

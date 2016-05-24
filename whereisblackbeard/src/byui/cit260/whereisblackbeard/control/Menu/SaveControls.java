@@ -11,4 +11,8 @@ package byui.cit260.whereisblackbeard.control.Menu;
  */
 public class SaveControls {
     
+    // get desired name from Player
+    
+    // write variables to file in save directory
+    
 }
