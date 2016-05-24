@@ -11,4 +11,20 @@ package byui.cit260.whereisblackbeard.control.Port;
  */
 public class DryDockControls {
     
+    // // Go to dry dock scene
+    // Draw dry dock scene
+    
+    // Ask player for desired upgrade
+    
+    // Have player select desired upgrade
+    
+    // Check gold
+    
+    // Remove gold if player has enough
+    // Send player to job board scene if not enough gold
+    
+    // Give player upgrade (speed)
+    
+    // Exit
+    
 }

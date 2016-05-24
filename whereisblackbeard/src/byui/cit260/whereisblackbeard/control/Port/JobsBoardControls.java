@@ -11,4 +11,15 @@ package byui.cit260.whereisblackbeard.control.Port;
  */
 public class JobsBoardControls {
     
+    // Go to jobs board scene
+    // Draw job board scene
+    
+    // Capture any key from keyboard
+    
+    // Randomly generate a job
+    
+    // Pay player
+    
+    // Exit to market/port scene
+    
 }
