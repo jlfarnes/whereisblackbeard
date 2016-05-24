@@ -11,4 +11,14 @@ package byui.cit260.whereisblackbeard.control.Scene;
  */
 public class BattleControls {
     
+    // Generate Enemy
+    // Stats
+    
+    // Display Battle Scene
+    
+    // Ask what player wants to do
+    
+    // Attack, Run, or Talk
+    
+    // 
 }
