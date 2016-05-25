@@ -13,9 +13,9 @@ import java.util.Objects;
  * @author jlfarnes
  */
 public class PlayerInventory implements Serializable {
-    private int weaponLevel;
-    private int goldCount;
-    private String accessories;
+    public static int weaponLevel;
+    public static int goldCount;
+    public static String accessories;
 
     public PlayerInventory(int weaponLevel, int goldCount, String accessories) {
         this.weaponLevel = weaponLevel;
