@@ -60,7 +60,7 @@ public class BattleControls {
     // Fire on Enemy
     public static boolean takeAshot (int playerAccuracy,int playerFirepower,int enemySpeed,int enemyDefense) {
         if ( (playerAccuracy > 0) == (playerAccuracy < 10) == (playerFirepower < 10) ) {
-                int total = (playerAccuracy  + playerFirepower) - (enemyDefense + enemySpeed); 
+                int total = (playerAccuracy + playerFirepower) - (enemyDefense + enemySpeed); 
                 if ( total > 0 ) {
                     return true;
                 }
@@ -73,9 +73,17 @@ public class BattleControls {
     }
     
     // Enemy Fires back
-    public static boolean takeDamage(int enemyAccuracy,int enemySpeed,int enemyFirepower,int enemyDefense) {
-        
-        return true;
+    public static boolean takeDamage(int enemyAccuracy,int playerSpeed,int enemyFirepower,int playerDefense) {
+        if ( (enemyAccuracy > 0) == (enemyAccuracy < 10) == (enemyFirepower < 10) ) {
+                int total = (enemyAccuracy + enemyFirepower) - (playerDefense + playerSpeed);
+                if ( total > 0 ) {
+                    return true;
+                }
+                else if ( total > 0 ) {
+                    return false;
+                }
+            return false;
+        }
+        return false;
     }
-    
 }
