@@ -25,6 +25,7 @@ public class JobsBoardControls {
         // 
 	// wait(waitTime)
         int waitTimeMilliSec = waitTime * 1000;
+        // https://stackoverflow.com/questions/3342651/how-can-i-delay-a-java-program-for-a-few-seconds
         try {
             Thread.sleep(waitTimeMilliSec);                 //1000 milliseconds is one second.
         } catch(InterruptedException ex) {

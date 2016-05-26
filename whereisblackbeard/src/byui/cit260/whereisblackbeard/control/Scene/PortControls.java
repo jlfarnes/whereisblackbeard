@@ -92,22 +92,27 @@ public class PortControls {
         return locName;
     };
     
-    // setMinusGold
-    public void setMinusGold(int goldRequired) {
+    // getMinusGold
+    public int getMinusGold(int playerGold, int goldRequired) {
         
         if ( ( (playerGold >= 0) == (playerGold <= 1000) ) == ( (goldRequired >= 0) == (goldRequired <= 100) ) ) {
         
             if (playerGold >= goldRequired) {
 		playerGold  = playerGold - goldRequired;
-		//return playerGold;
-                System.out.println("Pleasure doing business with you!");
+		return playerGold;
+                //System.out.println("Pleasure doing business with you!");
                 //return 1;
             }
             else if (playerGold < goldRequired) {
-                System.out.println("Your word is no good here...");
+                //System.out.println("Your word is no good here...");
 		//return 0;
+                return -1;
+            }
+            else {
+                return -1;
             }
         }
+        return -1;
     }
 }
 
