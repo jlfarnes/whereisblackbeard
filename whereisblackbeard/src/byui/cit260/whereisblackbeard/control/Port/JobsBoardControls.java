@@ -24,10 +24,20 @@ public class JobsBoardControls {
 	int pay = calcPay();
         // 
 	// wait(waitTime)
-        
+        int waitTimeMilliSec = waitTime * 1000;
+        try {
+            Thread.sleep(waitTimeMilliSec);                 //1000 milliseconds is one second.
+        } catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
 	// Print “Done for the Day”
+        
 	// Print “You were paid”, pay, “gold for your efforts”
+        
+        // Actually pay the player
 	payPlayer(pay);
+        
+        // Return to Port scene
     }
     // int from job is equal to pay amount
     // Calc random wait time
