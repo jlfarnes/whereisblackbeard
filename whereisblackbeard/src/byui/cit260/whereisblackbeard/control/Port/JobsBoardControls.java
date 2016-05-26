@@ -11,17 +11,18 @@ import java.util.Random;
  * @author josephclark
  */
 public class JobsBoardControls {
-    
+    public static int waitTime;
+    public static int pay;
     // Go to jobs board scene
     // Draw job board scene
     
     // Capture any key from keyboard
     
     // Randomly generate a job
-    private void getRandJob() {
+    public static int getRandJob(int maxPay) {
         
-        int waitTime = calcWaitTime();
-	int pay = calcPay();
+        waitTime = calcWaitTime();
+	pay = calcPay(maxPay);
         // 
 	// wait(waitTime)
         int waitTimeMilliSec = waitTime * 1000;
@@ -36,21 +37,22 @@ public class JobsBoardControls {
 	// Print “You were paid”, pay, “gold for your efforts”
         
         // Actually pay the player
-	payPlayer(pay);
+	// payPlayer(pay);
+        return pay;
         
         // Return to Port scene
     }
     // int from job is equal to pay amount
     // Calc random wait time
-    private int calcPay() {
+    public static int calcPay(int maxPay) {
         int minSec = 1;
-        int maxSec = 9;
-        int waitTime = calcRandNum(minSec,maxSec);
-        return waitTime;
+        int maxSec = maxPay;
+        int randPay = calcRandNum(minSec,maxSec);
+        return randPay;
     }
       
     // Calc random wait time
-    private int calcWaitTime() {
+    public static int calcWaitTime() {
         int minSec = 15;
         int maxSec = 120;
         int waitTime = calcRandNum(minSec,maxSec);
@@ -58,7 +60,7 @@ public class JobsBoardControls {
     }
     
     // Pay player
-    private void payPlayer(int pay) {
+    public static void payPlayer(int pay) {
         byui.cit260.whereisblackbeard.model.PlayerInventory.goldCount = byui.cit260.whereisblackbeard.model.PlayerInventory.goldCount + pay;
     }
     

@@ -20,6 +20,11 @@ public class Player implements Serializable {
     private int playerDiplomacy;
     private int playerCunning;
     private int playerStrength;
+    public static int playerAccuracy;
+    public static int playerDefense;
+    public static int playerFirepower;
+    public static int playerSpeed;
+    
 
     public Player() {
     }
