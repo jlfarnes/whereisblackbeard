@@ -33,7 +33,29 @@ public class BattleControls {
     // Attack, Run, or Talk
     
     // Try Diplomacy
-    // public static boolean takeAshot(enemyDiplomacy,enemyCunning,enemyStrength,enemyAccuracy,enemySpeed,enemyFirepower,enemyDefense,enemyBonus,locationBonus)
+    public static boolean tryDiplomacy(int playerDiplomacy,int playerCunning,int enemyDiplomacy,int enemyCunning) {
+        
+        // Validate Input
+        if (playerDiplomacy > 0) {
+            
+        
+            
+            // Calculate winner
+            int total = (playerDiplomacy * playerCunning - enemyDiplomacy * enemyCunning);
+            
+            // Determine winner
+            if ( total > 0 ) {
+                    return true;
+                }
+            else if ( total > 0 ) {
+                    return false;
+                }
+            else {
+                return false;
+            }
+        }
+        return false;
+    }
     
     // Fire on Enemy
     public static boolean takeAshot (int playerAccuracy,int playerFirepower,int enemySpeed,int enemyDefense) {
