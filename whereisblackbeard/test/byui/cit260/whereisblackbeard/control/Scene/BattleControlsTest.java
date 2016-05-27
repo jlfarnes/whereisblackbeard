@@ -41,58 +41,150 @@ public class BattleControlsTest {
         
         // input values for test case 1
         int playerDiplomacy = 3;
-        int playerCunning = 2;
+        int playerCunning = 3;
         int enemyDiplomacy = 4;
         int enemyCunning = 2;
         
-        boolean expResult = -1; // expected output return value
-        boolean result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
+        int expResult = 1; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
         assertEquals(expResult, result);
     }
-
+    
     /**
-     * Test of takeAshot method, of class BattleControls.
+     * Test of tryDiplomacy method, of class BattleControls.
      */
     @Test
-    public void testTakeAshot() {
-        System.out.println("takeAshot");
+    public void test2TryDiplomacy() {
+        System.out.println("tryDiplomacy");
         
         /**************************
          * Test case #2
          */
         System.out.println("\tTest case #2");
         
-        // input values for test case 2
-        int playerAccuracy = 5;
-        int playerFirepower = 6;
-        int enemySpeed = 7;
-        int enemyDefense = 5;
+        // input values for test case 1
+        int playerDiplomacy = -3;
+        int playerCunning = 2;
+        int enemyDiplomacy = 4;
+        int enemyCunning = 2;
         
-        boolean expResult = -1; // expected output return value
-        boolean result = BattleControls.takeAshot(playerAccuracy, playerFirepower, enemySpeed, enemyDefense);
+        int expResult = -1; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
         assertEquals(expResult, result);
     }
-
+    
     /**
-     * Test of takeDamage method, of class BattleControls.
+     * Test of tryDiplomacy method, of class BattleControls.
      */
     @Test
-    public void testTakeDamage() {
-        System.out.println("takeDamage");
-                
+    public void test3TryDiplomacy() {
+        System.out.println("tryDiplomacy");
+        
         /**************************
          * Test case #3
          */
         System.out.println("\tTest case #3");
         
-        // input values for test case 3
-        int enemyAccuracy = 8;
-        int playerSpeed = 8;
-        int enemyFirepower = 7;
-        int playerDefense = 7;
+        // input values for test case 1
+        int playerDiplomacy = 3;
+        int playerCunning = -5;
+        int enemyDiplomacy = 4;
+        int enemyCunning = 2;
         
-        boolean expResult = -1; // expected output return value        
-        boolean result = BattleControls.takeDamage(enemyAccuracy, playerSpeed, enemyFirepower, playerDefense);
+        int expResult = -1; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of tryDiplomacy method, of class BattleControls.
+     */
+    @Test
+    public void test4TryDiplomacy() {
+        System.out.println("tryDiplomacy");
+        
+        /**************************
+         * Test case #4
+         */
+        System.out.println("\tTest case #4");
+        
+        // input values for test case 1
+        int playerDiplomacy = 3;
+        int playerCunning = 2;
+        int enemyDiplomacy = 0;
+        int enemyCunning = 4;
+        
+        int expResult = -1; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of tryDiplomacy method, of class BattleControls.
+     */
+    @Test
+    public void test5TryDiplomacy() {
+        System.out.println("tryDiplomacy");
+        
+        /**************************
+         * Test case #5
+         */
+        System.out.println("\tTest case #5");
+        
+        // input values for test case 1
+        int playerDiplomacy = 1;
+        int playerCunning = 1;
+        int enemyDiplomacy = 1;
+        int enemyCunning = 1;
+        
+        int expResult = 1; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of tryDiplomacy method, of class BattleControls.
+     */
+    @Test
+    public void test6TryDiplomacy() {
+        System.out.println("tryDiplomacy");
+        
+        /**************************
+         * Test case #6
+         */
+        System.out.println("\tTest case #6");
+        
+        // input values for test case 1
+        int playerDiplomacy = 9;
+        int playerCunning = 9;
+        int enemyDiplomacy = 9;
+        int enemyCunning = 9;
+        
+        int expResult = 1; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of tryDiplomacy method, of class BattleControls.
+     */
+    @Test
+    public void test7TryDiplomacy() {
+        System.out.println("tryDiplomacy");
+        
+        /**************************
+         * Test case #7
+         */
+        System.out.println("\tTest case #7");
+        
+        // input values for test case 1
+        int playerDiplomacy = 1;
+        int playerCunning = 1;
+        int enemyDiplomacy = 9;
+        int enemyCunning = 9;
+        
+        int expResult = 0; // expected output return value
+        int result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
         assertEquals(expResult, result);
     }
     

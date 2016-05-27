@@ -36,7 +36,7 @@ public class BattleControls {
     public static int tryDiplomacy(int playerDiplomacy,int playerCunning,int enemyDiplomacy,int enemyCunning) {
         
         // Validate Input
-        if (playerDiplomacy > 0) {
+        if ( (playerDiplomacy > 0) == (playerDiplomacy < 10) == (playerCunning > 0) == (playerCunning < 10) == (enemyDiplomacy > 0) == (enemyDiplomacy < 10) == (enemyCunning > 0) == (enemyCunning < 10)) {
             
         
             
@@ -44,10 +44,10 @@ public class BattleControls {
             int total = (playerDiplomacy * playerCunning - enemyDiplomacy * enemyCunning);
             
             // Determine winner
-            if ( total > 0 ) {
+            if ( total >= 0 ) {
                     return 1;
                 }
-            else if ( total > 0 ) {
+            else if ( total < 0 ) {
                     return 0;
                 }
             else {
@@ -64,10 +64,10 @@ public class BattleControls {
     public static int takeAshot (int playerAccuracy,int playerFirepower,int enemySpeed,int enemyDefense) {
         if ( (playerAccuracy > 0) == (playerAccuracy < 10) == (playerFirepower < 10) ) {
                 int total = (playerAccuracy + playerFirepower) - (enemyDefense + enemySpeed); 
-                if ( total > 0 ) {
+                if ( total >= 0 ) {
                     return 1;
                 }
-                else if ( total > 0 ) {
+                else if ( total < 0 ) {
                     return 0;
                 }
             return -1;
@@ -79,10 +79,10 @@ public class BattleControls {
     public static int takeDamage(int enemyAccuracy,int playerSpeed,int enemyFirepower,int playerDefense) {
         if ( (enemyAccuracy > 0) == (enemyAccuracy < 10) == (enemyFirepower < 10) ) {
                 int total = (enemyAccuracy + enemyFirepower) - (playerDefense + playerSpeed);
-                if ( total > 0 ) {
+                if ( total >= 0 ) {
                     return 1;
                 }
-                else if ( total > 0 ) {
+                else if ( total < 0 ) {
                     return 0;
                 }
             return -1;
