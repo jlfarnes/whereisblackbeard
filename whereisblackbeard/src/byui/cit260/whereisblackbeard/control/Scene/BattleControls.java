@@ -77,7 +77,8 @@ public class BattleControls {
     
     // Enemy Fires back
     public static int takeDamage(int enemyAccuracy,int playerSpeed,int enemyFirepower,int playerDefense) {
-        if ( (enemyAccuracy > 0) == (enemyAccuracy < 10) == (enemyFirepower < 10) ) {
+        if ( (enemyAccuracy > 0) == (enemyAccuracy < 10) == (playerSpeed > 0) == (playerSpeed < 10) == (enemyFirepower > 0) == (enemyFirepower < 10) == (playerDefense > 0) == (playerDefense < 10)) {
+            
                 int total = (enemyAccuracy + enemyFirepower) - (playerDefense + playerSpeed);
                 if ( total >= 0 ) {
                     return 1;
