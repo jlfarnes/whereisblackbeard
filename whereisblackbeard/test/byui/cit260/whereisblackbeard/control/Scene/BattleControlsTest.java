@@ -45,7 +45,7 @@ public class BattleControlsTest {
         int enemyDiplomacy = 4;
         int enemyCunning = 2;
         
-        boolean expResult = false; // expected output return value
+        boolean expResult = -1; // expected output return value
         boolean result = BattleControls.tryDiplomacy(playerDiplomacy, playerCunning, enemyDiplomacy, enemyCunning);
         assertEquals(expResult, result);
     }
@@ -68,7 +68,7 @@ public class BattleControlsTest {
         int enemySpeed = 7;
         int enemyDefense = 5;
         
-        boolean expResult = false; // expected output return value
+        boolean expResult = -1; // expected output return value
         boolean result = BattleControls.takeAshot(playerAccuracy, playerFirepower, enemySpeed, enemyDefense);
         assertEquals(expResult, result);
     }
@@ -86,12 +86,12 @@ public class BattleControlsTest {
         System.out.println("\tTest case #3");
         
         // input values for test case 3
-        int enemyAccuracy = 3;
-        int playerSpeed = 6;
+        int enemyAccuracy = 8;
+        int playerSpeed = 8;
         int enemyFirepower = 7;
         int playerDefense = 7;
         
-        boolean expResult = false; // expected output return value        
+        boolean expResult = -1; // expected output return value        
         boolean result = BattleControls.takeDamage(enemyAccuracy, playerSpeed, enemyFirepower, playerDefense);
         assertEquals(expResult, result);
     }

@@ -33,7 +33,7 @@ public class BattleControls {
     // Attack, Run, or Talk
     
     // Try Diplomacy
-    public static boolean tryDiplomacy(int playerDiplomacy,int playerCunning,int enemyDiplomacy,int enemyCunning) {
+    public static int tryDiplomacy(int playerDiplomacy,int playerCunning,int enemyDiplomacy,int enemyCunning) {
         
         // Validate Input
         if (playerDiplomacy > 0) {
@@ -45,16 +45,16 @@ public class BattleControls {
             
             // Determine winner
             if ( total > 0 ) {
-                    return true;
+                    return 1;
                 }
             else if ( total > 0 ) {
-                    return false;
+                    return 0;
                 }
             else {
-                return false;
+                return -1;
             }
         }
-        return false;
+        return -1;
     }
     
     // Fire on Enemy
