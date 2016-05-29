@@ -189,11 +189,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void testTakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #1
@@ -212,11 +212,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void test2TakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #2
@@ -235,11 +235,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void test3TakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #3
@@ -258,11 +258,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void test4TakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #4
@@ -281,11 +281,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void test5TakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #5
@@ -304,11 +304,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void test6TakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #6
@@ -327,11 +327,11 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeDamage method, of class BattleControls.
      */
     @Test
     public void test7TakeDamage() {
-        System.out.println("tryDiplomacy");
+        System.out.println("takeDamage");
         
         /**************************
          * Test case #7
@@ -350,7 +350,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void testTakeAshot() {
@@ -373,7 +373,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void test2TakeAshot() {
@@ -396,7 +396,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void test3TakeAshot() {
@@ -419,7 +419,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void test4TakeAshot() {
@@ -442,7 +442,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void test5TakeAshot() {
@@ -465,7 +465,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void test6TakeAshot() {
@@ -488,7 +488,7 @@ public class BattleControlsTest {
     }
     
     /**
-     * Test of tryDiplomacy method, of class BattleControls.
+     * Test of takeAshot method, of class BattleControls.
      */
     @Test
     public void test7TakeAshot() {
