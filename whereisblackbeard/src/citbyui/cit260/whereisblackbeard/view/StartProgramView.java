@@ -97,6 +97,16 @@ public class StartProgramView {
             return false;
         }
 
-    
-    
+        // display next view
+        this.displayNextView(player);
+        
+        return true;
+    }
 
+    private void displayNextView(Player player) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        System.out.println("\n*** displayNextView() called ***");
+    }
+    
+}
