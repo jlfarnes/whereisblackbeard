@@ -5,11 +5,18 @@
  */
 package byui.cit260.whereisblackbeard.control;
 
+import byui.cit260.whereisblackbeard.model.Player;
+
 /**
  *
  * @author josephclark
  */
 public class GameControls {
+
+    public static Player createPlayer(String playersName) {
+        System.out.println("\n*** createPlayer() function called ***");
+        return new Player();
+        }
     
     // Draw Controls at bottom
     

@@ -5,6 +5,8 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
+import byui.cit260.whereisblackbeard.control.GameControls;
+import byui.cit260.whereisblackbeard.model.Player;
 import java.util.Scanner;
 
 /**
@@ -80,11 +82,21 @@ public class StartProgramView {
     }
 
     private boolean doAction(String playersName) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\n*** getPlayersName() called ***");
-        return true;
+        
+        if (playersName.length() < 2) {
+            System.out.println("\nInvalid players name: "
+                    + "The name must be greater than one character in length");
+            return false;
     }
+        
+    // call createPlayer() control function
+        Player player = GameControls.createPlayer(playersName);
+        
+        if (player == null) {
+            System.out.println("\nError creating the player.");
+            return false;
+        }
 
     
     
-}
+
