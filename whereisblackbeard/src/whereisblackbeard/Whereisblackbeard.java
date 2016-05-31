@@ -17,6 +17,7 @@ import byui.cit260.whereisblackbeard.model.PlayerInventory; // Author: Jacob Far
 import byui.cit260.whereisblackbeard.model.Scene;           // Author: Jacob Farnes
 import byui.cit260.whereisblackbeard.model.Ship;            // Author: Jacob Farnes
 import byui.cit260.whereisblackbeard.model.ShipInventory;   // Author: Jacob Farnes
+import citbyui.cit260.whereisblackbeard.view.StartProgramView;
 
 /**
  *
@@ -28,6 +29,12 @@ public class Whereisblackbeard {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        // start the program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+        
+        /*
         // Author: Joseph Clark
         Player playerOne = new Player();
         
@@ -162,6 +169,7 @@ public class Whereisblackbeard {
         
         String shipInvInfo = shipInvOne.toString();
         System.out.println(shipInvInfo);
+        */
     }
         
 }
