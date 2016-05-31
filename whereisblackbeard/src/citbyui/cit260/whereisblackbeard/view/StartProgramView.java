@@ -5,6 +5,8 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author josephclark
@@ -51,8 +53,30 @@ public class StartProgramView {
 
     private String getPlayersName() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\n*** getPlayersName() called ***");
-        return "Joe";
+        
+        // System.out.println("\n*** getPlayersName() called ***");
+        // return "Joe";
+        
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        String value = ""; // value to be returned
+        boolean valid = false; // initialize to not valid
+        
+        while (!valid) { // loop while an invalid value is entered
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length()  < 1) {
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+            
+            break; // end of loop
+        }
+            
+        
+        return value; 
     }
 
     private boolean doAction(String playersName) {
