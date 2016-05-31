@@ -6,6 +6,7 @@
 package byui.cit260.whereisblackbeard.control;
 
 import byui.cit260.whereisblackbeard.model.Player;
+import whereisblackbeard.Whereisblackbeard;
 
 /**
  *
@@ -24,7 +25,7 @@ public class GameControls {
         Player player = new Player();
         player.setName(name);
         
-        whereisblackbeard.Whereisblackbeard.setPlayer(player); //save the player
+        Whereisblackbeard.setPlayer(player); //save the player
         
         return player;
     }
