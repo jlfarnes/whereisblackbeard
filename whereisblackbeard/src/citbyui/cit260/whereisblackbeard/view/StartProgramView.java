@@ -34,6 +34,33 @@ public class StartProgramView {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
         System.out.println("\n*** displayStartProgram() function called ***");
+        
+        boolean done = false;
+        do {
+            // prompt for and get player name
+            String playersName = this.getPlayersName(); // May need varible
+            if (playersName.toUpperCase().equals("Q")) // User saying to quit
+                return; //exit game
+            
+            // show next view
+            done = this.doAction(playersName);
+            
+        } while (!done);
+            
     }
+
+    private String getPlayersName() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** getPlayersName() called ***");
+        return "Joe";
+    }
+
+    private boolean doAction(String playersName) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** getPlayersName() called ***");
+        return true;
+    }
+
+    
     
 }
