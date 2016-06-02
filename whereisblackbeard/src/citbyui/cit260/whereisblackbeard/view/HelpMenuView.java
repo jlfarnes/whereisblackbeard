@@ -5,47 +5,46 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
-import byui.cit260.whereisblackbeard.control.GameControls;
 import java.util.Scanner;
-import whereisblackbeard.Whereisblackbeard;
 
 /**
  *
  * @author josephclark
  */
-public class MainMenuView {
-    
-    private String menu;
+public class HelpMenuView {
+
+    private String helpMenu;
     private String promptMessage;
     
-    public MainMenuView() {
-        this.menu = "\n"
+    public HelpMenuView() {
+        this.helpMenu = "\n"
                   + "\n----------------------------------------"
-                  + "\n | Main Menu                           |"
+                  + "\n | Help Menu                           |"
                   + "\n----------------------------------------"
-                  + "\nN - Begin a new game"
-                  + "\nL - Load an existing game"
-                  + "\nH - Get help with how to play the game"
-                  + "\nS - Save game"
+                  + "\nG - What is the goal of the game?"
+                  + "\nM - How to move"
+                  + "\nR - What resources are available?"
+                  + "\nU - Using resources"
+                  + "\nT - Tips"
                   + "\nQ - Quit"
                   + "\n----------------------------------------";
     }
 
-    public void displayMainMenuView() {
+    public void displayHelpMenuView() {
         
         boolean done = false; // set flag to not done
         do {
             // prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
+            String helpMenuOption = this.getHelpMenuOption();
+            if (helpMenuOption.toUpperCase().equals("Q")) // user wants to quit
                 return; // exit the game
             
             // do the requested action and display the next view
-            done = this.doAction(menuOption);
+            done = this.doAction(helpMenuOption);
         } while (!done);
     }
     
-    private String getMenuOption() {
+    private String getHelpMenuOption() {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
@@ -72,17 +71,20 @@ public class MainMenuView {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
-            case "N": // create and start a new game
-                this.startNewGame();
+            case "G": // create and start a new game
+                this.goalOfGame();
                 break;
-            case "L": // load and existing game
-                this.startExistingGame();
+            case "M": // load and existing game
+                this.moveInGame();
                 break;
-            case "H": // display the help menu
-                this.displayHelpMenu();
+            case "R": // display the help menu
+                this.resourcesAvailable();
                 break;
-            case "S": // save the current game
-                this.saveGame();
+            case "U": // save the current game
+                this.usingResources();
+                break;
+            case "T": // tips for the game
+                this.gameTips();
                 break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
@@ -92,22 +94,24 @@ public class MainMenuView {
         return false;
     }
 
-    private void startNewGame() {
-                // create a new game
-        GameControls.createNewGame(Whereisblackbeard.getPlayer());
-        
-        // display the game menue
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void goalOfGame() {
+        System.out.println("*** goalOfGame function called ***");    }
+
+    private void moveInGame() {
+        System.out.println("*** moveInGame function called ***");    }
+
+    private void resourcesAvailable() {
+        System.out.println("*** resourcesAvailable function called ***");    }
+
+    private void usingResources() {
+        System.out.println("*** usingResources function called ***");    }
+    
+    private void gameTips() {
+        System.out.println("*** gameTips function called ***");    }
+
+    void displayHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");    }
-
-    private void displayHelpMenu() {
-        System.out.println("*** startExistingGame function called ***");    }
-
-    private void saveGame() {
-        System.out.println("*** displayHelpMenu function called ***");    }
     
 }
+ 

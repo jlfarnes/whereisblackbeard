@@ -18,6 +18,9 @@ import byui.cit260.whereisblackbeard.model.Scene;           // Author: Jacob Far
 import byui.cit260.whereisblackbeard.model.Ship;            // Author: Jacob Farnes
 import byui.cit260.whereisblackbeard.model.ShipInventory;   // Author: Jacob Farnes
 import citbyui.cit260.whereisblackbeard.view.StartProgramView;
+import citbyui.cit260.whereisblackbeard.view.MainMenuView;
+import citbyui.cit260.whereisblackbeard.view.GameMenuView;
+import citbyui.cit260.whereisblackbeard.view.HelpMenuView;
 
 /**
  *
