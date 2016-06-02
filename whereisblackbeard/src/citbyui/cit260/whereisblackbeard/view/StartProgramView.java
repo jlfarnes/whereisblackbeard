@@ -104,9 +104,18 @@ public class StartProgramView {
     }
 
     private void displayNextView(Player player) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // display a custom welcome message
+        System.out.println("\n============================================="
+                          + "\n Welcome to the game " + player.getPlayerName()
+                          + "\n We hope you have a lot of fun!"
+                          + "\n============================================="
+                          );
         
-        System.out.println("\n*** displayNextView() called ***");
+        // Create MainMenuView object
+        MainMenuView mainMenuView = new MainMenuView();
+                
+        // Display the main menu view
+        mainMenuView.displayMainMenuView();
     }
     
 }
