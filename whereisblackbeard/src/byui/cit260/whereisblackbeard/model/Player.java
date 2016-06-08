@@ -128,7 +128,7 @@ public class Player implements Serializable {
     public String toString() {
         return "Player{" + "playerName=" + playerName + ", playerChar=" + playerChar + ", playerBonus=" + playerBonus + ", playerDiplomacy=" + playerDiplomacy + ", playerCunning=" + playerCunning + ", playerStrength=" + playerStrength + '}';
     }
-
+/*
     public void setName(String name) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         System.out.println("\n*** Player.setName() called ***");
@@ -137,5 +137,5 @@ public class Player implements Serializable {
     public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+*/  
 }
