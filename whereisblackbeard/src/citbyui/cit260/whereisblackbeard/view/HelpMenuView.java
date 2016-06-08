@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class HelpMenuView {
 
     private String helpMenu;
-    private String promptMessage;
+    // private String promptMessage;
     
     public HelpMenuView() {
         this.helpMenu = "\n"
@@ -50,7 +50,7 @@ public class HelpMenuView {
         boolean valid = false; // initialize to not valid
         
         while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.helpMenu);
             
             value = keyboard.nextLine();
             value = value.trim();
@@ -95,7 +95,10 @@ public class HelpMenuView {
     }
 
     private void goalOfGame() {
-        System.out.println("*** goalOfGame function called ***");    }
+        // System.out.println("*** goalOfGame function called ***");
+        System.out.println("\n You are a new pirate. Find Blackbeard to claim "
+                + "\n\rthe title of the biggest, baddest pirate on the high seas.");
+    }
 
     private void moveInGame() {
         System.out.println("*** moveInGame function called ***");    }
@@ -108,10 +111,10 @@ public class HelpMenuView {
     
     private void gameTips() {
         System.out.println("*** gameTips function called ***");    }
-
+/*
     void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+*/
 }
  

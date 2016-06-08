@@ -36,20 +36,21 @@ public class GameMenuView {
         }
 
         // display next view
-        this.displayHelpMenu(player);
+        this.displayHelpMenu();
         
         return true;
     }
-
+/*
     private void displayHelpMenu(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\ndisplayHelpMenu called"
     }
-    
+*/
     private void displayHelpMenu() {
         
         // display the help menue
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenu();
+        helpMenu.displayHelpMenuView();
     }
     
 }

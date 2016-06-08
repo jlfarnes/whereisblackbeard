@@ -16,7 +16,7 @@ import whereisblackbeard.Whereisblackbeard;
 public class MainMenuView {
     
     private String menu;
-    private String promptMessage;
+    // private String promptMessage;
     
     public MainMenuView() {
         this.menu = "\n"
@@ -51,7 +51,7 @@ public class MainMenuView {
         boolean valid = false; // initialize to not valid
         
         while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.menu);
             
             value = keyboard.nextLine();
             value = value.trim();
@@ -93,7 +93,7 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-                // create a new game
+        // create a new game
         GameControls.createNewGame(Whereisblackbeard.getPlayer());
         
         // display the game menue
@@ -105,9 +105,14 @@ public class MainMenuView {
         System.out.println("*** startExistingGame function called ***");    }
 
     private void displayHelpMenu() {
-        System.out.println("*** startExistingGame function called ***");    }
+        // System.out.println("*** startExistingGame function called ***");
+        //
+        // display the help menue
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
+    }
 
     private void saveGame() {
-        System.out.println("*** displayHelpMenu function called ***");    }
+        System.out.println("*** saveGame function called ***");    }
     
 }
