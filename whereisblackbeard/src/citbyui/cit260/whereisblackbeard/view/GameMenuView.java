@@ -53,4 +53,11 @@ public class GameMenuView {
         helpMenu.displayHelpMenuView();
     }
     
+    private void displayPort() {
+        
+        // display the help menue
+        PortView port = new PortView();
+        port.displayPortView();
+    }
+    
 }
