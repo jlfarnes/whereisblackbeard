@@ -27,6 +27,7 @@ public class MainMenuView {
                   + "\nL - Load an existing game"
                   + "\nH - Get help with how to play the game"
                   + "\nS - Save game"
+                  + "\nP - How to explore the port view"
                   + "\nQ - Quit"
                   + "\n----------------------------------------";
     }
