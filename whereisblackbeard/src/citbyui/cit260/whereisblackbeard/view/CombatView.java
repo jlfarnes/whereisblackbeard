@@ -132,23 +132,92 @@ public class CombatView {
                     break;
             }
         }
+        else if (this.choiceLevel == 3) { // communication Menu
+            switch (choice) {
+                case "D":
+                    System.out.println("\nDiplomacy called, returning to Combat menu");
+                    this.displayCombatView();
+                    // this.commView();
+                    choiceLevel = 3;
+                    break;
+                case "L":
+                    System.out.println("\nDeception called, returning to Combat menu");
+                    this.displayCombatView();
+                    // this.attackView();
+                    choiceLevel = 4;
+                    break;
+                case "T":
+                    System.out.println("\nTrade&Barter called, returning to Combat menu");
+                    this.displayCombatView();
+                    // this.runAwayView();
+                    choiceLevel = 5;
+                    break;
+                default:
+                    System.out.println("\nInvalid selection, Try again...");
+                    break;
+            }
+        }
+        else if (this.choiceLevel == 4) { // attack Menu
+            switch (choice) {
+                case "S":
+                    System.out.println("\nSingle Shot called, returning to Combat menu");
+                    this.displayCombatView();
+                    choiceLevel = 3;
+                    break;
+                case "F":
+                    System.out.println("\nFire At Will called, returning to Combat menu");
+                    this.displayCombatView();
+                    //this.attackView();
+                    choiceLevel = 4;
+                    break;
+                case "B":
+                    System.out.println("\nBroadside called, returning to Combat menu");
+                    this.displayCombatView();
+                    //this.runAwayView();
+                    choiceLevel = 5;
+                    break;
+                default:
+                    System.out.println("\nInvalid selection, Try again...");
+                    break;
+            }
+        }
+        else if (this.choiceLevel == 5) { // runaway Menu
+            switch (choice) {
+                case "C":
+                    this.commView();
+                    choiceLevel = 2;
+                    break;
+                case "P":
+                    this.attackView();
+                    choiceLevel = 6;
+                    break;
+                case "D":
+                    System.out.println("\nDon't Run Away called, returning to Combat menu");
+                    this.displayCombatView();
+                    choiceLevel = 2;
+                    break;
+                default:
+                    System.out.println("\nInvalid selection, Try again...");
+                    break;
+            }
+        }
             
         return false;
     }
 
     private void commView() {
-        System.out.println("*** foodStores function called ***");
+        System.out.println("*** commView function called ***");
     }
 
     private void attackView() {
-        System.out.println("*** waterStores function called ***");
+        System.out.println("*** attackView function called ***");
     }
 
     private void runAwayView() {
-        System.out.println("*** armoryWeapons function called ***");
+        System.out.println("*** runAwayView function called ***");
     }
 
     private void runToPortView() {
-        System.out.println("*** drydockRepair function called ***");
+        System.out.println("*** runToPortView function called ***");
     }
 }
