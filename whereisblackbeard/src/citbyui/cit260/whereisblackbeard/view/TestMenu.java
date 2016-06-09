@@ -31,6 +31,7 @@ public class TestMenu {
     }
     
     public void displayTestMenu() {
+        this.loadTestMenuText();
         System.out.println(menus);
         
     /*    do {
@@ -73,37 +74,44 @@ public class TestMenu {
     
     private boolean doAction(String choice) {
         choice = choice.toUpperCase();
-        //System.out.println("doing nothing for now");
         
         switch (choice) {
             case "S":
-                System.out.println("\nStarting Cove View called");
-                //displayStartingCove();
+                this.startingCove();
                 break;
             case "P":
-                System.out.println("\nPort View called");
-                //PortView.displayPortView();
+                this.portView();
                 break;
             case "C":
-                System.out.println("\nCombat View called");
-                //displayCombatView();
+                this.combatView();
                 break;
             case "M":
-                System.out.println("\nMain Menu View called");
-                //displayMainMenu();
+                this.mainMenuView();
                 break;
             default:
-                System.out.println("\nInvalid value");
+                System.out.println("\n*** Invalid selction ** Try again");
                 break;
         }
         
         return false;
     }
 
-    private static class testOption {
-
-        public testOption() {
-            System.out.println("\ntestOption called");
-        }
+    private void startingCove() {
+        System.out.println("*** startingCove function called ***");
     }
+
+    private void portView() {
+        System.out.println("*** portView function called ***");
+    }
+
+    private void combatView() {
+        System.out.println("*** combatView function called ***");
+    }
+
+    private void mainMenuView() {
+        System.out.println("*** mainMenuView function called ***");
+    }
+    
+
+    
 }
