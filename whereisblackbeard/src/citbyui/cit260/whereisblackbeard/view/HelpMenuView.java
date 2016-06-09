@@ -101,16 +101,16 @@ public class HelpMenuView {
     }
 
     private void moveInGame() {
-        System.out.println("*** moveInGame function called ***");    }
+        System.out.println("*** You move in game by using the letter key and then pressing enter ***");    }
 
     private void resourcesAvailable() {
-        System.out.println("*** resourcesAvailable function called ***");    }
+        System.out.println("*** The in-game window shows how many ammo, food, and water as well as gold ***");    }
 
     private void usingResources() {
-        System.out.println("*** usingResources function called ***");    }
+        System.out.println("*** Resources are removed as you move places or spend gold ***");    }
     
     private void gameTips() {
-        System.out.println("*** gameTips function called ***");    }
+        System.out.println("*** You need to upgrade or you will not be able to proceed ***");    }
 /*
     void displayHelpMenu() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
