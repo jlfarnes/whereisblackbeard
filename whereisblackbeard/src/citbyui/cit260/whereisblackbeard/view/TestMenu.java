@@ -68,7 +68,8 @@ public class TestMenu {
         return value; 
     }
     
-    private void doAction(testOption) {
+    private boolean doAction(String choice) {
+        choice = choice.toUpperCase();
         //System.out.println("doing nothing for now");
         
         switch (choice) {
@@ -92,6 +93,8 @@ public class TestMenu {
                 System.out.println("\nInvalid value");
                 break;
         }
+        
+        return false;
     }
 
     private static class testOption {
