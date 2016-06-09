@@ -48,14 +48,14 @@ public class GameMenuView {
 */
     private void displayHelpMenu() {
         
-        // display the help menue
+        // display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.displayHelpMenuView();
     }
     
     private void displayPort() {
         
-        // display the help menue
+        // display the port menu
         PortView port = new PortView();
         port.displayPortView();
     }

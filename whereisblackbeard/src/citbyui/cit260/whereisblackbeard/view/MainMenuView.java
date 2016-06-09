@@ -84,6 +84,9 @@ public class MainMenuView {
             case "S": // save the current game
                 this.saveGame();
                 break;
+            case "P": // display the port view
+                this.displayPort();
+                break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
                 break;
@@ -114,5 +117,10 @@ public class MainMenuView {
 
     private void saveGame() {
         System.out.println("*** saveGame function called ***");    }
+
+    private void displayPort() {
+        PortView port = new PortView();
+        port.displayPortView();
+    }
     
 }
