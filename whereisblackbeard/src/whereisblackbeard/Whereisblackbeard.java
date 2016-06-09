@@ -25,7 +25,8 @@ import citbyui.cit260.whereisblackbeard.view.PortView;
 import citbyui.cit260.whereisblackbeard.view.TestMenu;
 
 /**
- *
+ *fred
+ * 
  * @author 8440p
  */
 public class Whereisblackbeard {

@@ -31,7 +31,7 @@ public class TestMenu {
     }
     
     public void displayTestMenu() {
-        
+        System.out.println(menus);
         
     /*    do {
             // prompt for and get players name
@@ -43,6 +43,9 @@ public class TestMenu {
             // do the requested action and display the next view
             done = this.doAction(testOption);
         } while (!done); */
+        this.getTestOption();
+        this.doAction(choice);
+    
     }
     
     public String getTestOption() {
