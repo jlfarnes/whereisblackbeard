@@ -15,6 +15,7 @@ public class TestMenu {
     
     private String menus;
     private String choice;
+    private String testOption;
     boolean done = false; // set flag to not done
     
     public void loadTestMenuText() {
@@ -32,16 +33,16 @@ public class TestMenu {
     public void displayTestMenu() {
         
         
-        do {
+    /*    do {
             // prompt for and get players name
             String testOption = this.getTestOption();
             if (testOption.toUpperCase().equals("M")) // user wants to quit
                 //return; // exit the game\
-                displayMainMenu();
+                //displayMainMenu();
             
             // do the requested action and display the next view
             done = this.doAction(testOption);
-        } while (!done);
+        } while (!done); */
     }
     
     public String getTestOption() {
@@ -67,7 +68,7 @@ public class TestMenu {
         return value; 
     }
     
-    public void doAction(testOption) {
+    private void doAction(testOption) {
         //System.out.println("doing nothing for now");
         
         switch (choice) {
@@ -90,6 +91,13 @@ public class TestMenu {
             default:
                 System.out.println("\nInvalid value");
                 break;
+        }
+    }
+
+    private static class testOption {
+
+        public testOption() {
+            System.out.println("\ntestOption called");
         }
     }
 }
