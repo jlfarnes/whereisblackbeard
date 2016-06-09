@@ -28,6 +28,7 @@ public class MainMenuView {
                   + "\nH - Get help with how to play the game"
                   + "\nS - Save game"
                   + "\nP - How to explore the port view"
+                  + "\nG - Go to game menu"
                   + "\nQ - Quit"
                   + "\n----------------------------------------";
     }
@@ -88,6 +89,9 @@ public class MainMenuView {
             case "P": // display the port view
                 this.displayPort();
                 break;
+            case "G": // display the game menu
+                this.displayGameMenu();
+                break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
                 break;
@@ -102,7 +106,7 @@ public class MainMenuView {
         
         // display the game menue
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenu();
     }
 
     private void startExistingGame() {
@@ -122,6 +126,11 @@ public class MainMenuView {
     private void displayPort() {
         PortView port = new PortView();
         port.displayPortView();
+    }
+
+    private void displayGameMenu() {
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayGameMenuView();
     }
     
 }

@@ -5,9 +5,7 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
-import byui.cit260.whereisblackbeard.control.GameControls;
-import byui.cit260.whereisblackbeard.model.Player;
-import whereisblackbeard.Whereisblackbeard;
+import java.util.Scanner;
 
 /**
  *
@@ -15,49 +13,108 @@ import whereisblackbeard.Whereisblackbeard;
  */
 public class GameMenuView {
 
-    void displayMenu() {
-        System.out.println("\n*** displayMenu stub function called ***");
-    }
+    private String gameMenu;
+    // private String promptMessage;
     
-    private boolean doAction(String playersName) {
-        
-        if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: "
-                    + "The name must be greater than one character in length");
-            return false;
+    public GameMenuView() {
+        this.gameMenu = "\n"
+                  + "\n----------------------------------------"
+                  + "\n | Game Menu                          |"
+                  + "\n----------------------------------------"
+                  + "\nF - Food"
+                  + "\nW - Water"
+                  + "\nA - Weapons"
+                  + "\nG - Gold"
+                  + "\n----------------------------------------";
     }
-        
-    // call createPlayer() control function
-        Player player = GameControls.createPlayer(playersName);
-        
-        if (player == null) {
-            System.out.println("\nError creating the player.");
-            return false;
-        }
 
-        // display next view
-        this.displayHelpMenu();
+    public void displayGameMenuView() {
         
-        return true;
-    }
-/*
-    private void displayHelpMenu(Player player) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\ndisplayHelpMenu called"
-    }
-*/
-    private void displayHelpMenu() {
-        
-        // display the help menu
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        boolean done = false; // set flag to not done
+        do {
+            // prompt for and get players name
+            String gameMenuOption = this.getGameMenuOption();
+            if (gameMenuOption.toUpperCase().equals("Q")) // user wants to quit
+                return; // exit the game
+            
+            // do the requested action and display the next view
+            done = this.doAction(gameMenuOption);
+        } while (!done);
     }
     
-    private void displayPort() {
+    private String getGameMenuOption() {
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        String value = ""; // value to be returned
+        boolean valid = false; // initialize to not valid
         
-        // display the port menu
-        PortView port = new PortView();
-        port.displayPortView();
+        while (!valid) { // loop while an invalid value is entered
+            System.out.println("\n" + this.gameMenu);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length()  < 1) {
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+            
+            else if (value.length() > 0) {
+                System.out.println("\nValid value");
+                continue;
+            }
+            
+            break; // end of loop
+        }
+            
+        
+        return value; 
     }
+
+    private boolean doAction(String choice) {
+        choice = choice.toUpperCase(); // convert choice to upper case
+        
+        switch (choice) {
+            case "F": // create and start a new game
+                this.playerFood();
+                break;
+            case "W": // load and existing game
+                this.playerWater();
+                break;
+            case "A": // display the help menu
+                this.playerWeapons();
+                break;
+            case "G": // save the current game
+                this.playerGold();
+                break;
+            default:
+                System.out.println("\n*** Invalid selction ** Try again");
+                break;
+        }
+        
+        return false;
+    }
+
+    private void playerFood() {
+        System.out.println("*** playerFood function called ***");
+    }
+
+    private void playerWater() {
+        System.out.println("*** playerWater function called ***");
+    }
+
+    private void playerWeapons() {
+        System.out.println("*** playerWeapons function called ***");
+    }
+
+    private void playerGold() {
+        System.out.println("*** playerGold function called ***");
+    }
+
+
+    void displayGameMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }
+ 
