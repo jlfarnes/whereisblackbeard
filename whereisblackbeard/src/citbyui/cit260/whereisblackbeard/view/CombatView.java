@@ -116,50 +116,39 @@ public class CombatView {
         if (this.choiceLevel == 2) {
             switch (choice) {
                 case "H":
-                    this.Hail();
+                    this.commView();
+                    choiceLevel = 3;
+                    break;
+                case "F":
+                    this.attackView();
+                    choiceLevel = 4;
+                    break;
+                case "R":
+                    this.runAwayView();
+                    choiceLevel = 5;
+                    break;
+                default:
+                    System.out.println("\nInvalid selection, Try again...");
+                    break;
             }
         }
-        switch (choice) {
-            case "F": // create and start a new game
-                this.foodStores();
-                break;
-            case "W": // load and existing game
-                this.waterStores();
-                break;
-            case "A": // display the help menu
-                this.armoryWeapons();
-                break;
-            case "D": // save the current game
-                this.drydockRepair();
-                break;
-            case "J": // tips for the game
-                this.jobsBoard();
-                break;
-            default:
-                System.out.println("\n*** Invalid selction ** Try again");
-                break;
-        }
-        
+            
         return false;
     }
 
-    private void foodStores() {
+    private void commView() {
         System.out.println("*** foodStores function called ***");
     }
 
-    private void waterStores() {
+    private void attackView() {
         System.out.println("*** waterStores function called ***");
     }
 
-    private void armoryWeapons() {
+    private void runAwayView() {
         System.out.println("*** armoryWeapons function called ***");
     }
 
-    private void drydockRepair() {
+    private void runToPortView() {
         System.out.println("*** drydockRepair function called ***");
-    }
-
-    private void jobsBoard() {
-        System.out.println("*** jobsBoard function called ***");
     }
 }
