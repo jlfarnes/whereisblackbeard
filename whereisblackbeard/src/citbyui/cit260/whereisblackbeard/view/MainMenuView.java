@@ -29,6 +29,7 @@ public class MainMenuView {
                   + "\nS - Save game"
                   + "\nP - How to explore the port view"
                   + "\nG - Go to game menu"
+                  + "\nT - Test Menu"
                   + "\nQ - Quit"
                   + "\n----------------------------------------";
     }
@@ -92,6 +93,9 @@ public class MainMenuView {
             case "G": // display the game menu
                 this.displayGameMenu();
                 break;
+            case "T": // display the game menu
+                this.displayTestMenu();
+                break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
                 break;
@@ -131,6 +135,13 @@ public class MainMenuView {
     private void displayGameMenu() {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayGameMenuView();
+    }
+
+    private void displayTestMenu() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        TestMenu testMenu = new TestMenu();
+        testMenu.displayTestMenu();
     }
     
 }
