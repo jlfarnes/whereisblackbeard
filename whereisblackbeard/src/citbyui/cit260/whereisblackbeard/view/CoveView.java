@@ -11,4 +11,8 @@ package citbyui.cit260.whereisblackbeard.view;
  */
 public class CoveView {
     
+    
+    public void displayCoveView() {
+        System.out.println("called displayCoveView");
+    }
 }

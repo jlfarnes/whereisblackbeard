@@ -34,18 +34,18 @@ public class TestMenu {
         this.loadTestMenuText();
         System.out.println(menus);
         
-    /*    do {
+        do {
             // prompt for and get players name
             String testOption = this.getTestOption();
             if (testOption.toUpperCase().equals("M")) // user wants to quit
-                //return; // exit the game\
+                return; // exit the game\
                 //displayMainMenu();
             
             // do the requested action and display the next view
             done = this.doAction(testOption);
-        } while (!done); */
-        this.getTestOption();
-        this.doAction(choice);
+        } while (!done); 
+        testOption = this.getTestOption();
+        this.doAction(testOption);
     
     }
     
@@ -78,15 +78,19 @@ public class TestMenu {
         switch (choice) {
             case "S":
                 this.startingCove();
+                //return true;
                 break;
             case "P":
                 this.portView();
+                //return true;
                 break;
             case "C":
                 this.combatView();
+                //return true;
                 break;
             case "M":
                 this.mainMenuView();
+                //return true;
                 break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
@@ -98,18 +102,28 @@ public class TestMenu {
 
     private void startingCove() {
         System.out.println("*** startingCove function called ***");
+        CoveView cove = new CoveView();
+        cove.displayCoveView();
     }
 
     private void portView() {
         System.out.println("*** portView function called ***");
+        PortView port = new PortView();
+        port.displayPortView();
     }
 
     private void combatView() {
         System.out.println("*** combatView function called ***");
+        CombatView combat = new CombatView();
+        combat.displayCombatView();
     }
 
     private void mainMenuView() {
         System.out.println("*** mainMenuView function called ***");
+        //MainMenuView.displayMainMenu();
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMainMenuView();
+        //return;
     }
     
 
