@@ -106,7 +106,7 @@ public class StartProgramView {
     private void displayNextView(Player player) {
         // display a custom welcome message
         System.out.println("\n============================================="
-                          + "\n Welcome to the game " + player.getPlayerName()
+                          + "\n Welcome to the game, " + player.getPlayerName()
                           + "\n We hope you have a lot of fun!"
                           + "\n============================================="
                           );
