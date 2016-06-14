@@ -9,10 +9,19 @@ package citbyui.cit260.whereisblackbeard.view;
  *
  * @author 8440p
  */
-public class CoveView {
+public class CoveView extends View {
     
     
     public void displayCoveView() {
         System.out.println("called displayCoveView");
     }
+
+    @Override
+    public boolean doAction(String value) {
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\nImplement CoveView");
+        
+        return true;
+    }
+    
 }

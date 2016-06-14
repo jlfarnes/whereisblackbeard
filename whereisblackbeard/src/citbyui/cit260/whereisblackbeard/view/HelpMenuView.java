@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author josephclark
  */
-public class HelpMenuView {
+public class HelpMenuView extends View {
 
     private String helpMenu;
     // private String promptMessage;
@@ -67,7 +67,8 @@ public class HelpMenuView {
         return value; 
     }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {

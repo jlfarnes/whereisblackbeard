@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author josephclark
  */
-public class GameMenuView {
+public class GameMenuView extends View {
 
     private String gameMenu;
     // private String promptMessage;
@@ -70,7 +70,8 @@ public class GameMenuView {
         return value; 
     }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {

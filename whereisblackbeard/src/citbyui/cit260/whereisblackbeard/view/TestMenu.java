@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author jlfarnes
  */
-public class TestMenu {
+public class TestMenu extends View {
     
     private String menus;
     private String choice;
@@ -72,7 +72,8 @@ public class TestMenu {
         return value; 
     }
     
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         
         switch (choice) {

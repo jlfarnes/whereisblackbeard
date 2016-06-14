@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author jlfarnes
  */
-public class CombatView {
+public class CombatView extends View {
     
     private String combatView;
     private String commView;
@@ -132,7 +132,8 @@ public class CombatView {
         return value; 
     }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         System.out.println("Choice level is" + choiceLevel);
         

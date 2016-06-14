@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author josephclark
  */
-public class PortView {
+public class PortView extends View {
 
     private String port;
     // private String promptMessage;
@@ -66,7 +66,8 @@ public class PortView {
         return value; 
     }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
