@@ -13,13 +13,14 @@ import whereisblackbeard.Whereisblackbeard;
  *
  * @author josephclark
  */
-public class MainMenuView {
+public class MainMenuView extends View {
     
-    private String menu;
+    // private String menu;
     // private String promptMessage;
     
     public MainMenuView() {
-        this.menu = "\n"
+        // this.menu = 
+                    super("\n"
                   + "\n----------------------------------------"
                   + "\n | Main Menu                           |"
                   + "\n----------------------------------------"
@@ -31,47 +32,48 @@ public class MainMenuView {
                   + "\nG - Go to game menu"
                   + "\nT - Test Menu"
                   + "\nQ - Quit"
-                  + "\n----------------------------------------";
+                  + "\n----------------------------------------");
     }
 
-    public void displayMainMenuView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        } while (!done);
-    }
-    
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-        
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length()  < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-            
-            break; // end of loop
-        }
-            
-        
-        return value; 
-    }
+//    public void displayMainMenuView() {
+//        
+//        boolean done = false; // set flag to not done
+//        do {
+//            // prompt for and get players name
+//            String menuOption = this.getMenuOption();
+//            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
+//                return; // exit the game
+//            
+//            // do the requested action and display the next view
+//            done = this.doAction(menuOption);
+//        } while (!done);
+//    }
+//    
+//    private String getMenuOption() {
+//        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//        String value = ""; // value to be returned
+//        boolean valid = false; // initialize to not valid
+//        
+//        while (!valid) { // loop while an invalid value is entered
+//            System.out.println("\n" + this.menu);
+//            
+//            value = keyboard.nextLine();
+//            value = value.trim();
+//            
+//            if (value.length()  < 1) {
+//                System.out.println("\nInvalid value: value cannot be blank");
+//                continue;
+//            }
+//            
+//            break; // end of loop
+//        }
+//            
+//        
+//        return value; 
+//    }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {

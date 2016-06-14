@@ -122,7 +122,7 @@ public class TestMenu {
         System.out.println("*** mainMenuView function called ***");
         //MainMenuView.displayMainMenu();
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMainMenuView();
+        mainMenu.display();
         //return;
     }
     
