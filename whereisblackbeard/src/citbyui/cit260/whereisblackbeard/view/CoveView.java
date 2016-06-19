@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public class CoveView extends View {
     
@@ -18,6 +18,11 @@ public class CoveView extends View {
     
     public void displayCoveView() {
         // System.out.println("called displayCoveView");
+        
+        // Get cove name from elsewhere
+        // coveName = inputCoveVarHere;
+        
+        //
         this.coveMenu = "\n"
                   + "\n----------------------------------------"
                   + "\n | " + coveName
@@ -93,15 +98,16 @@ public class CoveView extends View {
     private void displayInventory() {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
-        System.out.println("*** displayInventory function called ***");
-        //displayInventoryMenuView();
+        //System.out.println("*** displayInventory function called ***");
+        InventoryMenuView invMenu = new InventoryMenuView();
+        invMenu.displayInventoryMenuView();
     }
     
     private void displayTask() {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
-        System.out.println("*** displayTask function called ***");
-        //displayInventoryMenuView();
+        //System.out.println("*** displayTask function called ***");
+        System.out.println("Go sail your skiff to a Port...");
     }
     
     private void displayPortTravelMenu() {

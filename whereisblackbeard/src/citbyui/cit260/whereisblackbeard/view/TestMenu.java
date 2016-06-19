@@ -102,26 +102,25 @@ public class TestMenu extends View {
     }
 
     private void startingCove() {
-        System.out.println("*** startingCove function called ***");
+        //System.out.println("*** startingCove function called ***");
         CoveView cove = new CoveView();
         cove.displayCoveView();
     }
 
     private void portView() {
-        System.out.println("*** portView function called ***");
+        //System.out.println("*** portView function called ***");
         PortView port = new PortView();
         port.displayPortView();
     }
 
     private void combatView() {
-        System.out.println("*** combatView function called ***");
+        //System.out.println("*** combatView function called ***");
         CombatView combat = new CombatView();
         combat.displayCombatView();
     }
 
     private void mainMenuView() {
-        System.out.println("*** mainMenuView function called ***");
-        //MainMenuView.displayMainMenu();
+        //System.out.println("*** mainMenuView function called ***");
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
         //return;
