@@ -33,6 +33,8 @@ public class CoveView extends View {
                   + "\nG - Go somewhere else"
                   + "\n----------------------------------------";
         
+         System.out.println(coveMenu);
+        
         boolean done = false; // set flag to not done
         do {
             // prompt for and get players name
@@ -76,7 +78,7 @@ public class CoveView extends View {
     public boolean doAction(String value) {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         //System.out.println("\nImplement CoveView");
-        
+        value = value.toUpperCase();
         switch (value) {
             case "R":
                 this.displayInventory();
