@@ -79,7 +79,7 @@ public class HelpMenuView extends View {
                 this.moveInGame();
                 break;
             case "R": // display the help menu
-                this.resourcesAvailable();
+                this.displayInventoryMenu();
                 break;
             case "U": // save the current game
                 this.usingResources();
@@ -112,6 +112,11 @@ public class HelpMenuView extends View {
     
     private void gameTips() {
         System.out.println("*** You need to upgrade or you will not be able to proceed ***");    }
+    
+    private void displayInventoryMenu() {
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.displayInventoryMenuView();
+    }
 /*
     void displayHelpMenu() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
