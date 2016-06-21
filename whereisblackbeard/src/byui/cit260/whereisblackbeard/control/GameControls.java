@@ -23,7 +23,7 @@ public class GameControls {
         }
         
         Player player = new Player();
-        player.setPlayerName(name);
+        player.playerName = name;
         
         Whereisblackbeard.setPlayer(player); //save the player
         

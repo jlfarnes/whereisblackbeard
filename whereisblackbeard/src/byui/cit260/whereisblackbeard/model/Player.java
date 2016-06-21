@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Player implements Serializable {
     
-    private String playerName ;
+    public String playerName ;
     private String playerChar;
     private int playerBonus;
     private int playerDiplomacy;
@@ -30,7 +30,7 @@ public class Player implements Serializable {
     }
     
     
-
+/*
     public String getPlayerName() {
         return playerName;
     }
@@ -38,7 +38,7 @@ public class Player implements Serializable {
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
-
+*/
     public String getPlayerChar() {
         return playerChar;
     }
@@ -70,15 +70,15 @@ public class Player implements Serializable {
     public void setPlayerCunning(int playerCunning) {
         this.playerCunning = playerCunning;
     }
-
     public int getPlayerStrength() {
+
         return playerStrength;
     }
 
     public void setPlayerStrength(int playerStrength) {
         this.playerStrength = playerStrength;
     }
-
+/*
     @Override
     public int hashCode() {
         int hash = 7;
@@ -122,7 +122,7 @@ public class Player implements Serializable {
             return false;
         }
         return true;
-    }
+    } */
 
     @Override
     public String toString() {
