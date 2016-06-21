@@ -13,84 +13,94 @@ import java.util.Objects;
  *
  * @author josephclark
  */
-public class Market implements Serializable {
+public enum Market implements Serializable {
+    
+    Diplomats_Bag(""),
+    Pirates_Hat(""),
+    Dead_Parrot("He's not dead, he's just sleeping");
     
     private String foodForSale;
     private String waterForSale;
     private String clothForSale;
     private String accessories;
 
-    public Market() {
+//    public Market() {
+//    }
+    
+    Market(String xForSale) {
+        this.foodForSale = xForSale;
+        this.waterForSale = xForSale;
+        this.clothForSale = xForSale;
     }
 
     public String getFoodForSale() {
         return foodForSale;
     }
 
-    public void setFoodForSale(String foodForSale) {
-        this.foodForSale = foodForSale;
-    }
+//    public void setFoodForSale(String foodForSale) {
+//        this.foodForSale = foodForSale;
+//    }
 
     public String getWaterForSale() {
         return waterForSale;
     }
 
-    public void setWaterForSale(String waterForSale) {
-        this.waterForSale = waterForSale;
-    }
+//    public void setWaterForSale(String waterForSale) {
+//        this.waterForSale = waterForSale;
+//    }
 
     public String getClothForSale() {
         return clothForSale;
     }
 
-    public void setClothForSale(String clothForSale) {
-        this.clothForSale = clothForSale;
-    }
+//    public void setClothForSale(String clothForSale) {
+//        this.clothForSale = clothForSale;
+//    }
 
-    public String getAccessories() {
-        return accessories;
-    }
+//    public String getAccessories() {
+//        return accessories;
+//    }
 
-    public void setAccessories(String accessories) {
-        this.accessories = accessories;
-    }
+//    public void setAccessories(String accessories) {
+//        this.accessories = accessories;
+//    }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.foodForSale);
-        hash = 53 * hash + Objects.hashCode(this.waterForSale);
-        hash = 53 * hash + Objects.hashCode(this.clothForSale);
-        hash = 53 * hash + Objects.hashCode(this.accessories);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Market other = (Market) obj;
-        if (!Objects.equals(this.foodForSale, other.foodForSale)) {
-            return false;
-        }
-        if (!Objects.equals(this.waterForSale, other.waterForSale)) {
-            return false;
-        }
-        if (!Objects.equals(this.clothForSale, other.clothForSale)) {
-            return false;
-        }
-        if (!Objects.equals(this.accessories, other.accessories)) {
-            return false;
-        }
-        return true;
-    }
+//    @Override
+//    public int hashCode() {
+//        int hash = 7;
+//        hash = 53 * hash + Objects.hashCode(this.foodForSale);
+//        hash = 53 * hash + Objects.hashCode(this.waterForSale);
+//        hash = 53 * hash + Objects.hashCode(this.clothForSale);
+//        hash = 53 * hash + Objects.hashCode(this.accessories);
+//        return hash;
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Market other = (Market) obj;
+//        if (!Objects.equals(this.foodForSale, other.foodForSale)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.waterForSale, other.waterForSale)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.clothForSale, other.clothForSale)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.accessories, other.accessories)) {
+//            return false;
+//        }
+//        return true;
+//    }
 
     
     
