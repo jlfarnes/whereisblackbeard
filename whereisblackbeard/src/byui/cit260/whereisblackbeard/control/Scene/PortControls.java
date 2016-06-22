@@ -4,12 +4,6 @@
  * and open the template in the editor.
  */
 package byui.cit260.whereisblackbeard.control.Scene;
-// import java.io.Serializable;
-// import byui.cit260.whereisblackbeard.model.PlayerInventory;
-// import byui.cit260.whereisblackbeard.model.Market;
-
-//vars
-
 
 /**
  *

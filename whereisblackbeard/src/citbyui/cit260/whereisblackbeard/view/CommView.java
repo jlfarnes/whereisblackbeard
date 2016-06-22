@@ -30,19 +30,19 @@ public class CommView extends View {
                 case "D":
                     System.out.println("\nDiplomacy called, returning to Combat menu");
                 //    choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     // this.commView();
                     break;
                 case "L":
                     System.out.println("\nDeception called, returning to Combat menu");
                 //    choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     // this.attackView();
                     break;
                 case "T":
                     System.out.println("\nTrade&Barter called, returning to Combat menu");
                 //    choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     // this.runAwayView();
                     break;
                 default:

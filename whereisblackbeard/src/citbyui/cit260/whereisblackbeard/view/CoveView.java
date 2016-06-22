@@ -5,8 +5,6 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author jlfarnes

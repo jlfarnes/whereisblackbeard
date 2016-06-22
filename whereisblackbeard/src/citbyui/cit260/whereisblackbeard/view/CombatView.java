@@ -5,8 +5,6 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author jlfarnes
@@ -29,9 +27,7 @@ public class CombatView extends View {
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
-        //System.out.println("Choice level is" + choiceLevel);
-        
-        switch (choice) {
+       switch (choice) {
                 case "H":
                     //choiceLevel = 3;
                     this.commView();

@@ -7,7 +7,7 @@ package citbyui.cit260.whereisblackbeard.view;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public class RunToPortView extends View{
     
@@ -30,6 +30,7 @@ public class RunToPortView extends View{
     public boolean doAction(String choice) {
         System.out.println("\n Port called - flesh me out with all 25 Port names"
                          + "\n really should just call the map view here...");
+        choice = choice.toUpperCase(); // convert choice to upper case
         switch (choice) {
                 case "L":
                     //choiceLevel = 2;
@@ -42,7 +43,7 @@ public class RunToPortView extends View{
                 case "D":
                     System.out.println("\nDon't Run Away called, returning to Combat menu");
                     //choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     break;
                 default:
                     System.out.println("\nInvalid selection, dropping to main combat menu");

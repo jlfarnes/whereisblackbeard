@@ -7,7 +7,7 @@ package citbyui.cit260.whereisblackbeard.view;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public class RunAwayView extends View {
     
@@ -25,6 +25,7 @@ public class RunAwayView extends View {
     
     @Override
     public boolean doAction(String choice) {
+        choice = choice.toUpperCase(); // convert choice to upper case
         switch (choice) {
                 case "C":
                     //choiceLevel = 2;
@@ -32,7 +33,8 @@ public class RunAwayView extends View {
                     break;
                 case "P":
                     //choiceLevel = 6;
-                    this.runToPortView();
+                    //this.runToPortView();
+                    System.out.println("\n Calling the Map Selection View");
                     break;
                 case "D":
                     System.out.println("\nDon't Run Away called, returning to Combat menu");

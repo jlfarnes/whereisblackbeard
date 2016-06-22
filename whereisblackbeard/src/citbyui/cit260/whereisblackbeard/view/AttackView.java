@@ -16,7 +16,7 @@ public class AttackView extends View {
                   + "\n----------------------------------------"
                   + "\n | Attack Enemy Ship                   |"
                   + "\n----------------------------------------"
-                  + "\nS - Hail the other ship"
+                  + "\nS - Single Shot"
                   + "\nF - Fire at Will"
                   + "\nB - Broadside"
                   + "\nC - Cancel"
@@ -25,22 +25,23 @@ public class AttackView extends View {
     
     @Override
     public boolean doAction(String choice) {
+        choice = choice.toUpperCase(); // convert choice to upper case
         switch (choice) {
                 case "S":
                     System.out.println("\nSingle Shot called, returning to Combat menu");
                     //choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     break;
                 case "F":
                     System.out.println("\nFire At Will called, returning to Combat menu");
                     //choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     //this.attackView();
                     break;
                 case "B":
                     System.out.println("\nBroadside called, returning to Combat menu");
                     //choiceLevel = 2;
-                    this.display();
+                    //this.display();
                     //this.runAwayView();
                     break;
                 default:
