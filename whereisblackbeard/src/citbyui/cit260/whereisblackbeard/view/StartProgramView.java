@@ -15,29 +15,26 @@ import java.util.Scanner;
  */
 public class StartProgramView extends View {
     
-    private String promptMessage;
+    // private String promptMessage;
     
     public StartProgramView() {
-    this.promptMessage = "\nPlease enter your name: ";
-    //display the banner when view is created
-    this.displayBanner();
-}
-
-    public void displayBanner() {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println(
-                "\n**************************************************"
+          super("\n**************************************************"
               + "\n*                                                *"
               + "\n* Enter banner lore here                         *"
               + "\n*                                                *"
               + "\n**************************************************"
+              + "\nPlease enter your name: "
                 );
-    }
-
+        
+        //this.promptMessage = ;
+    //display the banner when view is created
+    //this.display();
+}
+/*
     public void displayStartProgramView() {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
-        System.out.println("\n*** displayStartProgram() function called ***");
+        //System.out.println("\n*** displayStartProgram() function called ***");
         
         boolean done = false;
         do {
@@ -80,7 +77,7 @@ public class StartProgramView extends View {
         
         return value; 
     }
-
+*/
     @Override
     public boolean doAction(String playersName) {
         

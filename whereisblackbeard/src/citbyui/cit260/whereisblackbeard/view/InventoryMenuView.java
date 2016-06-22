@@ -27,7 +27,7 @@ public class InventoryMenuView extends View {
                   + "\nA - Cannonballs"
                   + "\n----------------------------------------";
     }
-
+/*
     public void displayInventoryMenuView() {
         
         boolean done = false; // set flag to not done
@@ -64,7 +64,7 @@ public class InventoryMenuView extends View {
         
         return value; 
     }
-
+*/
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case

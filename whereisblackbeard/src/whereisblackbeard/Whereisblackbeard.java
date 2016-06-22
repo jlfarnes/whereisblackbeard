@@ -59,7 +59,7 @@ public class Whereisblackbeard {
         
         // start the program view
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        startProgramView.display();
         
         /*
         // Author: Joseph Clark

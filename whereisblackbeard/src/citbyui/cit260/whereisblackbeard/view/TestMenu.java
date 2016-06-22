@@ -18,8 +18,8 @@ public class TestMenu extends View {
     private String testOption;
     boolean done = false; // set flag to not done
     
-    public void loadTestMenuText() {
-        this.menus = "\n"
+    public TestMenu() {
+            super("\n"
                 + "\nTest Menu"
                 + "\n========="
                 + "\nS - Starting Cove View"
@@ -27,51 +27,9 @@ public class TestMenu extends View {
                 + "\nC - Combat View"
                 + "\n"
                 + "\n============="
-                + "\nM - Main Menu";
+                + "\nM - Main Menu");
     }
-    
-    public void displayTestMenu() {
-        this.loadTestMenuText();
-        System.out.println(menus);
         
-        do {
-            // prompt for and get players name
-            String testOption = this.getTestOption();
-            if (testOption.toUpperCase().equals("M")) // user wants to quit
-                return; // exit the game\
-                //displayMainMenu();
-            
-            // do the requested action and display the next view
-            done = this.doAction(testOption);
-        } while (!done); 
-        testOption = this.getTestOption();
-        this.doAction(testOption);
-    
-    }
-    
-    public String getTestOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-        
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.choice);
-            
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length()  < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-            
-            break; // end of loop
-        }
-            
-        
-        return value; 
-    }
-    
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
@@ -104,19 +62,19 @@ public class TestMenu extends View {
     private void startingCove() {
         //System.out.println("*** startingCove function called ***");
         CoveView cove = new CoveView();
-        cove.displayCoveView();
+        cove.display();
     }
 
     private void portView() {
         //System.out.println("*** portView function called ***");
         PortView port = new PortView();
-        port.displayPortView();
+        port.display();
     }
 
     private void combatView() {
         //System.out.println("*** combatView function called ***");
         CombatView combat = new CombatView();
-        combat.displayCombatView();
+        combat.display();
     }
 
     private void mainMenuView() {

@@ -13,11 +13,11 @@ import java.io.Serializable;
  */
 public class Game implements Serializable {
     
-    private defeatBlackbeard;
+    private boolean defeatBlackbeard = false;
     private double totalTime;
-    private locationVisited;
+    private boolean locationVisited = false;
     
-    private Ship ship;
+    //private Ship ship;
     
     
 }

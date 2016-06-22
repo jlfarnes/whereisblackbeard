@@ -14,13 +14,9 @@ import whereisblackbeard.Whereisblackbeard;
  * @author josephclark
  */
 public class MainMenuView extends View {
-    
-    // private String menu;
-    // private String promptMessage;
-    
+        
     public MainMenuView() {
-        // this.menu = 
-                    super("\n"
+              super("\n"
                   + "\n----------------------------------------"
                   + "\n | Main Menu                           |"
                   + "\n----------------------------------------"
@@ -34,43 +30,6 @@ public class MainMenuView extends View {
                   + "\nQ - Quit"
                   + "\n----------------------------------------");
     }
-
-//    public void displayMainMenuView() {
-//        
-//        boolean done = false; // set flag to not done
-//        do {
-//            // prompt for and get players name
-//            String menuOption = this.getMenuOption();
-//            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-//                return; // exit the game
-//            
-//            // do the requested action and display the next view
-//            done = this.doAction(menuOption);
-//        } while (!done);
-//    }
-//    
-//    private String getMenuOption() {
-//        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-//        String value = ""; // value to be returned
-//        boolean valid = false; // initialize to not valid
-//        
-//        while (!valid) { // loop while an invalid value is entered
-//            System.out.println("\n" + this.menu);
-//            
-//            value = keyboard.nextLine();
-//            value = value.trim();
-//            
-//            if (value.length()  < 1) {
-//                System.out.println("\nInvalid value: value cannot be blank");
-//                continue;
-//            }
-//            
-//            break; // end of loop
-//        }
-//            
-//        
-//        return value; 
-//    }
 
     @Override
     public boolean doAction(String choice) {
@@ -112,7 +71,7 @@ public class MainMenuView extends View {
         
         // display the game menue
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenu();
+        gameMenu.display();
     }
 
     private void startExistingGame() {
@@ -123,7 +82,8 @@ public class MainMenuView extends View {
         //
         // display the help menue
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        // helpMenu.displayHelpMenuView();
+        helpMenu.display();        
     }
 
     private void saveGame() {
@@ -131,19 +91,19 @@ public class MainMenuView extends View {
 
     private void displayPort() {
         PortView port = new PortView();
-        port.displayPortView();
+        port.display();
     }
 
     private void displayGameMenu() {
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
+        gameMenu.display();
     }
 
     private void displayTestMenu() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
         TestMenu testMenu = new TestMenu();
-        testMenu.displayTestMenu();
+        testMenu.display();
     }
     
 }

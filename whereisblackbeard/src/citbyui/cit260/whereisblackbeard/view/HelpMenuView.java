@@ -13,11 +13,12 @@ import java.util.Scanner;
  */
 public class HelpMenuView extends View {
 
-    private String helpMenu;
+    //private String helpMenu;
     // private String promptMessage;
     
     public HelpMenuView() {
-        this.helpMenu = "\n"
+    //    this.helpMenu = 
+                    super("\n"
                   + "\n----------------------------------------"
                   + "\n | Help Menu                           |"
                   + "\n----------------------------------------"
@@ -27,9 +28,9 @@ public class HelpMenuView extends View {
                   + "\nU - Using resources"
                   + "\nT - Tips"
                   + "\nQ - Quit"
-                  + "\n----------------------------------------";
+                  + "\n----------------------------------------");
     }
-
+/*
     public void displayHelpMenuView() {
         
         boolean done = false; // set flag to not done
@@ -65,7 +66,7 @@ public class HelpMenuView extends View {
             
         
         return value; 
-    }
+    } */
 
     @Override
     public boolean doAction(String choice) {
@@ -115,12 +116,8 @@ public class HelpMenuView extends View {
     
     private void displayInventoryMenu() {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.displayInventoryMenuView();
+        inventoryMenu.display();
     }
-/*
-    void displayHelpMenu() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-*/
+
 }
  

@@ -13,11 +13,12 @@ import java.util.Scanner;
  */
 public class PortView extends View {
 
-    private String port;
+    // private String port;
     // private String promptMessage;
     
     public PortView() {
-        this.port = "\n"
+        //this.port = 
+                super("\n"
                   + "\n----------------------------------------"
                   + "\n | Exploring a Port                           |"
                   + "\n----------------------------------------"
@@ -26,44 +27,7 @@ public class PortView extends View {
                   + "\nA - Armory"
                   + "\nD - Drydock"
                   + "\nJ - Jobs"
-                  + "\n----------------------------------------";
-    }
-
-    public void displayPortView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String portOption = this.getPortOption();
-            if (portOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(portOption);
-        } while (!done);
-    }
-    
-    private String getPortOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-        
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.port);
-            
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length()  < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-            
-            break; // end of loop
-        }
-            
-        
-        return value; 
+                  + "\n----------------------------------------");
     }
 
     @Override

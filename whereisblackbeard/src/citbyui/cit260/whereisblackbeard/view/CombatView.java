@@ -23,14 +23,15 @@ public class CombatView extends View {
     // private String promptMessage;
     
     public CombatView() {
-        this.combatView = "\n"
+        // this.combatView = 
+                super("\n"
                   + "\n----------------------------------------"
                   + "\n | In Combat                           |"
                   + "\n----------------------------------------"
                   + "\nH - Hail the other ship"
                   + "\nF - Fire"
                   + "\nR - Run Away"
-                  + "\n----------------------------------------";
+                  + "\n----------------------------------------");
         
         this.commView = "\n"
                   + "\n----------------------------------------"
@@ -72,20 +73,6 @@ public class CombatView extends View {
                   + "\nF - Florida Keys"
                   + "\nC - Cancel"
                   + "\n----------------------------------------";
-    }
-
-    public void displayCombatView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String combatOption = this.getCombatOption();
-            if (combatOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(combatOption);
-        } while (!done);
     }
     
     private String getCombatOption() {
@@ -130,7 +117,7 @@ public class CombatView extends View {
             
         
         return value; 
-    }
+    } 
 
     @Override
     public boolean doAction(String choice) {
@@ -162,19 +149,19 @@ public class CombatView extends View {
                 case "D":
                     System.out.println("\nDiplomacy called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     // this.commView();
                     break;
                 case "L":
                     System.out.println("\nDeception called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     // this.attackView();
                     break;
                 case "T":
                     System.out.println("\nTrade&Barter called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     // this.runAwayView();
                     break;
                 default:
@@ -187,18 +174,18 @@ public class CombatView extends View {
                 case "S":
                     System.out.println("\nSingle Shot called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     break;
                 case "F":
                     System.out.println("\nFire At Will called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     //this.attackView();
                     break;
                 case "B":
                     System.out.println("\nBroadside called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     //this.runAwayView();
                     break;
                 default:
@@ -219,7 +206,7 @@ public class CombatView extends View {
                 case "D":
                     System.out.println("\nDon't Run Away called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     break;
                 default:
                     System.out.println("\nInvalid selection, Try again...");
@@ -239,7 +226,7 @@ public class CombatView extends View {
                 case "D":
                     System.out.println("\nDon't Run Away called, returning to Combat menu");
                     choiceLevel = 2;
-                    this.displayCombatView();
+                    this.display();
                     break;
                 default:
                     System.out.println("\nInvalid selection, dropping to main combat menu");
