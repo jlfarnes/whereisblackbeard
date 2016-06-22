@@ -28,7 +28,8 @@ public class RunToPortView extends View{
     
     @Override
     public boolean doAction(String choice) {
-        System.out.println("\n Port called - flesh me out with all 25 Port names");
+        System.out.println("\n Port called - flesh me out with all 25 Port names"
+                         + "\n really should just call the map view here...");
         switch (choice) {
                 case "L":
                     //choiceLevel = 2;

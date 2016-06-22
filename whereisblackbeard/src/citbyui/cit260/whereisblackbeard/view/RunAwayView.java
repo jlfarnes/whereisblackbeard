@@ -28,7 +28,7 @@ public class RunAwayView extends View {
         switch (choice) {
                 case "C":
                     //choiceLevel = 2;
-                    this.CoveView();
+                    this.coveView();
                     break;
                 case "P":
                     //choiceLevel = 6;
@@ -47,7 +47,7 @@ public class RunAwayView extends View {
         return false;
     }
     
-    private void CoveView() {
+    private void coveView() {
         //System.out.println("*** CoveView function called ***");
         CoveView cove = new CoveView();
         cove.display();
