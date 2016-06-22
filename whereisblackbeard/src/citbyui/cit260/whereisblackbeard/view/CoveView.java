@@ -55,17 +55,15 @@ public class CoveView extends View {
     }
     
     private void displayTask() {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
+               
         //System.out.println("*** displayTask function called ***");
         System.out.println("Go sail your skiff to a Port...");
     }
     
     private void displayPortTravelMenu() {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
+        //System.out.println("*** displayPortTravelMenu function called ***");
         
-        System.out.println("*** displayPortTravelMenu function called ***");
-        //displayInventoryMenuView();
         PortView port = new PortView();
         port.display();
     }

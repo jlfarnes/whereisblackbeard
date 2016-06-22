@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package citbyui.cit260.whereisblackbeard.view;
+
+/**
+ *
+ * @author jlfarnes
+ */
+public class AttackView extends View {
+    
+    public AttackView() {
+              super("\n"
+                  + "\n----------------------------------------"
+                  + "\n | Attack Enemy Ship                   |"
+                  + "\n----------------------------------------"
+                  + "\nS - Hail the other ship"
+                  + "\nF - Fire at Will"
+                  + "\nB - Broadside"
+                  + "\nC - Cancel"
+                  + "\n----------------------------------------");
+    }
+    
+    @Override
+    public boolean doAction(String choice) {
+        switch (choice) {
+                case "S":
+                    System.out.println("\nSingle Shot called, returning to Combat menu");
+                    //choiceLevel = 2;
+                    this.display();
+                    break;
+                case "F":
+                    System.out.println("\nFire At Will called, returning to Combat menu");
+                    //choiceLevel = 2;
+                    this.display();
+                    //this.attackView();
+                    break;
+                case "B":
+                    System.out.println("\nBroadside called, returning to Combat menu");
+                    //choiceLevel = 2;
+                    this.display();
+                    //this.runAwayView();
+                    break;
+                default:
+                    System.out.println("\nInvalid selection, Try again...");
+                    break;
+            }
+        return false;
+    }
+}
