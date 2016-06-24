@@ -5,19 +5,19 @@
  */
 package byui.cit260.whereisblackbeard.model;
 
-import static byui.cit260.whereisblackbeard.control.Scene.PortControls.location;
+//import static byui.cit260.whereisblackbeard.control.Scene.PortControls.location;
 import java.io.Serializable;
-import java.util.Objects;
+//import java.util.Objects;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public class Map implements Serializable {
     
     private String locName;
     
-    private Location[][] location;
+    //private Location[][] location;
     private int noOfRows;
     private int noOfColumns;
     private Location[][] locations;
@@ -32,7 +32,7 @@ public class Map implements Serializable {
         this.noOfRows = noOfRows;
         this.noOfColumns = noOfColumns;
         
-        this.location = new Location[noOfRows][noOfColumns];
+        this.locations = new Location[noOfRows][noOfColumns];
         
         for (int row = 0; row < noOfRows; row++) {
             for (int column = 0; column < noOfColumns; column++) {
@@ -58,11 +58,11 @@ public class Map implements Serializable {
     }
 
     public Location[][] getLocation() {
-        return location;
+        return locations;
     }
 
     public void setLocation(Location[][] location) {
-        this.location = location;
+        this.locations = location;
     }
 
     public int getNoOfRows() {
