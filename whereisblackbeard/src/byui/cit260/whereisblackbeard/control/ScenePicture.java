@@ -9,7 +9,16 @@ package byui.cit260.whereisblackbeard.control;
  *
  * @author josephclark
  */
-public class ScenePicture {
+public enum ScenePicture {
+    
+    start,
+    cove,
+    port,
+    store,
+    combat,
+    ship,
+    jobs,
+    finish;
     
     // Draw scene function with bounds
     
