@@ -59,7 +59,7 @@ public enum Location implements Serializable {
 //    public Location() {
 //    }
 
-    Location (String description) {
+    Location(String description) {
         this.description = description;
         coordinates = new Point(1,1);
     }

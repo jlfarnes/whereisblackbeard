@@ -21,14 +21,7 @@ public class Map implements Serializable {
     private int noOfRows;
     private int noOfColumns;
     private Location[][] locations;
-/*
-    public Map(String locName, int rows, int cols) {
-        this.locName = locName;
-    }
 
-    public Map() {
-    }
-*/
     public Map(int noOfRows, int noOfColumns) {
         
         if (noOfRows < 1 || noOfColumns < 1) {
@@ -89,43 +82,8 @@ public class Map implements Serializable {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.locName);
-        hash = 97 * hash + this.noOfRows;
-        hash = 97 * hash + this.noOfColumns;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Map other = (Map) obj;
-        if (this.noOfRows != other.noOfRows) {
-            return false;
-        }
-        if (this.noOfColumns != other.noOfColumns) {
-            return false;
-        }
-        if (!Objects.equals(this.locName, other.locName)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
     public String toString() {
         return "Map{" + "locName=" + locName + ", rows=" + noOfRows + ", cols=" + noOfColumns + '}';
     }
-    
-    
     
 }
