@@ -17,6 +17,8 @@ public class Map implements Serializable {
     private String locName;
     private int rows;
     private int cols;
+    
+    private Location location;
 
     public Map(String locName, int rows, int cols) {
         this.locName = locName;
@@ -52,6 +54,14 @@ public class Map implements Serializable {
 
     public void setCols(int cols) {
         this.cols = cols;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     @Override

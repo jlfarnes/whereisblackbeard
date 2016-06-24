@@ -19,6 +19,11 @@ public class Scene implements Serializable {
     private int locLockLevel;
     private int playerUnlockLevel;
     private String sceneType;
+    
+    private DryDock dryDock;
+    private JobsBoard jobsBoard;
+    private Market market;
+    private Armory armory;
 
     public Scene() {
     }
@@ -53,6 +58,38 @@ public class Scene implements Serializable {
 
     public void setSceneType(String sceneType) {
         this.sceneType = sceneType;
+    }
+
+    public DryDock getDryDock() {
+        return dryDock;
+    }
+
+    public void setDryDock(DryDock dryDock) {
+        this.dryDock = dryDock;
+    }
+
+    public JobsBoard getJobsBoard() {
+        return jobsBoard;
+    }
+
+    public void setJobsBoard(JobsBoard jobsBoard) {
+        this.jobsBoard = jobsBoard;
+    }
+
+    public Market getMarket() {
+        return market;
+    }
+
+    public void setMarket(Market market) {
+        this.market = market;
+    }
+
+    public Armory getArmory() {
+        return armory;
+    }
+
+    public void setArmory(Armory armory) {
+        this.armory = armory;
     }
 
     @Override

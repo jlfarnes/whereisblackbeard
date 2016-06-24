@@ -17,7 +17,58 @@ public class Game implements Serializable {
     private double totalTime;
     private boolean locationVisited = false;
     
-    //private Ship ship;
+    private Ship ship;
+    private Map map;
+    private Player player;
+            
+
+    public boolean isDefeatBlackbeard() {
+        return defeatBlackbeard;
+    }
+
+    public void setDefeatBlackbeard(boolean defeatBlackbeard) {
+        this.defeatBlackbeard = defeatBlackbeard;
+    }
+
+    public double getTotalTime() {
+        return totalTime;
+    }
+
+    public void setTotalTime(double totalTime) {
+        this.totalTime = totalTime;
+    }
+
+    public boolean isLocationVisited() {
+        return locationVisited;
+    }
+
+    public void setLocationVisited(boolean locationVisited) {
+        this.locationVisited = locationVisited;
+    }
+
+    public Ship getShip() {
+        return ship;
+    }
+
+    public void setShip(Ship ship) {
+        this.ship = ship;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
     
     
 }

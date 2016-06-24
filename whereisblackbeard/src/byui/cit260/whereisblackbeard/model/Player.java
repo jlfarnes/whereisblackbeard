@@ -25,6 +25,9 @@ public class Player implements Serializable {
     public static int playerFirepower;
     public static int playerSpeed;
     
+    private PlayerInventory playerInventory;
+    private Character character;
+    
 
     public Player() {
     }
@@ -70,6 +73,7 @@ public class Player implements Serializable {
     public void setPlayerCunning(int playerCunning) {
         this.playerCunning = playerCunning;
     }
+    
     public int getPlayerStrength() {
 
         return playerStrength;
@@ -77,6 +81,62 @@ public class Player implements Serializable {
 
     public void setPlayerStrength(int playerStrength) {
         this.playerStrength = playerStrength;
+    }
+    
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
+    public static int getPlayerAccuracy() {
+        return playerAccuracy;
+    }
+
+    public static void setPlayerAccuracy(int playerAccuracy) {
+        Player.playerAccuracy = playerAccuracy;
+    }
+
+    public static int getPlayerDefense() {
+        return playerDefense;
+    }
+
+    public static void setPlayerDefense(int playerDefense) {
+        Player.playerDefense = playerDefense;
+    }
+
+    public static int getPlayerFirepower() {
+        return playerFirepower;
+    }
+
+    public static void setPlayerFirepower(int playerFirepower) {
+        Player.playerFirepower = playerFirepower;
+    }
+
+    public static int getPlayerSpeed() {
+        return playerSpeed;
+    }
+
+    public static void setPlayerSpeed(int playerSpeed) {
+        Player.playerSpeed = playerSpeed;
+    }
+
+    public PlayerInventory getPlayerInventory() {
+        return playerInventory;
+    }
+
+    public void setPlayerInventory(PlayerInventory playerInventory) {
+        this.playerInventory = playerInventory;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
     }
 /*
     @Override

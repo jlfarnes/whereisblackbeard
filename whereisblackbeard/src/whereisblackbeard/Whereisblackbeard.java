@@ -5,28 +5,12 @@
  */
 package whereisblackbeard;
 
-import byui.cit260.whereisblackbeard.model.Game;
-import byui.cit260.whereisblackbeard.model.Armory;          // Author: Joseph Clark
-import byui.cit260.whereisblackbeard.model.Character;       // Author: Joseph Clark
-import byui.cit260.whereisblackbeard.model.DryDock;         // Author: Joseph Clark
-import byui.cit260.whereisblackbeard.model.JobsBoard;       // Author: Joseph Clark
-import byui.cit260.whereisblackbeard.model.Location;        // Author: Jacob Farnes
-import byui.cit260.whereisblackbeard.model.Map;             // Author: Jacob Farnes
-import byui.cit260.whereisblackbeard.model.Market;          // Author: Joseph Clark
-import byui.cit260.whereisblackbeard.model.Player;          // Author: Jacob Farnes & Joseph Clark
-import byui.cit260.whereisblackbeard.model.PlayerInventory; // Author: Jacob Farnes
-import byui.cit260.whereisblackbeard.model.Scene;           // Author: Jacob Farnes
-import byui.cit260.whereisblackbeard.model.Ship;            // Author: Jacob Farnes
-import byui.cit260.whereisblackbeard.model.ShipInventory;   // Author: Jacob Farnes
+import byui.cit260.whereisblackbeard.model.Game;          // Author: Joseph Clark
+import byui.cit260.whereisblackbeard.model.Player;   // Author: Jacob Farnes
 import citbyui.cit260.whereisblackbeard.view.StartProgramView;
-import citbyui.cit260.whereisblackbeard.view.MainMenuView;
-import citbyui.cit260.whereisblackbeard.view.GameMenuView;
-import citbyui.cit260.whereisblackbeard.view.HelpMenuView;
-import citbyui.cit260.whereisblackbeard.view.PortView;
-import citbyui.cit260.whereisblackbeard.view.TestMenu;
 
 /**
- *fred
+ *
  * 
  * @author 8440p
  */

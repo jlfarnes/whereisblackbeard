@@ -19,6 +19,8 @@ public class Ship implements Serializable {
     private int sailSize;
     private int crewCapacity;
     private int shipSize;
+    
+    private ShipInventory shipInventory;
 
     public Ship(String description, int hullHealth, int sailSize, int crewCapacity, int shipSize) {
         this.description = description;
@@ -72,6 +74,14 @@ public class Ship implements Serializable {
 
     public void setShipSize(int shipSize) {
         this.shipSize = shipSize;
+    }
+
+    public ShipInventory getShipInventory() {
+        return shipInventory;
+    }
+
+    public void setShipInventory(ShipInventory shipInventory) {
+        this.shipInventory = shipInventory;
     }
 
     @Override

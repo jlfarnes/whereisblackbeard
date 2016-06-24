@@ -46,6 +46,8 @@ public enum Location implements Serializable {
     // private int attribute;
     private final String description;
     private final Point coordinates;
+    
+    private Scene scene;
 
 //    public Location(int visited, int challengeSolved, int attribute) {
 //        this.visited = visited;
@@ -73,6 +75,14 @@ public enum Location implements Serializable {
 
     public Point getCoordinates() {
         return coordinates;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
 //    public void setCoordinates(Point coordinates) {
