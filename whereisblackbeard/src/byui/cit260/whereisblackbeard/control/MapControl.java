@@ -16,7 +16,7 @@ public class MapControl {
 
     private static Scene[] createScenes() {
     
-    Scene[] scenes = new Scene[SceneType.values().length];
+    Scene[] scenes = new Scene[ScenePicture.values().length];
     
     Scene startingScene = new Scene();
     startingScene.setDescription(
@@ -26,7 +26,7 @@ public class MapControl {
     startingScene.setMapSymbol(" ST ");
     startingScene.setBlocked(false);
     startingScene.setTravelTime(250);
-    scenes[SceneType.start.ordinal()] = startingScene;
+    scenes[ScenePicture.start.ordinal()] = startingScene;
     
     Scene finishScene = new Scene();
     finishScene.setDescription(
@@ -35,7 +35,7 @@ public class MapControl {
     finishScene.setMapSymbol(" FN ");
     finishScene.setBlocked(false);
     finishScene.setTravelTime(Double.POSITIVE_INFINITY);
-    scenes[SceneType.finish.ordinal()] = finishScene;
+    scenes[ScenePicture.finish.ordinal()] = finishScene;
     
     return scenes;
     
