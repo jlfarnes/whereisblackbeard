@@ -14,7 +14,57 @@ import java.io.Serializable;
  */
 public class Location implements Serializable {
     
+/*    public enum LocationArray implements Serializable {
+        Starting_Cove("(1-1) This is where the player will be when the game starts."),
+        Liverpool("1-2"),
+        London("1-3"),
+        Paris("1-4"),
+        Lisbon("1-5"),
+        Madrid("2-1"),
+        Monaco("2-2"),
+        Canary_Islands("2-3"),
+        Ivory_Coast("2-4"),
+        Gold_Coast("2-5"),
+        The_Bahamas("3-1"),
+        Nassau("3-2"),
+        Freeport("3-3"),
+        Antigua("3-4"),
+        Cayman_Islands("3-5"),
+        Cuba("4-1"),
+        Haiti("4-2"),
+        Quixotle("4-3"),
+        Guadalajara("4-4"),
+        Florida_Keys("4-5"),
+        New_York("5-1"),
+        Alexandra("5-2"),
+        Baltimore("5-3"),
+        Columbus("5-4"),
+        Plymouth("5-5"); 
+    */
     
+    
+        // private int visited;
+        // private int challengeSolved;
+        // private int attribute;
+        private final String description;
+        private final Point coordinates;
+
+        private Scene scene;
+
+    //    public Location(int visited, int challengeSolved, int attribute) {
+    //        this.visited = visited;
+    //        this.challengeSolved = challengeSolved;
+    //        this.attribute = attribute;
+    //    }
+
+    //    public Location() {
+    //    }
+
+        Location(String description) {
+            this.description = description;
+            coordinates = new Point(1,1);
+        }
+    }
     
     
 /*
