@@ -14,7 +14,7 @@ import java.io.Serializable;
  */
 public enum Location implements Serializable {
     
-    //public enum Location {
+    // public enum Location {
     Starting_Cove("(1-1) This is where the player will be when the game starts."),
     Liverpool("1-2"),
     London("1-3"),
