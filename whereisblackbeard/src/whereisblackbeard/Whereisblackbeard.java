@@ -5,6 +5,7 @@
  */
 package whereisblackbeard;
 
+import byui.cit260.whereisblackbeard.model.Game;
 import byui.cit260.whereisblackbeard.model.Armory;          // Author: Joseph Clark
 import byui.cit260.whereisblackbeard.model.Character;       // Author: Joseph Clark
 import byui.cit260.whereisblackbeard.model.DryDock;         // Author: Joseph Clark
