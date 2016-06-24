@@ -24,9 +24,7 @@ public class MainMenuView extends View {
                   + "\nL - Load an existing game"
                   + "\nH - Get help with how to play the game"
                   + "\nS - Save game"
-                  + "\nP - How to explore the port view"
                   + "\nG - Go to game menu"
-                  + "\nT - Test Menu"
                   + "\nQ - Quit"
                   + "\n----------------------------------------");
     }
@@ -48,14 +46,8 @@ public class MainMenuView extends View {
             case "S": // save the current game
                 this.saveGame();
                 break;
-            case "P": // display the port view
-                this.displayPort();
-                break;
             case "G": // display the game menu
                 this.displayGameMenu();
-                break;
-            case "T": // display the game menu
-                this.displayTestMenu();
                 break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
@@ -89,21 +81,10 @@ public class MainMenuView extends View {
     private void saveGame() {
         System.out.println("*** saveGame function called ***");    }
 
-    private void displayPort() {
-        PortView port = new PortView();
-        port.display();
-    }
-
     private void displayGameMenu() {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
 
-    private void displayTestMenu() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
-        TestMenu testMenu = new TestMenu();
-        testMenu.display();
-    }
     
 }

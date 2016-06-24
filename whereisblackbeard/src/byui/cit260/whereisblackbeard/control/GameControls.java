@@ -5,7 +5,11 @@
  */
 package byui.cit260.whereisblackbeard.control;
 
+import byui.cit260.whereisblackbeard.model.Game;
+import byui.cit260.whereisblackbeard.model.Map;
 import byui.cit260.whereisblackbeard.model.Player;
+import byui.cit260.whereisblackbeard.model.Scene;
+import byui.cit260.whereisblackbeard.model.Ship;
 import whereisblackbeard.Whereisblackbeard;
 
 /**
@@ -34,7 +38,27 @@ public class GameControls {
 
     public static void createNewGame(Player player) {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("createNewGame called");
+        // System.out.println("createNewGame called");
+        Game game = new Game();
+        Whereisblackbeard.setCurrentGame(game);
+        
+        game.setPlayer(player);
+        
+        Ship ship = new Ship();
+        game.setShip(ship);
+        
+        Map map = MapControl.createMap();
+        game.setMap(map);
+        
+        MapControl.movePlayerToStartingLocation(map);
+    }
+
+    static void assignScenesToLocation(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static void assignScenesToLocation(Map map, Scene scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

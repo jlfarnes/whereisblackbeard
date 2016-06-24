@@ -23,11 +23,11 @@ public class Ship implements Serializable {
     private ShipInventory shipInventory;
 
     public Ship(String description, int hullHealth, int sailSize, int crewCapacity, int shipSize) {
-        this.description = description;
+        this.description = "\ndescription";
         this.hullHealth = hullHealth;
-        this.sailSize = sailSize;
-        this.crewCapacity = crewCapacity;
-        this.shipSize = shipSize;
+        this.sailSize = 0;
+        this.crewCapacity = 0;
+        this.shipSize = 0;
     }
 
     public Ship() {

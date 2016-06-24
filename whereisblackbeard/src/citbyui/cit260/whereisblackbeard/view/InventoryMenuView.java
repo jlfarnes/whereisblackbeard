@@ -17,7 +17,7 @@ public class InventoryMenuView extends View {
     // private String promptMessage;
     
     public InventoryMenuView() {
-        this.inventoryMenu = "\n"
+        super("\n"
                   + "\n----------------------------------------"
                   + "\n | Viewing Inventory and Resources                           |"
                   + "\n----------------------------------------"
@@ -25,7 +25,7 @@ public class InventoryMenuView extends View {
                   + "\nF - Food"
                   + "\nW - Water"
                   + "\nA - Cannonballs"
-                  + "\n----------------------------------------";
+                  + "\n----------------------------------------");
     }
 /*
     public void displayInventoryMenuView() {

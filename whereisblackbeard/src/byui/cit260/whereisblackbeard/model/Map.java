@@ -5,6 +5,7 @@
  */
 package byui.cit260.whereisblackbeard.model;
 
+import static byui.cit260.whereisblackbeard.control.Scene.PortControls.location;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -15,19 +16,42 @@ import java.util.Objects;
 public class Map implements Serializable {
     
     private String locName;
-    private int rows;
-    private int cols;
     
-    private Location location;
+    private Location[][] location;
+    private int noOfRows;
+    private int noOfColumns;
+    private Location[][] locations;
 
     public Map(String locName, int rows, int cols) {
         this.locName = locName;
-        this.rows = rows;
-        this.cols = cols;
     }
 
     public Map() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Map(int noOfRows, int noOfColumns) {
+        
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println("The number of rows and columns must be > zero");
+            return;
+        }
+        
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        this.location = new Location[noOfRows][noOfColumns];
+        
+        for (int row = 0; row < noOfRows; row++) {
+            for (int column = 0; column < noOfColumns; column++) {
+                
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                locations[row][column] = location;
+            }
+        }
     }
     
     
@@ -40,36 +64,36 @@ public class Map implements Serializable {
         this.locName = locName;
     }
 
-    public int getRows() {
-        return rows;
-    }
-
-    public void setRows(int rows) {
-        this.rows = rows;
-    }
-
-    public int getCols() {
-        return cols;
-    }
-
-    public void setCols(int cols) {
-        this.cols = cols;
-    }
-
-    public Location getLocation() {
+    public Location[][] getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(Location[][] location) {
         this.location = location;
+    }
+
+    public int getNoOfRows() {
+        return noOfRows;
+    }
+
+    public void setNoOfRows(int noOfRows) {
+        this.noOfRows = noOfRows;
+    }
+
+    public int getNoOfColumns() {
+        return noOfColumns;
+    }
+
+    public void setNoOfColumns(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + Objects.hashCode(this.locName);
-        hash = 97 * hash + this.rows;
-        hash = 97 * hash + this.cols;
+        hash = 97 * hash + this.noOfRows;
+        hash = 97 * hash + this.noOfColumns;
         return hash;
     }
 
@@ -85,10 +109,10 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (this.rows != other.rows) {
+        if (this.noOfRows != other.noOfRows) {
             return false;
         }
-        if (this.cols != other.cols) {
+        if (this.noOfColumns != other.noOfColumns) {
             return false;
         }
         if (!Objects.equals(this.locName, other.locName)) {
@@ -99,7 +123,7 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "locName=" + locName + ", rows=" + rows + ", cols=" + cols + '}';
+        return "Map{" + "locName=" + locName + ", rows=" + noOfRows + ", cols=" + noOfColumns + '}';
     }
     
     

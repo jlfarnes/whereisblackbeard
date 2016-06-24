@@ -26,6 +26,8 @@ public class GameMenuView extends View {
                   + "\nW - Water"
                   + "\nA - Weapons"
                   + "\nG - Gold"
+                  + "\nP - How to explore the port view"
+                  + "\nT - Test Menu"
                   + "\n----------------------------------------");
     }
 
@@ -45,6 +47,12 @@ public class GameMenuView extends View {
                 break;
             case "G": // save the current game
                 this.playerGold();
+                break;
+            case "P": // display the port view
+                this.displayPort();
+                break;
+            case "T": // display the game menu
+                this.displayTestMenu();
                 break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
@@ -68,6 +76,18 @@ public class GameMenuView extends View {
 
     private void playerGold() {
         System.out.println("*** playerGold function called ***");
+    }
+    
+    private void displayPort() {
+        PortView port = new PortView();
+        port.display();
+    }
+    
+    private void displayTestMenu() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        TestMenu testMenu = new TestMenu();
+        testMenu.display();
     }
     
 }
