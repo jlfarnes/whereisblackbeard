@@ -21,14 +21,14 @@ public class Map implements Serializable {
     private int noOfRows;
     private int noOfColumns;
     private Location[][] locations;
-
+/*
     public Map(String locName, int rows, int cols) {
         this.locName = locName;
     }
 
     public Map() {
     }
-
+*/
     public Map(int noOfRows, int noOfColumns) {
         
         if (noOfRows < 1 || noOfColumns < 1) {

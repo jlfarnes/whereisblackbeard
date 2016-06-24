@@ -10,10 +10,11 @@ import java.io.Serializable;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public enum Location implements Serializable {
     
+    //public enum Location {
     Starting_Cove("(1-1) This is where the player will be when the game starts."),
     Liverpool("1-2"),
     London("1-3"),
@@ -64,7 +65,7 @@ public enum Location implements Serializable {
     }
     
     
-
+/*
     public String getDescription() {
         return description;
     }
@@ -84,7 +85,7 @@ public enum Location implements Serializable {
     public void setScene(Scene scene) {
         this.scene = scene;
     }
-
+*/
 //    public void setCoordinates(Point coordinates) {
 //        this.coordinates = coordinates;
 //    }

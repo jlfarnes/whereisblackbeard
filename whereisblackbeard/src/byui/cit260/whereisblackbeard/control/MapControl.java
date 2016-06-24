@@ -16,7 +16,7 @@ public class MapControl {
 
     private static Scene createScenes;
 
-    private static Map createMap() {
+    public static Map createMap() {
         Map map = new Map(20, 20);
         
         Scene scenes = createScenes;
