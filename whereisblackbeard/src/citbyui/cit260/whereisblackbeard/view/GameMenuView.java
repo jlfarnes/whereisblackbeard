@@ -22,6 +22,7 @@ public class GameMenuView extends View {
                   + "\n----------------------------------------"
                   + "\n | Game Menu                          |"
                   + "\n----------------------------------------"
+                  + "\nM - Map"
                   + "\nF - Food"
                   + "\nW - Water"
                   + "\nA - Weapons"
@@ -36,6 +37,9 @@ public class GameMenuView extends View {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
+            case "M":
+                this.displayMap();
+                break;
             case "F": // create and start a new game
                 this.playerFood();
                 break;
@@ -61,7 +65,27 @@ public class GameMenuView extends View {
         
         return false;
     }
-
+    
+    private void displayMap(String locName, int locRow, int locCol) {
+        System.out.println("*** displayMap function called ***");
+        /*
+        System.out.println("\n|-----------------------|")
+                        + ("\n| " + locName + " |")
+                        + ("\n|-----------------------|")
+                        + ("\n| | 1 | 2 | 3 | 4 | 5 | |")
+                        + ("\n|1|")
+                        + ("\n|2|")
+                        + ("\n|3|")
+                        + ("\n|4|")
+                        + ("\n|5|")
+                        + ("\n|-----------------------------|")
+                        + ("\n You are at " + locRow " , " + locCol)
+                        + ("\n Where would you like to go?")
+                        + ("\n Enter the row of the location you would like to go to.")
+                        + ("\n Row? : ");
+                        */
+    }
+    
     private void playerFood() {
         System.out.println("*** playerFood function called ***");
     }

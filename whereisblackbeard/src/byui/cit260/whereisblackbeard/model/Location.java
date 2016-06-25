@@ -64,7 +64,7 @@ public class Location implements Serializable {
             this.description = description;
             coordinates = new Point(1,1);
         }
-    }
+    //}
     
     
 /*
