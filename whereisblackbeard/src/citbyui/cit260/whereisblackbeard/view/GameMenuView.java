@@ -72,17 +72,17 @@ public class GameMenuView extends View {
             String leftIndicator;
             String rightIndicator;
 
-            Game game = whereisblackbeard.getCurrentGame(); // retreive the game
+            Game game = game.getCurrentGame(); // retreive the game
             Map map = game.getMap(); // retreive the map from game
             Location[][] locations = map.getLocations(); // retreive the locations from map
             try {
-              this.console.print(" |");
+              System.out.print(" |");
               for( int column = 0; column < locations[0].length; column++){
-                this.console.print(" " + column + " |"); // print col numbers to side of map
+                System.out.print(" " + column + " |"); // print col numbers to side of map
               }
-              this.console.println();
+              System.out.println();
               for( int row = 0; row < locations.length; row++){
-                this.console.print(row + " "); // print row numbers to side of map
+                System.out.print(row + " "); // print row numbers to side of map
                 for( int column = 0; column < locations[row].length; column++){
                   leftIndicator = " ";
                   rightIndicator = " ";
@@ -94,11 +94,11 @@ public class GameMenuView extends View {
                      leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                      rightIndicator = "<"; // same as above
                   }
-                  this.console.print("|"); // start map with a |
+                  System.out.print("|"); // start map with a |
                   if(locations[row][column].getScene() == null)
-                    this.console.print(leftIndicator + "??" + rightIndicator);
+                    System.out.print(leftIndicator + "??" + rightIndicator);
                   else
-                    this.console.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
+                    System.out.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
                 }
                 this.console.println("|");
               }
