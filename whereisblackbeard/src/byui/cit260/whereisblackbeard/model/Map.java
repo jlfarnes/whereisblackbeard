@@ -21,6 +21,10 @@ public class Map implements Serializable {
     private int noOfRows;
     private int noOfColumns;
     private Location[][] locations;
+    private Location currentLocation;
+    private int currentRow = 0;
+    private int currentColumn = 0;
+    
 
     public Map(int noOfRows, int noOfColumns) {
         
@@ -45,6 +49,30 @@ public class Map implements Serializable {
                 locations[row][column] = loc;
             }
         }
+    }
+
+    public int getCurrentRow() {
+        return currentRow;
+    }
+
+    public void setCurrentRow(int currentRow) {
+        this.currentRow = currentRow;
+    }
+
+    public int getCurrentColumn() {
+        return currentColumn;
+    }
+
+    public void setCurrentColumn(int currentColumn) {
+        this.currentColumn = currentColumn;
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
     }
     
     
@@ -86,11 +114,4 @@ public class Map implements Serializable {
         return "Map{" + "locName=" + locName + ", rows=" + noOfRows + ", cols=" + noOfColumns + '}';
     }
 
-    public Location getCurrentLocation() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("getCurrentLocation called");
-        
-        return false;
-    }
-    
 }

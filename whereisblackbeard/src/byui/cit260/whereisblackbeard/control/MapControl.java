@@ -71,9 +71,19 @@ public class MapControl {
         
         return map;
     }
-
+    
     public static void movePlayerToStartingLocation(Map map) {
-        System.out.println("\n*** movePlayerToStartingLocation() called ***");
+        // movePlayer(map, 2, 2);
+        movePlayer(map, 0, 0);
+    }
+
+    public static void movePlayer(Map map, int row, int column) {
+        map.setCurrentLocation(map.getLocations()[row][column]);
+        map.getCurrentLocation().setVisited(true);
+
+        map.setCurrentRow(row);
+        map.setCurrentColumn(column);
+
     }
     
 }

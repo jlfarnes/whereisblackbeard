@@ -10,6 +10,7 @@ package citbyui.cit260.whereisblackbeard.view;
 import byui.cit260.whereisblackbeard.model.Game;
 import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
+import whereisblackbeard.Whereisblackbeard;
 //import byui.cit260.whereisblackbeard.model.Scene;
 
 //import byui.cit260.whereisblackbeard.model.Map;
@@ -77,7 +78,7 @@ public class GameMenuView extends View {
         String leftIndicator;
         String rightIndicator;
 
-        Game game = game.getCurrentGame(); // retreive the game
+        Game game = Whereisblackbeard.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
         Location[][] locations = map.getLocations(); // retreive the locations from map
         //Scene scene = scene.getScene();

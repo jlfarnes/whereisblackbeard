@@ -48,17 +48,10 @@ public class Location implements Serializable {
         // private int attribute;
         private final String description;
         private final Point coordinates;
-
+        private boolean visited;
         private Scene scene;
-
-    //    public Location(int visited, int challengeSolved, int attribute) {
-    //        this.visited = visited;
-    //        this.challengeSolved = challengeSolved;
-    //        this.attribute = attribute;
-    //    }
-
-    //    public Location() {
-    //    }
+        private int row = 0;
+        private int column = 0;
 
     Location(String description) {
         this.description = description;
@@ -66,11 +59,13 @@ public class Location implements Serializable {
     }
     //}
 
-    Location() {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\n*** Location constructor called");
+    public Location() {
+         this.description = "";
+         coordinates = new Point(1,1);
     }
-    
+
+
+ 
     
 
     public String getDescription() {
@@ -80,6 +75,16 @@ public class Location implements Serializable {
 //    public void setDescription(String description) {
 //        this.description = description;
 //    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+    
+    
 
     public Point getCoordinates() {
         return coordinates;
@@ -166,21 +171,20 @@ public class Location implements Serializable {
         return locations;
     }
 
-    void setColumn(int column) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\n*** setColumn called");
+    public int getRow() {
+        return row;
     }
 
-    void setRow(int row) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\n*** setRow called");
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    void setVisited(boolean b) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("\n*** setVisited called");
+    public int getColumn() {
+        return column;
     }
-    
-    
-    
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
 }

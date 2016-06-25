@@ -6,6 +6,7 @@
 package byui.cit260.whereisblackbeard.control;
 
 import byui.cit260.whereisblackbeard.model.Game;
+import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
 import byui.cit260.whereisblackbeard.model.Player;
 import byui.cit260.whereisblackbeard.model.Scene;
@@ -54,11 +55,15 @@ public class GameControls {
     }
 
     static void assignScenesToLocation(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       Location[][] locations = map.getLocations();
+       
+       locations[0][0].setScene(scenes[ScenePicture.start.ordinal()]);
+       locations[0][1].setScene(scenes[ScenePicture.cove.ordinal()]);
+       locations[0][2].setScene(scenes[ScenePicture.port.ordinal()]);
+       locations[0][3].setScene(scenes[ScenePicture.store.ordinal()]);
+       locations[0][4].setScene(scenes[ScenePicture.combat.ordinal()]);
+       locations[0][5].setScene(scenes[ScenePicture.ship.ordinal()]);
+       locations[0][6].setScene(scenes[ScenePicture.jobs.ordinal()]);
+       locations[0][7].setScene(scenes[ScenePicture.finish.ordinal()]);
     }
-
-    static void assignScenesToLocation(Map map, Scene scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
