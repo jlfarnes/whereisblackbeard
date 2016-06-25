@@ -39,8 +39,8 @@ public class GameMenuView extends View {
         
         switch (choice) {
             case "M":
-                Map map = new Map();
-                this.displayMap(map.getLocName(), map.getNoOfRows(), map.getNoOfColumns());
+                // Map map = new Map();
+                this.displayMap(); //map.getLocName(), map.getNoOfRows(), map.getNoOfColumns());
                 break;
             case "F": // create and start a new game
                 this.playerFood();
@@ -68,11 +68,11 @@ public class GameMenuView extends View {
         return false;
     }
     
-    private void displayMap(String locName, int locRow, int locCol) {
+    private void displayMap() /* String locName, int locRow, int locCol) */ {
         System.out.println("*** displayMap function called ***");
         /*
         System.out.println("\n|-----------------------|")
-                        + ("\n| " + locName + " |")
+                        + ("\n| Location Name") // + locName + " |")
                         + ("\n|-----------------------|")
                         + ("\n| | 1 | 2 | 3 | 4 | 5 | |")
                         + ("\n|1|")
@@ -81,11 +81,33 @@ public class GameMenuView extends View {
                         + ("\n|4|")
                         + ("\n|5|")
                         + ("\n|-----------------------------|")
-                        + ("\n You are at " + locRow " , " + locCol)
+                        + ("\n You are at X,Y") // + locRow " , " + locCol)
                         + ("\n Where would you like to go?")
                         + ("\n Enter the row of the location you would like to go to.")
                         + ("\n Row? : ");
-                        */
+        */    
+        
+        //Display Title
+        System.out.println(locationName);
+        //Display Row numbers
+        
+        for (int i = 0; i <= noOfRows; i++ ) {
+            System.out.println("\n| " + i + " | ");
+            for (int icol = 0; i <= noOfColumns; icol++) {
+                //System.out.print(icol);
+                System.out.print(" | ");
+                location = locations[row][column];
+                if (locVisited = 1) {
+                    System.out.print(" X ");
+                }
+                else {
+                    System.out.print(" ? ");
+                }
+                //System.out.print(" | ");
+            }
+            System.out.print(" |");
+        }
+        System.out.print(" |");
     }
     
     private void playerFood() {
