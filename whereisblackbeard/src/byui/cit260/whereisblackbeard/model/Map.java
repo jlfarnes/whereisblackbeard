@@ -85,5 +85,12 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "locName=" + locName + ", rows=" + noOfRows + ", cols=" + noOfColumns + '}';
     }
+
+    public Location getCurrentLocation() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("getCurrentLocation called");
+        
+        return false;
+    }
     
 }

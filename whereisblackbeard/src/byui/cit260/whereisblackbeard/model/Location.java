@@ -72,7 +72,7 @@ public class Location implements Serializable {
     }
     
     
-/*
+
     public String getDescription() {
         return description;
     }
@@ -92,7 +92,7 @@ public class Location implements Serializable {
     public void setScene(Scene scene) {
         this.scene = scene;
     }
-*/
+
 
     @Override
     public String toString() {
