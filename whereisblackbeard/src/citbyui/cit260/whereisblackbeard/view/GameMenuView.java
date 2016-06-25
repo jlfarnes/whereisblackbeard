@@ -6,6 +6,7 @@
 package citbyui.cit260.whereisblackbeard.view;
 
 import java.util.Scanner;
+import byui.cit260.whereisblackbeard.model.Map;
 
 /**
  *
@@ -38,7 +39,8 @@ public class GameMenuView extends View {
         
         switch (choice) {
             case "M":
-                this.displayMap();
+                Map map = new Map();
+                this.displayMap(map.getLocName(), map.getNoOfRows(), map.getNoOfColumns());
                 break;
             case "F": // create and start a new game
                 this.playerFood();
