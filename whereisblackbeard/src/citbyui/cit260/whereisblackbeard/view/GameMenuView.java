@@ -45,7 +45,6 @@ public class GameMenuView extends View {
         
         switch (choice) {
             case "M":
-                // Map map = new Map();
                 this.displayMap();
                 break;
             case "F": // create and start a new game
