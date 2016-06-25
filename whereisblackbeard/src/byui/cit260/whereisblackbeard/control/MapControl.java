@@ -63,7 +63,7 @@ public class MapControl {
 }
 
     public static Map createMap() {
-        Map map = new Map(20, 20);
+        Map map = new Map(5, 5);
         
         Scene[] scenes = createScenes();
         
@@ -73,7 +73,7 @@ public class MapControl {
     }
     
     public static void movePlayerToStartingLocation(Map map) {
-        // movePlayer(map, 2, 2);
+        movePlayer(map, 1, 1);
         movePlayer(map, 0, 0);
     }
 

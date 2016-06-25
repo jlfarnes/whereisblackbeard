@@ -62,8 +62,9 @@ public class GameControls {
        locations[0][2].setScene(scenes[ScenePicture.port.ordinal()]);
        locations[0][3].setScene(scenes[ScenePicture.store.ordinal()]);
        locations[0][4].setScene(scenes[ScenePicture.combat.ordinal()]);
-       locations[0][5].setScene(scenes[ScenePicture.ship.ordinal()]);
-       locations[0][6].setScene(scenes[ScenePicture.jobs.ordinal()]);
-       locations[0][7].setScene(scenes[ScenePicture.finish.ordinal()]);
+       
+       locations[1][0].setScene(scenes[ScenePicture.ship.ordinal()]);
+       locations[1][1].setScene(scenes[ScenePicture.jobs.ordinal()]);
+       locations[1][2].setScene(scenes[ScenePicture.finish.ordinal()]);
     }
 }

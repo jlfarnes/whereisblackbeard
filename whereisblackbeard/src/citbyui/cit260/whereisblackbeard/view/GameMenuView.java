@@ -83,9 +83,9 @@ public class GameMenuView extends View {
         Location[][] locations = map.getLocations(); // retreive the locations from map
         //Scene scene = scene.getScene();
         try {
-          System.out.print(" |");
+          System.out.print("  |");
           for( int column = 0; column < locations[0].length; column++){
-            System.out.print(" " + column + " |"); // print col numbers to side of map
+            System.out.print("  " + column + " |"); // print col numbers to side of map
           }
           System.out.println();
           for( int row = 0; row < locations.length; row++){
@@ -97,10 +97,10 @@ public class GameMenuView extends View {
                 leftIndicator = "*"; // can be stars or whatever these are indicators showing visited
                 rightIndicator = "*"; // same as above
               }
-            /*  else if(locations[row][column].isVisited()){
+              else if(locations[row][column].isVisited()){
                  leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                  rightIndicator = "<"; // same as above
-              } */
+              }
               System.out.print("|"); // start map with a |
               if(locations[row][column].getScene() == null)
                 System.out.print(leftIndicator + "??" + rightIndicator);
