@@ -88,7 +88,8 @@ public class GameMenuView extends View {
         */    
         
         //Display Title
-        System.out.println(locationName);
+        System.out.println("\n|--------- MAP ---------|");
+        System.out.println("\n|-----------------------|");
         //Display Row numbers
         
         for (int i = 0; i <= noOfRows; i++ ) {
