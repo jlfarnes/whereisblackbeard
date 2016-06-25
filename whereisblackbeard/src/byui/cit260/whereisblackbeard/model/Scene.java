@@ -24,6 +24,9 @@ public class Scene implements Serializable {
     private JobsBoard jobsBoard;
     private Market market;
     private Armory armory;
+    
+    private String description;
+    private String mapSymbol;
 
     public Scene() {
     }
@@ -90,6 +93,22 @@ public class Scene implements Serializable {
 
     public void setArmory(Armory armory) {
         this.armory = armory;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
     }
 
     @Override

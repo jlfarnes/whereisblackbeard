@@ -18,24 +18,45 @@ public class MapControl {
     
     Scene[] scenes = new Scene[ScenePicture.values().length];
     
-    Scene startingScene = new Scene();
-    startingScene.setDescription(
-            "ajfioajdfosa"
-          + "ajsfdioajsdiofp");
+    Scene scene = new Scene();
+    scene.setDescription("start scene");
+    scene.setMapSymbol("SS");
+    scenes[ScenePicture.start.ordinal()] = scene;
     
-    startingScene.setMapSymbol(" ST ");
-    startingScene.setBlocked(false);
-    startingScene.setTravelTime(250);
-    scenes[ScenePicture.start.ordinal()] = startingScene;
-    
-    Scene finishScene = new Scene();
-    finishScene.setDescription(
-            "aiodsjfaiopsj"
-          + "fjaiosfjao");
-    finishScene.setMapSymbol(" FN ");
-    finishScene.setBlocked(false);
-    finishScene.setTravelTime(Double.POSITIVE_INFINITY);
-    scenes[ScenePicture.finish.ordinal()] = finishScene;
+    scene = new Scene();
+    scene.setDescription("cove scene");
+    scene.setMapSymbol("CV");
+    scenes[ScenePicture.cove.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("port scene");
+    scene.setMapSymbol("PT");
+    scenes[ScenePicture.port.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("store scene");
+    scene.setMapSymbol("ST");
+    scenes[ScenePicture.store.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("combat scene");
+    scene.setMapSymbol("CB");
+    scenes[ScenePicture.combat.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("ship scene");
+    scene.setMapSymbol("SP");
+    scenes[ScenePicture.ship.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("jobs scene");
+    scene.setMapSymbol("JB");
+    scenes[ScenePicture.jobs.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("finish scene");
+    scene.setMapSymbol("FN");
+    scenes[ScenePicture.finish.ordinal()] = scene;
     
     return scenes;
     
@@ -44,7 +65,7 @@ public class MapControl {
     public static Map createMap() {
         Map map = new Map(20, 20);
         
-        Scene scenes = createScenes;
+        Scene[] scenes = createScenes();
         
         GameControls.assignScenesToLocation(map, scenes);
         
