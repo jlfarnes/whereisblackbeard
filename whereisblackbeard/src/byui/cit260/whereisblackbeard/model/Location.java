@@ -65,6 +65,10 @@ public class Location implements Serializable {
             coordinates = new Point(1,1);
         }
     //}
+
+    Location() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 /*
