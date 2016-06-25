@@ -6,6 +6,12 @@
 package citbyui.cit260.whereisblackbeard.view;
 
 //import java.util.Scanner;
+
+import byui.cit260.whereisblackbeard.model.Game;
+import byui.cit260.whereisblackbeard.model.Location;
+import byui.cit260.whereisblackbeard.model.Map;
+import byui.cit260.whereisblackbeard.model.Scene;
+
 //import byui.cit260.whereisblackbeard.model.Map;
 
 /**
@@ -75,6 +81,7 @@ public class GameMenuView extends View {
         Game game = game.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
         Location[][] locations = map.getLocations(); // retreive the locations from map
+        Scene scene = scene.getScene();
         try {
           System.out.print(" |");
           for( int column = 0; column < locations[0].length; column++){
@@ -90,10 +97,10 @@ public class GameMenuView extends View {
                 leftIndicator = "*"; // can be stars or whatever these are indicators showing visited
                 rightIndicator = "*"; // same as above
               }
-              else if(locations[row][column].isVisited()){
+            /*  else if(locations[row][column].isVisited()){
                  leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                  rightIndicator = "<"; // same as above
-              }
+              } */
               System.out.print("|"); // start map with a |
               if(locations[row][column].getScene() == null)
                 System.out.print(leftIndicator + "??" + rightIndicator);

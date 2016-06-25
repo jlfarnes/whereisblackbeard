@@ -57,7 +57,7 @@ public class Map implements Serializable {
         this.locName = locName;
     }
 
-    public Location[][] getLocation() {
+    public Location[][] getLocations() {
         return locations;
     }
 
