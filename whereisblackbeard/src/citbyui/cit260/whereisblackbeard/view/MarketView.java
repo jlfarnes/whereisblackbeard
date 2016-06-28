@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package citbyui.cit260.whereisblackbeard.view;
+package byui.cit260.whereisblackbeard.control.Port.MarketControls;
 
 /**
  *
@@ -46,10 +47,20 @@ public class MarketView extends View {
 
     private void foodOptions() {
         System.out.println("*** foodOptions function called ***");
+        
+        int invFood = 1;
+        int marketFood = 2;
+        
+        setFoodUnit(invFood,marketFood);
     }
 
     private void waterOptions() {
         System.out.println("*** waterOptions function called ***");
+        
+        int invWater= 2;
+        int marketWater = 3;
+        
+        setWaterGallons(invWater,marketWater);
     }
 
     private void accessoriesOptions() {
