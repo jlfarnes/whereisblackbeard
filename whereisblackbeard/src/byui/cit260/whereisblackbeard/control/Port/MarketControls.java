@@ -32,14 +32,14 @@ public class MarketControls {
     // Yeah... we're going to skip all that and just put the algorithms in here to be called from the Market view
     
     public int setFoodUnit(int invFood, int marketFood) {
-        System.out.println("\n*** setFoodUnit called");
+        // System.out.println("\n*** setFoodUnit called");
         
         int total = (invFood + marketFood);
         return total;
     }
     
     public int setWaterGallons(int invWater, int marketWater) {
-        System.out.println("\n*** setFoodUnit called");
+        // System.out.println("\n*** setWaterGallons called");
         
         int total = (invWater + marketWater);
         return total;
