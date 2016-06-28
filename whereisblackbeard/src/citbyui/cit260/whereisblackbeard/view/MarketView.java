@@ -9,12 +9,12 @@ package citbyui.cit260.whereisblackbeard.view;
  *
  * @author josephclark
  */
-public class MarketView {
+public class MarketView extends View {
     
     public MarketView() {
                 super("\n"
                   + "\n----------------------------------------"
-                  + "\n | Exploring a Port                           |"
+                  + "\n | Market                           |"
                   + "\n----------------------------------------"
                   + "\nF - Food"
                   + "\nW - Water"
