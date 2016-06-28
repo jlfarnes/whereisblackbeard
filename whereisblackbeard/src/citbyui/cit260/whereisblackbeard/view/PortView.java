@@ -20,7 +20,7 @@ public class PortView extends View {
         //this.port = 
                 super("\n"
                   + "\n----------------------------------------"
-                  + "\n | Exploring a Port                           |"
+                  + "\n | Exploring a Port                    |"
                   + "\n----------------------------------------"
                   + "\nA - Armory"
                   + "\nD - Drydock"

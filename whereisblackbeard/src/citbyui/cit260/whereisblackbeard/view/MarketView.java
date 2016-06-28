@@ -15,7 +15,7 @@ public class MarketView extends View {
     public MarketView() {
                 super("\n"
                   + "\n----------------------------------------"
-                  + "\n | Market                           |"
+                  + "\n | Market                               |"
                   + "\n----------------------------------------"
                   + "\nF - Food"
                   + "\nW - Water"

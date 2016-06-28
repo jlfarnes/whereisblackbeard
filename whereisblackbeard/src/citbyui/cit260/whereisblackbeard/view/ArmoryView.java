@@ -14,7 +14,7 @@ public class ArmoryView extends View {
     public ArmoryView() {
                 super("\n"
                   + "\n----------------------------------------"
-                  + "\n | Armory                          |"
+                  + "\n | Armory                              |"
                   + "\n----------------------------------------"
                   + "\nA - Accuracy Upgrade"
                   + "\nF - Firepower Upgrade"
