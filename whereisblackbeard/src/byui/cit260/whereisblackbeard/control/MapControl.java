@@ -172,6 +172,13 @@ public class MapControl {
     }
     
     public static double calcPercentage(int sceneVisited, int totalScenes) {
+        for(int totalScenes=1; totalScenes<=25; totalScenes++){
+        for(int sceneVisited=1; variable length argument?; sceneVisited++){
+
+        if(i%sceneVisited==0){ 
+
+            System.out.println(sceneVisited);
+        
         return 0;
     }
     
