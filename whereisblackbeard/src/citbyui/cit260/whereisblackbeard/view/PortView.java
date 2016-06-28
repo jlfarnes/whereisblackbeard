@@ -27,6 +27,7 @@ public class PortView extends View {
                   + "\nA - Armory"
                   + "\nD - Drydock"
                   + "\nJ - Jobs"
+                  + "\nM - Market"
                   + "\n----------------------------------------");
     }
 
@@ -49,6 +50,9 @@ public class PortView extends View {
                 break;
             case "J": // tips for the game
                 this.jobsBoard();
+                break;
+            case "M":
+                this.marketView();
                 break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
@@ -76,6 +80,10 @@ public class PortView extends View {
 
     private void jobsBoard() {
         System.out.println("*** jobsBoard function called ***");
+    }
+
+    private void marketView() {
+        System.out.println("*** marketView function called ***");
     }
 }
  
