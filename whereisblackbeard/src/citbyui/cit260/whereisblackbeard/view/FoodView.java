@@ -61,8 +61,18 @@ public class FoodView extends View {
     private void sellAmount(ArrayList<GroceryItem> gList, int type, int amt) {
         System.out.println("\n*** sellAmount called");
         
-        for (int i = 0; i <= gList.size(); i++) {
+        int i = 0;
+        int listLength = gList.size();
+        
+        for (GroceryItem item : gList ) {
             
+            boolean test = (type = gList[i]);
+            
+            if (test = true) {
+                int invFood = amt;
+                
+            }
+            i++;
         }
     }
     
