@@ -5,11 +5,16 @@
  */
 package citbyui.cit260.whereisblackbeard.view;
 
+import byui.cit260.whereisblackbeard.model.GroceryItem;
+import java.util.ArrayList;
+
 /**
  *
  * @author jlfarnes
  */
 public class FoodView extends View {
+    
+    
     
     public FoodView() {
             super("\n"
@@ -42,6 +47,23 @@ public class FoodView extends View {
         }
         
         return false;
+    }
+    
+    private ArrayList<GroceryItem> saleArray() {
+        ArrayList<GroceryItem> groceryItems = new ArrayList<>();
+        groceryItems.add(new GroceryItem("Single","One Ration",1));
+        groceryItems.add(new GroceryItem("Box","Five Rations in a Box",5));
+        groceryItems.add(new GroceryItem("Crate","Twenty Rations in a Crate",20));
+        
+        return groceryItems;
+    }
+    
+    private void sellAmount(ArrayList<GroceryItem> gList, int type, int amt) {
+        System.out.println("\n*** sellAmount called");
+        
+        for (int i = 0; i <= gList.size(); i++) {
+            
+        }
     }
     
     private void singleRat() {
