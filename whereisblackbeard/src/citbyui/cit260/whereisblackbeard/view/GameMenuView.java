@@ -35,7 +35,7 @@ public class GameMenuView extends View {
                   + "\nW - Water"
                   + "\nA - Weapons"
                   + "\nG - Gold"
-                  + "\nP - How to explore the port view"
+                  + "\nP - Port"
                   + "\nT - Test Menu"
                   + "\n----------------------------------------");
     }

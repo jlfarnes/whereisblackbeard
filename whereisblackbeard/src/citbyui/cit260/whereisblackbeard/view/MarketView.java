@@ -11,7 +11,7 @@ package citbyui.cit260.whereisblackbeard.view;
  * @author josephclark
  */
 public class MarketView extends View {
-    
+        
     public MarketView() {
                 super("\n"
                   + "\n----------------------------------------"
@@ -27,15 +27,22 @@ public class MarketView extends View {
     public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
+        //MarketControls mc = new MarketControls();
+        int int1 = 2;
+        int int2 = 3;
+        
         switch (choice) {
             case "F": // create and start a new game
                 this.foodOptions();
+                //mc.setFoodUnit(int1,int2);
                 break;
             case "W": // load and existing game
                 this.waterOptions();
+                //mc.setWaterGallons(int1,int2);
                 break;
             case "A": // display the help menu
                 this.accessoriesOptions();
+                //mc.setAccesories();
                 break;
             default:
                 System.out.println("\n*** Invalid selction ** Try again");
