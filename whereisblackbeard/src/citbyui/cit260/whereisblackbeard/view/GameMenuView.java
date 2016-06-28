@@ -7,6 +7,8 @@ package citbyui.cit260.whereisblackbeard.view;
 
 //import java.util.Scanner;
 
+import byui.cit260.whereisblackbeard.control.MapControl;
+import byui.cit260.whereisblackbeard.control.ScenePicture;
 import byui.cit260.whereisblackbeard.model.Game;
 import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
@@ -78,7 +80,6 @@ public class GameMenuView extends View {
         String leftIndicator;
         String rightIndicator;
         
-        int numberOfScenes = 0;
         int visitedScenes = 0;
 
         Game game = Whereisblackbeard.getCurrentGame(); // retreive the game
@@ -110,17 +111,20 @@ public class GameMenuView extends View {
                 System.out.print(leftIndicator + "??" + rightIndicator);
               else
               {
-                  numberOfScenes++;
                 System.out.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
               }
             }
             System.out.println("|");
           }
+          int TotalScenes = ScenePicture.values().length;
+          
+          double percent = MapControl.calcPercentage(visitedScenes, TotalScenes);
+          
+          System.out.println("You have visited " + visitedScenes + " of " + TotalScenes + " locations or " + percent + "% of the map");
         }catch (Exception e) {
           System.out.println("Error");
         }
-        // call function
-        // print, disply information
+
           
     }
     

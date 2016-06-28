@@ -160,6 +160,7 @@ public class MapControl {
     public static void movePlayerToStartingLocation(Map map) {
         movePlayer(map, 1, 1);
         movePlayer(map, 0, 0);
+        movePlayer(map, 3, 3);
     }
 
     public static void movePlayer(Map map, int row, int column) {
@@ -172,14 +173,8 @@ public class MapControl {
     }
     
     public static double calcPercentage(int sceneVisited, int totalScenes) {
-        for(int totalScenes=1; totalScenes<=25; totalScenes++){
-        for(int sceneVisited=1; variable length argument?; sceneVisited++){
-
-        if(i%sceneVisited==0){ 
-
-            System.out.println(sceneVisited);
         
-        return 0;
+        return ((float)sceneVisited / totalScenes) * 100;
     }
     
 }
