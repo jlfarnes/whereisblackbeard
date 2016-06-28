@@ -19,44 +19,129 @@ public class MapControl {
     Scene[] scenes = new Scene[ScenePicture.values().length];
     
     Scene scene = new Scene();
-    scene.setDescription("start scene");
-    scene.setMapSymbol("SS");
-    scenes[ScenePicture.start.ordinal()] = scene;
+    scene.setDescription("startingCove scene");
+    scene.setMapSymbol("ST");
+    scenes[ScenePicture.startingCove.ordinal()] = scene;
     
     scene = new Scene();
-    scene.setDescription("cove scene");
-    scene.setMapSymbol("CV");
-    scenes[ScenePicture.cove.ordinal()] = scene;
+    scene.setDescription("liverpool scene");
+    scene.setMapSymbol("LV");
+    scenes[ScenePicture.liverpool.ordinal()] = scene;
         
     scene = new Scene();
-    scene.setDescription("port scene");
-    scene.setMapSymbol("PT");
-    scenes[ScenePicture.port.ordinal()] = scene;
+    scene.setDescription("london scene");
+    scene.setMapSymbol("LD");
+    scenes[ScenePicture.london.ordinal()] = scene;
         
     scene = new Scene();
-    scene.setDescription("store scene");
-    scene.setMapSymbol("ST");
-    scenes[ScenePicture.store.ordinal()] = scene;
+    scene.setDescription("paris scene");
+    scene.setMapSymbol("PS");
+    scenes[ScenePicture.paris.ordinal()] = scene;
         
     scene = new Scene();
-    scene.setDescription("combat scene");
+    scene.setDescription("lisbon scene");
+    scene.setMapSymbol("LS");
+    scenes[ScenePicture.lisbon.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("madrid scene");
+    scene.setMapSymbol("MD");
+    scenes[ScenePicture.madrid.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("monaco scene");
+    scene.setMapSymbol("MN");
+    scenes[ScenePicture.monaco.ordinal()] = scene;
+        
+    scene = new Scene();
+    scene.setDescription("canaryIslands scene");
+    scene.setMapSymbol("CI");
+    scenes[ScenePicture.canaryIslands.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("ivoryCoast scene");
+    scene.setMapSymbol("IC");
+    scenes[ScenePicture.ivoryCoast.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("goldCoast scene");
+    scene.setMapSymbol("GC");
+    scenes[ScenePicture.goldCoast.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("bahamas scene");
+    scene.setMapSymbol("BM");
+    scenes[ScenePicture.bahamas.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("nassau scene");
+    scene.setMapSymbol("NS");
+    scenes[ScenePicture.nassau.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("freeport scene");
+    scene.setMapSymbol("FP");
+    scenes[ScenePicture.freeport.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("antigua scene");
+    scene.setMapSymbol("AG");
+    scenes[ScenePicture.antigua.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("caymanIslands scene");
+    scene.setMapSymbol("CY");
+    scenes[ScenePicture.caymanIslands.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("cuba scene");
     scene.setMapSymbol("CB");
-    scenes[ScenePicture.combat.ordinal()] = scene;
-        
+    scenes[ScenePicture.cuba.ordinal()] = scene;
+    
     scene = new Scene();
-    scene.setDescription("ship scene");
-    scene.setMapSymbol("SP");
-    scenes[ScenePicture.ship.ordinal()] = scene;
-        
+    scene.setDescription("haiti scene");
+    scene.setMapSymbol("HT");
+    scenes[ScenePicture.haiti.ordinal()] = scene;
+    
     scene = new Scene();
-    scene.setDescription("jobs scene");
-    scene.setMapSymbol("JB");
-    scenes[ScenePicture.jobs.ordinal()] = scene;
-        
+    scene.setDescription("quixotle scene");
+    scene.setMapSymbol("QX");
+    scenes[ScenePicture.quixotle.ordinal()] = scene;
+    
     scene = new Scene();
-    scene.setDescription("finish scene");
-    scene.setMapSymbol("FN");
-    scenes[ScenePicture.finish.ordinal()] = scene;
+    scene.setDescription("guadalajara scene");
+    scene.setMapSymbol("GJ");
+    scenes[ScenePicture.guadalajara.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("floridaKeys scene");
+    scene.setMapSymbol("FK");
+    scenes[ScenePicture.floridaKeys.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("newYork scene");
+    scene.setMapSymbol("NY");
+    scenes[ScenePicture.newYork.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("alexandra scene");
+    scene.setMapSymbol("AX");
+    scenes[ScenePicture.alexandra.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("baltimore scene");
+    scene.setMapSymbol("BL");
+    scenes[ScenePicture.baltimore.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("columbus scene");
+    scene.setMapSymbol("CM");
+    scenes[ScenePicture.columbus.ordinal()] = scene;
+    
+    scene = new Scene();
+    scene.setDescription("plymouth scene");
+    scene.setMapSymbol("PM");
+    scenes[ScenePicture.plymouth.ordinal()] = scene;
     
     return scenes;
     

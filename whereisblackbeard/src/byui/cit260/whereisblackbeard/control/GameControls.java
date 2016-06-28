@@ -57,14 +57,34 @@ public class GameControls {
     static void assignScenesToLocation(Map map, Scene[] scenes) {
        Location[][] locations = map.getLocations();
        
-       locations[0][0].setScene(scenes[ScenePicture.start.ordinal()]);
-       locations[0][1].setScene(scenes[ScenePicture.cove.ordinal()]);
-       locations[0][2].setScene(scenes[ScenePicture.port.ordinal()]);
-       locations[0][3].setScene(scenes[ScenePicture.store.ordinal()]);
-       locations[0][4].setScene(scenes[ScenePicture.combat.ordinal()]);
+       locations[0][0].setScene(scenes[ScenePicture.startingCove.ordinal()]);
+       locations[0][1].setScene(scenes[ScenePicture.liverpool.ordinal()]);
+       locations[0][2].setScene(scenes[ScenePicture.london.ordinal()]);
+       locations[0][3].setScene(scenes[ScenePicture.paris.ordinal()]);
+       locations[0][4].setScene(scenes[ScenePicture.lisbon.ordinal()]);
        
-       locations[1][0].setScene(scenes[ScenePicture.ship.ordinal()]);
-       locations[1][1].setScene(scenes[ScenePicture.jobs.ordinal()]);
-       locations[1][2].setScene(scenes[ScenePicture.finish.ordinal()]);
+       locations[1][0].setScene(scenes[ScenePicture.madrid.ordinal()]);
+       locations[1][1].setScene(scenes[ScenePicture.monaco.ordinal()]);
+       locations[1][2].setScene(scenes[ScenePicture.canaryIslands.ordinal()]);
+       locations[1][3].setScene(scenes[ScenePicture.ivoryCoast.ordinal()]);
+       locations[1][4].setScene(scenes[ScenePicture.goldCoast.ordinal()]);
+       
+       locations[2][0].setScene(scenes[ScenePicture.bahamas.ordinal()]);
+       locations[2][1].setScene(scenes[ScenePicture.nassau.ordinal()]);
+       locations[2][2].setScene(scenes[ScenePicture.freeport.ordinal()]);
+       locations[2][3].setScene(scenes[ScenePicture.antigua.ordinal()]);
+       locations[2][4].setScene(scenes[ScenePicture.caymanIslands.ordinal()]);
+       
+       locations[3][0].setScene(scenes[ScenePicture.cuba.ordinal()]);
+       locations[3][1].setScene(scenes[ScenePicture.haiti.ordinal()]);
+       locations[3][2].setScene(scenes[ScenePicture.quixotle.ordinal()]);
+       locations[3][3].setScene(scenes[ScenePicture.guadalajara.ordinal()]);
+       locations[3][4].setScene(scenes[ScenePicture.floridaKeys.ordinal()]);
+       
+       locations[4][0].setScene(scenes[ScenePicture.newYork.ordinal()]);
+       locations[4][1].setScene(scenes[ScenePicture.alexandra.ordinal()]);
+       locations[4][2].setScene(scenes[ScenePicture.baltimore.ordinal()]);
+       locations[4][3].setScene(scenes[ScenePicture.columbus.ordinal()]);
+       locations[4][4].setScene(scenes[ScenePicture.plymouth.ordinal()]);
     }
 }

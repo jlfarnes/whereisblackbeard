@@ -11,14 +11,31 @@ package byui.cit260.whereisblackbeard.control;
  */
 public enum ScenePicture {
     
-    start,
-    cove,
-    port,
-    store,
-    combat,
-    ship,
-    jobs,
-    finish;
+    startingCove,
+    liverpool,
+    london,
+    paris,
+    lisbon,
+    madrid,
+    monaco,
+    canaryIslands,
+    ivoryCoast,
+    goldCoast,
+    bahamas,
+    nassau,
+    freeport,
+    antigua,
+    caymanIslands,
+    cuba,
+    haiti,
+    quixotle,
+    guadalajara,
+    floridaKeys,
+    newYork,
+    alexandra,
+    baltimore,
+    columbus,
+    plymouth;
     
     // Draw scene function with bounds
     
