@@ -15,8 +15,8 @@ import java.util.Objects;
  */
 public enum Market implements Serializable {
     
-    Diplomats_Bag(""),
-    Pirates_Hat(""),
+    Diplomats_Bag("A handy bag with a big, fat padlock to keep prying eyes out."),
+    Pirates_Hat("Yarr! It looks exactly like what you think..."),
     Dead_Parrot("He's not dead, he's just sleeping");
     
     private String foodForSale;
