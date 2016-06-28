@@ -74,9 +74,9 @@ public class MarketView extends View {
         int marketWater = 3;
         
         //setWaterGallons(invWater,marketWater);
-        int total = (invWater + marketWater);
+        //int total = (invWater + marketWater);
         //return total;
-        System.out.println("\n Water = " + total);
+        //System.out.println("\n Water = " + total);
         
         WaterView wv = new WaterView();
         wv.display();
