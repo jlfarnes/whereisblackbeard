@@ -46,7 +46,7 @@ public class MarketView extends View {
     }
 
     private void foodOptions() {
-        System.out.println("*** foodOptions function called ***");
+        // System.out.println("*** foodOptions function called ***");
         
         int invFood = 1;
         int marketFood = 2;
@@ -58,7 +58,7 @@ public class MarketView extends View {
     }
 
     private void waterOptions() {
-        System.out.println("*** waterOptions function called ***");
+        // System.out.println("*** waterOptions function called ***");
         
         int invWater= 2;
         int marketWater = 3;

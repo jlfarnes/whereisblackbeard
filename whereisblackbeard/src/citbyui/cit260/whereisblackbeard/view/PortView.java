@@ -22,8 +22,6 @@ public class PortView extends View {
                   + "\n----------------------------------------"
                   + "\n | Exploring a Port                           |"
                   + "\n----------------------------------------"
-                  + "\nF - Food Stores"
-                  + "\nW - Water Stores"
                   + "\nA - Armory"
                   + "\nD - Drydock"
                   + "\nJ - Jobs"
@@ -36,12 +34,6 @@ public class PortView extends View {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
-            case "F": // create and start a new game
-                this.foodStores();
-                break;
-            case "W": // load and existing game
-                this.waterStores();
-                break;
             case "A": // display the help menu
                 this.armoryWeapons();
                 break;
@@ -62,16 +54,11 @@ public class PortView extends View {
         return false;
     }
 
-    private void foodStores() {
-        System.out.println("*** foodStores function called ***");
-    }
-
-    private void waterStores() {
-        System.out.println("*** waterStores function called ***");
-    }
-
     private void armoryWeapons() {
-        System.out.println("*** armoryWeapons function called ***");
+        // System.out.println("*** armoryWeapons function called ***");
+        
+        ArmoryView armory = new ArmoryView();
+        armory.display();
     }
 
     private void drydockRepair() {
@@ -83,7 +70,10 @@ public class PortView extends View {
     }
 
     private void marketView() {
-        System.out.println("*** marketView function called ***");
+        // System.out.println("*** marketView function called ***");
+        
+        MarketView market = new MarketView();
+        market.display();
     }
 }
  
