@@ -77,6 +77,9 @@ public class GameMenuView extends View {
     public void displayMap() {
         String leftIndicator;
         String rightIndicator;
+        
+        int numberOfScenes = 0;
+        int visitedScenes = 0;
 
         Game game = Whereisblackbeard.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
@@ -100,18 +103,24 @@ public class GameMenuView extends View {
               else if(locations[row][column].isVisited()){
                  leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                  rightIndicator = "<"; // same as above
+                 visitedScenes++;
               }
               System.out.print("|"); // start map with a |
               if(locations[row][column].getScene() == null)
                 System.out.print(leftIndicator + "??" + rightIndicator);
               else
+              {
+                  numberOfScenes++;
                 System.out.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
+              }
             }
             System.out.println("|");
           }
         }catch (Exception e) {
           System.out.println("Error");
         }
+        // call function
+        // print, disply information
           
     }
     

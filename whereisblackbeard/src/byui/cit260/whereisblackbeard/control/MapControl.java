@@ -86,4 +86,8 @@ public class MapControl {
 
     }
     
+    public static double calcPercentage(int sceneVisited, int totalScenes) {
+        return 0;
+    }
+    
 }
