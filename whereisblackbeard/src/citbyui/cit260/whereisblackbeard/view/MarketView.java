@@ -59,9 +59,12 @@ public class MarketView extends View {
         int marketFood = 2;
         
         //setFoodUnit(invFood,marketFood);
-        int total = (invFood + marketFood);
+        //int total = (invFood + marketFood);
         //return total;
-        System.out.println("\n Food = " + total);
+        //System.out.println("\n Food = " + total);
+        
+        FoodView fv = new FoodView();
+        fv.display();
     }
 
     private void waterOptions() {
@@ -74,6 +77,9 @@ public class MarketView extends View {
         int total = (invWater + marketWater);
         //return total;
         System.out.println("\n Water = " + total);
+        
+        WaterView wv = new WaterView();
+        wv.display();
     }
 
     private void accessoriesOptions() {
