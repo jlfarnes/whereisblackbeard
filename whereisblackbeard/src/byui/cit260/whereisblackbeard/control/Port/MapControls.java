@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.whereisblackbeard.control.Port;
+//import byui.cit260.whereisblackbeard.exceptions.MapControlExceptions;
 
 /**
  *
@@ -30,7 +31,18 @@ public class MapControls {
         
         for (Actor actor : actors) {
             Point coordinates = actor.getCoordinates();
-            MapControl.moveActorToLocation(actor, coordinates);
+            MapControls.moveActorToLocation(actor, coordinates);
+        }
+    }
+    public static void moveActorToLocation(Actor actor, Point coordinates) throws MapControlException {
+        Map map = Whereisblackbeard.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if (newRow < 0 || newRow >= map.getNoOfRows() || newColumn < 0 || newColumn >= map.getNoOfColumns() ) {
+            throw new MapControlException("Can not move actor to location " 
+                                        + coordinates.x ", " + coordinates.y 
+                                        + " because that location is outside the bounds of the map.");
         }
     }
     
@@ -43,6 +55,7 @@ public class MapControls {
         } catch (MapControlException me) {
             System.out.println(me.getMessage());
         }
+        return false;
     }
     
     
