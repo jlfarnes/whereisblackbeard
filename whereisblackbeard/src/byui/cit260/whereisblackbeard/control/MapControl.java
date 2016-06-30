@@ -5,8 +5,11 @@
  */
 package byui.cit260.whereisblackbeard.control;
 
+import byui.cit260.whereisblackbeard.exceptions.MapControlExceptions;
 import byui.cit260.whereisblackbeard.model.Map;
+import byui.cit260.whereisblackbeard.model.Player;
 import byui.cit260.whereisblackbeard.model.Scene;
+import java.awt.Point;
 
 /**
  *
@@ -157,10 +160,42 @@ public class MapControl {
         return map;
     }
     
-    public static void movePlayerToStartingLocation(Map map) {
-        movePlayer(map, 1, 1);
-        movePlayer(map, 0, 0);
-        movePlayer(map, 3, 3);
+    public static void movePlayerToStartingLocation(Map map)
+                            throws MapControlExceptions {
+        Player[] players = Player.values();
+        
+        for (Player player : players) {
+            Point coordinates = player.getCoordinates();
+            MapControl.movePlayerToLocation(player, coordinates);
+        }
+    }
+    
+    public static void movePlayerToLocation(Player player, Point coordinates)
+                            throws MapControlExceptions {
+        
+        Map map = Whereisblackbeard.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if (newRow < 0 || newRow >= map.getNoOfRows()
+            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+            throw new MapControlExceptions("Can not move player to location "
+                                         + coordinates.x + ", " + coordinates.y
+                                         + " because that location is outside "
+                                         + " the bounds of the map.");
+        }
+    }
+    
+    @Override
+    public boolean doAction(String choice) {
+        Player player = null;
+        
+        try {
+        MapControl.movePlayerToLocation(player, coordinates);
+        } catch (MapControlExceptions me) {
+            System.out.println(me.getMessage());
+        }
+        return false;
     }
 
     public static void movePlayer(Map map, int row, int column) {
