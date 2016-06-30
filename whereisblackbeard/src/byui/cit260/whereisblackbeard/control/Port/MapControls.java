@@ -25,6 +25,26 @@ public class MapControls {
     
     // Call go to map position operation
     
+    public static void moveActorsToStartingLocation(Map map) {
+        Actor[] actors = Actor.values();
+        
+        for (Actor actor : actors) {
+            Point coordinates = actor.getCoordinates();
+            MapControl.moveActorToLocation(actor, coordinates);
+        }
+    }
+    
+    @Override
+    public boolean doAction(String choice) {
+        Actor actor = null;
+        
+        try {
+        MapControl.moveActorToLocation(actor, coordinates);
+        } catch (MapControlException me) {
+            System.out.println(me.getMessage());
+        }
+    }
+    
     
     
 }
