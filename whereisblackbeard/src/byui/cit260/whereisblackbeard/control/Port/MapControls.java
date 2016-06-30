@@ -25,4 +25,6 @@ public class MapControls {
     
     // Call go to map position operation
     
+    
+    
 }
