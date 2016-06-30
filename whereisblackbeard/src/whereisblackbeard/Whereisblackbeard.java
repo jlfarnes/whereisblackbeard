@@ -12,7 +12,7 @@ import citbyui.cit260.whereisblackbeard.view.StartProgramView;
 /**
  *
  * 
- * @author 8440p
+ * @author jlfarnes
  */
 public class Whereisblackbeard {
 
@@ -44,7 +44,13 @@ public class Whereisblackbeard {
         
         // start the program view
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
+        try {
+            startProgramView.display();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
         
         /*
         // Author: Joseph Clark
