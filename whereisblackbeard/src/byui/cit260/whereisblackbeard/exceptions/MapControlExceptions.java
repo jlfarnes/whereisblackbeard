@@ -7,7 +7,7 @@ package byui.cit260.whereisblackbeard.exceptions;
 
 /**
  *
- * @author 8440p
+ * @author jlfarnes
  */
 public class MapControlExceptions extends Exception{
 
