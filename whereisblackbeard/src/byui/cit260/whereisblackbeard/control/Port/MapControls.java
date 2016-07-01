@@ -41,7 +41,7 @@ public class MapControls {
         
         if (newRow < 0 || newRow >= map.getNoOfRows() || newColumn < 0 || newColumn >= map.getNoOfColumns() ) {
             throw new MapControlException("Can not move actor to location " 
-                                        + coordinates.x ", " + coordinates.y 
+                                        + coordinates.x + ", " + coordinates.y 
                                         + " because that location is outside the bounds of the map.");
         }
     }
