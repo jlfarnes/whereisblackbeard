@@ -17,11 +17,16 @@ public class GroceryItem implements Serializable {
     private String name;
     private String desc;
     private int quantity;
+    private int defaultQuantity;
 
     public GroceryItem(String name, String desc, int quantity) {
         this.name = name;
         this.desc = desc;
-        this.quantity = quantity;
+        this.defaultQuantity = this.quantity = quantity;
+    }
+    
+    public void restockItems() {
+        this.quantity = this.defaultQuantity;
     }
 
     public String getName() {

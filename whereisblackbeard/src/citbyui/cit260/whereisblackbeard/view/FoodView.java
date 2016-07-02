@@ -58,22 +58,37 @@ public class FoodView extends View {
         return groceryItems;
     }
     
-    private void sellAmount(ArrayList<GroceryItem> gList, int type, int amt) {
+    // TODO: Use when we move to a new port
+    private void restockArray(ArrayList<GroceryItem> gList) {
+        for (GroceryItem item : gList) {
+            
+            item.restockItems();
+
+        }
+    }
+    
+    private boolean sellAmount(ArrayList<GroceryItem> gList, String name, int amt) {
         System.out.println("\n*** sellAmount called");
         
-        int i = 0;
-        int listLength = gList.size();
+        int totalQuantity = 0;
+        //int listLength = gList.size();
         
         for (GroceryItem item : gList ) {
             
-            boolean test = (type = gList[i]);
+            //totalQuantity += item.getQuantity();
             
-            if (test = true) {
-                int invFood = amt;
-                
+            if (item.getName().equals(name)) {
+                if (item.getQuantity() >= amt) {
+                    item.setQuantity(item.getQuantity() - amt);
+                    
+                    return true;
+                }
+                else {
+                    return false;
+                }
             }
-            i++;
         }
+        return false;
     }
     
     private void singleRat() {
