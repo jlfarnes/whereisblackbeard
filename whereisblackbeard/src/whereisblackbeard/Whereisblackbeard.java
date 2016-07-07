@@ -8,6 +8,12 @@ package whereisblackbeard;
 import byui.cit260.whereisblackbeard.model.Game;          // Author: Joseph Clark
 import byui.cit260.whereisblackbeard.model.Player;   // Author: Jacob Farnes
 import citbyui.cit260.whereisblackbeard.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,6 +28,11 @@ public class Whereisblackbeard {
     
     private static Game currentGame = null;
     private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -38,19 +49,85 @@ public class Whereisblackbeard {
     public static void setPlayer(Player player) {
         Whereisblackbeard.player = player;
     }
-    
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        Whereisblackbeard.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        Whereisblackbeard.inFile = inFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        Whereisblackbeard.logFile = logFile;
+    }
     
     public static void main(String[] args) {
         
-        // start the program view
-        StartProgramView startProgramView = new StartProgramView();
         try {
-            startProgramView.display();
-        } catch (Throwable te) {
-            System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.display();
+            
+            Whereisblackbeard.inFile =
+                    new BufferedReader(new InputStreamReader(System.in));
+            
+            Whereisblackbeard.outFile = new PrintWriter(System.out, true);
+            
+        try {
+            
+            // open log file
+            String filePath = "log.txt";
+            Whereisblackbeard.logFile = new PrintWriter(filePath);
+            
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.toString() +
+                               "\nCause: " + e.getCause() +
+                               "\nMessage: " + e.getMessage());
+            
         }
+        
+        
+            // start the program view
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.display();
+            return;
+            
+        } catch (Throwable e) {
+    
+            System.out.println("Exception: " + e.toString() +
+                               "\nCause: " + e.getCause() +
+                               "\nMessage: " + e.getMessage());
+            
+            e.printStackTrace();
+        }
+        
+        finally {
+            try {
+                if (Whereisblackbeard.inFile != null)
+                    Whereisblackbeard.inFile.close();
+                
+                if (Whereisblackbeard.outFile != null)
+                    Whereisblackbeard.outFile.close();
+                
+                if (Whereisblackbeard.logFile != null)
+                    Whereisblackbeard.logFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+          
+        }
+    }
         
         /*
         // Author: Joseph Clark
@@ -190,4 +267,4 @@ public class Whereisblackbeard {
         */
     }
         
-}
+
