@@ -15,6 +15,7 @@ import whereisblackbeard.Whereisblackbeard;
 public class ErrorView {
     
     private static final PrintWriter errorFile = Whereisblackbeard.getOutFile();
+    private static final PrintWriter logFile = Whereisblackbeard.getLogFile();
     
     public static void display(String className, String errorMessage) {
         
@@ -22,6 +23,8 @@ public class ErrorView {
                     "-------------------------------------------------------"
                   + "\n- Error - " + errorMessage
                   + "\n-------------------------------------------------------");
+        // log error
+        logFile.println(className + " - " + errorMessage);
     }
     
 }

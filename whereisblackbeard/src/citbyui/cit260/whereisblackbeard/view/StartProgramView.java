@@ -63,7 +63,7 @@ public class StartProgramView extends View {
         while (!valid) { // loop while an invalid value is entered
             System.out.println("\n" + this.promptMessage);
             
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim();
             
             if (value.length()  < 1) {
