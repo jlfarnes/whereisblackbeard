@@ -50,7 +50,7 @@ public class MainMenuView extends View {
                 this.displayGameMenu();
                 break;
             default:
-                ErrorView.display(this.getClass().getName(),
+                ErrorView.display("Main Menu View",
                         "\n*** Invalid selction ** Try again");
                 break;
         }
@@ -68,7 +68,22 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        this.console.println("*** startExistingGame function called ***");    }
+        
+        this.console.println("\nEnter the file path where the game "
+                           + "is to be saved");
+        
+        String filePath = this.getInput();
+        
+        try {
+    
+            GameControls.getExistingGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
 
     private void displayHelpMenu() {
         // this.console.println("*** startExistingGame function called ***");
@@ -80,7 +95,17 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        this.console.println("*** saveGame function called ***");    }
+        this.console.println("\nEnter the file path where the game "
+                           + "is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+    
+            GameControls.saveGame(Whereisblackbeard.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+    }
 
     private void displayGameMenu() {
         GameMenuView gameMenu = new GameMenuView();

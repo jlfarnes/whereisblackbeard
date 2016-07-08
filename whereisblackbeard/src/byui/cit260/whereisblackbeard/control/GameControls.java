@@ -5,12 +5,17 @@
  */
 package byui.cit260.whereisblackbeard.control;
 
+import byui.cit260.whereisblackbeard.exceptions.GameControlsExceptions;
 import byui.cit260.whereisblackbeard.model.Game;
 import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
 import byui.cit260.whereisblackbeard.model.Player;
 import byui.cit260.whereisblackbeard.model.Scene;
 import byui.cit260.whereisblackbeard.model.Ship;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import whereisblackbeard.Whereisblackbeard;
 
 /**
@@ -52,6 +57,36 @@ public class GameControls {
         game.setMap(map);
         
         MapControl.movePlayerToStartingLocation(map);
+    }
+    
+    public static void saveGame(Game game, String filepath)
+            throws GameControlsExceptions {
+        
+        try( FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game);
+        }
+        catch(Exception e) {
+            throw new GameControlsExceptions(e.getMessage());
+        }
+    }
+    
+    public static void getExistingGame(String filepath)
+            throws GameControlsExceptions {
+        
+        Game game = null;
+        
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject();
+        }
+        catch(Exception e) {
+            throw new GameControlsExceptions(e.getMessage());
+        }
+        
+        Whereisblackbeard.setCurrentGame(game);
     }
 
     static void assignScenesToLocation(Map map, Scene[] scenes) {
