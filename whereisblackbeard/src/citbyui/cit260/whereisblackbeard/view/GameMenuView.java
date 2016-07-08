@@ -164,8 +164,6 @@ public class GameMenuView extends View {
         this.console.println("\nEnter the file path where the report "
                            + "is to be printed");
         String filePath = this.getInput();
-        ReportMenu reportMenu = new ReportMenu();
-        reportMenu.display();
     }
 
     private void displayReportMenu() {
