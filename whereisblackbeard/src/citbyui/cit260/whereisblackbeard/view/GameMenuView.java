@@ -39,6 +39,7 @@ public class GameMenuView extends View {
                   + "\nG - Gold"
                   + "\nP - Port"
                   + "\nT - Test Menu"
+                  + "\nR - Report Menu"
                   + "\n----------------------------------------");
     }
 
@@ -65,8 +66,11 @@ public class GameMenuView extends View {
             case "P": // display the port view
                 this.displayPort();
                 break;
-            case "T": // display the game menu
+            case "T": // display the test menu
                 this.displayTestMenu();
+                break;
+            case "R": // display the report menu
+                this.displayReportMenu();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -154,6 +158,19 @@ public class GameMenuView extends View {
     private void displayTestMenu() {
         TestMenu testMenu = new TestMenu();
         testMenu.display();
+    }
+
+    private void displayReportMenu(String filepath) {
+        this.console.println("\nEnter the file path where the report "
+                           + "is to be printed");
+        String filePath = this.getInput();
+        ReportMenu reportMenu = new ReportMenu();
+        reportMenu.display();
+    }
+
+    private void displayReportMenu() {
+        ReportMenu reportMenu = new ReportMenu();
+        reportMenu.display();
     }
     
 }
