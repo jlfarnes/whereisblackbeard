@@ -69,7 +69,8 @@ public class GameMenuView extends View {
                 this.displayTestMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -87,13 +88,13 @@ public class GameMenuView extends View {
         Location[][] locations = map.getLocations(); // retreive the locations from map
         //Scene scene = scene.getScene();
         try {
-          System.out.print("  |");
+          this.console.print("  |");
           for( int column = 0; column < locations[0].length; column++){
-            System.out.print("  " + column + " |"); // print col numbers to side of map
+            this.console.print("  " + column + " |"); // print col numbers to side of map
           }
-          System.out.println();
+          this.console.println();
           for( int row = 0; row < locations.length; row++){
-            System.out.print(row + " "); // print row numbers to side of map
+            this.console.print(row + " "); // print row numbers to side of map
             for( int column = 0; column < locations[row].length; column++){
               leftIndicator = " ";
               rightIndicator = " ";
@@ -106,42 +107,43 @@ public class GameMenuView extends View {
                  rightIndicator = "<"; // same as above
                  visitedScenes++;
               }
-              System.out.print("|"); // start map with a |
+              this.console.print("|"); // start map with a |
               if(locations[row][column].getScene() == null)
-                System.out.print(leftIndicator + "??" + rightIndicator);
+                this.console.print(leftIndicator + "??" + rightIndicator);
               else
               {
-                System.out.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
+                this.console.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
               }
             }
-            System.out.println("|");
+            this.console.println("|");
           }
           int TotalScenes = ScenePicture.values().length;
           
           double percent = MapControl.calcPercentage(visitedScenes, TotalScenes);
           
-          System.out.println("You have visited " + visitedScenes + " of " + TotalScenes + " locations or " + percent + "% of the map");
+          this.console.println("You have visited " + visitedScenes + " of " + TotalScenes + " locations or " + percent + "% of the map");
         }catch (Exception e) {
-          System.out.println("Error");
+          ErrorView.display(this.getClass().getName(),
+                  "Error");
         }
 
           
     }
     
     private void playerFood() {
-        System.out.println("*** playerFood function called ***");
+        this.console.println("*** playerFood function called ***");
     }
 
     private void playerWater() {
-        System.out.println("*** playerWater function called ***");
+        this.console.println("*** playerWater function called ***");
     }
 
     private void playerWeapons() {
-        System.out.println("*** playerWeapons function called ***");
+        this.console.println("*** playerWeapons function called ***");
     }
 
     private void playerGold() {
-        System.out.println("*** playerGold function called ***");
+        this.console.println("*** playerGold function called ***");
     }
     
     private void displayPort() {

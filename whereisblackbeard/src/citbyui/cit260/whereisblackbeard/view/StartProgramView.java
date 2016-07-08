@@ -34,7 +34,7 @@ public class StartProgramView extends View {
     public void displayStartProgramView() {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
-        //System.out.println("\n*** displayStartProgram() function called ***");
+        //this.console.println("\n*** displayStartProgram() function called ***");
         
         boolean done = false;
         do {
@@ -53,7 +53,7 @@ public class StartProgramView extends View {
     private String getPlayersName() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
-        // System.out.println("\n*** getPlayersName() called ***");
+        // this.console.println("\n*** getPlayersName() called ***");
         // return "Joe";
         
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
@@ -61,13 +61,14 @@ public class StartProgramView extends View {
         boolean valid = false; // initialize to not valid
         
         while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
+            this.console.println("\n" + this.promptMessage);
             
             value = this.keyboard.readLine();
             value = value.trim();
             
             if (value.length()  < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid value: value cannot be blank");
                 continue;
             }
             
@@ -82,7 +83,8 @@ public class StartProgramView extends View {
     public boolean doAction(String playersName) {
         
         if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: "
+            ErrorView.display(this.getClass().getName(),
+                    "\nInvalid players name: "
                     + "The name must be greater than one character in length");
             return false;
     }
@@ -91,7 +93,8 @@ public class StartProgramView extends View {
         Player player = GameControls.createPlayer(playersName);
         
         if (player == null) {
-            System.out.println("\nError creating the player.");
+            ErrorView.display(this.getClass().getName(),
+                    "\nError creating the player.");
             return false;
         }
 
@@ -103,7 +106,7 @@ public class StartProgramView extends View {
 
     private void displayNextView(Player player) {
         // display a custom welcome message
-        System.out.println("\n============================================="
+        this.console.println("\n============================================="
                           + "\n Welcome to the game, " + player.playerName
                           + "\n We hope you have a lot of fun!"
                           + "\n============================================="

@@ -42,7 +42,8 @@ public class FoodView extends View {
                 this.crateRat();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -68,7 +69,7 @@ public class FoodView extends View {
     }
     
     private boolean sellAmount(ArrayList<GroceryItem> gList, String name, int amt) {
-        System.out.println("\n*** sellAmount called");
+        this.console.println("\n*** sellAmount called");
         
         int totalQuantity = 0;
         //int listLength = gList.size();
@@ -92,14 +93,14 @@ public class FoodView extends View {
     }
     
     private void singleRat() {
-        System.out.println("\n*** singleRat called");
+        this.console.println("\n*** singleRat called");
     }
     
     private void boxRat() {
-        System.out.println("\n*** boxRat called");
+        this.console.println("\n*** boxRat called");
     }
     
     private void crateRat() {
-        System.out.println("\n*** crateRat called");
+        this.console.println("\n*** crateRat called");
     }
 }

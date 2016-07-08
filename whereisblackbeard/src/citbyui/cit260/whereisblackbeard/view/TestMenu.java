@@ -52,7 +52,8 @@ public class TestMenu extends View {
                 //return true;
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -60,25 +61,25 @@ public class TestMenu extends View {
     }
 
     private void startingCove() {
-        //System.out.println("*** startingCove function called ***");
+        //this.console.println("*** startingCove function called ***");
         CoveView cove = new CoveView();
         cove.display();
     }
 
     private void portView() {
-        //System.out.println("*** portView function called ***");
+        //this.console.println("*** portView function called ***");
         PortView port = new PortView();
         port.display();
     }
 
     private void combatView() {
-        //System.out.println("*** combatView function called ***");
+        //this.console.println("*** combatView function called ***");
         CombatView combat = new CombatView();
         combat.display();
     }
 
     private void mainMenuView() {
-        //System.out.println("*** mainMenuView function called ***");
+        //this.console.println("*** mainMenuView function called ***");
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
         //return;

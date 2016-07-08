@@ -37,7 +37,8 @@ public class WaterView extends View {
                 this.barrelRat();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -45,14 +46,14 @@ public class WaterView extends View {
     }
     
     private void singleRat() {
-        System.out.println("\n*** singleWaterRat called");
+        this.console.println("\n*** singleWaterRat called");
     }
     
     private void jugRat() {
-        System.out.println("\n*** jugWaterRat called");
+        this.console.println("\n*** jugWaterRat called");
     }
     
     private void barrelRat() {
-        System.out.println("\n*** barrelRat called");
+        this.console.println("\n*** barrelRat called");
     }
 }

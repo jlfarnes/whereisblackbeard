@@ -94,11 +94,11 @@ public class PortControls {
             if (playerGold >= goldRequired) {
 		playerGold  = playerGold - goldRequired;
 		return playerGold;
-                //System.out.println("Pleasure doing business with you!");
+                //this.console.println("Pleasure doing business with you!");
                 //return 1;
             }
             else if (playerGold < goldRequired) {
-                //System.out.println("Your word is no good here...");
+                //this.console.println("Your word is no good here...");
 		//return 0;
                 return -1;
             }

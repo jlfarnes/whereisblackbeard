@@ -51,13 +51,14 @@ public class HelpMenuView extends View {
         boolean valid = false; // initialize to not valid
         
         while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.helpMenu);
+            this.console.println("\n" + this.helpMenu);
             
             value = this.keyboard.readLine();
             value = value.trim();
             
             if (value.length()  < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
+                ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value cannot be blank");
                 continue;
             }
             
@@ -89,7 +90,8 @@ public class HelpMenuView extends View {
                 this.gameTips();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -97,22 +99,22 @@ public class HelpMenuView extends View {
     }
 
     private void goalOfGame() {
-        // System.out.println("*** goalOfGame function called ***");
-        System.out.println("\n You are a new pirate. Find Blackbeard to claim "
+        // this.console.println("*** goalOfGame function called ***");
+        this.console.println("\n You are a new pirate. Find Blackbeard to claim "
                 + "\n\rthe title of the biggest, baddest pirate on the high seas.");
     }
 
     private void moveInGame() {
-        System.out.println("*** You move in game by using the letter key and then pressing enter ***");    }
+        this.console.println("*** You move in game by using the letter key and then pressing enter ***");    }
 
     private void resourcesAvailable() {
-        System.out.println("*** The in-game window shows how many ammo, food, and water as well as gold ***");    }
+        this.console.println("*** The in-game window shows how many ammo, food, and water as well as gold ***");    }
 
     private void usingResources() {
-        System.out.println("*** Resources are removed as you move places or spend gold ***");    }
+        this.console.println("*** Resources are removed as you move places or spend gold ***");    }
     
     private void gameTips() {
-        System.out.println("*** You need to upgrade or you will not be able to proceed ***");    }
+        this.console.println("*** You need to upgrade or you will not be able to proceed ***");    }
     
     private void displayInventoryMenu() {
         InventoryMenuView inventoryMenu = new InventoryMenuView();

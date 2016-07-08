@@ -41,7 +41,8 @@ public class CombatView extends View {
                     this.runAwayView();
                     break;
                 default:
-                    System.out.println("\nInvalid selection, Try again...");
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid selection, Try again...");
                     break;
         }
         return false;
@@ -49,19 +50,19 @@ public class CombatView extends View {
 
 
     private void commView() {
-        // System.out.println("*** commView function called ***");
+        // this.console.println("*** commView function called ***");
         CommView comm = new CommView();
         comm.display();
     }
 
     private void attackView() {
-        //System.out.println("*** attackView function called ***");
+        //this.console.println("*** attackView function called ***");
         AttackView attack = new AttackView();
         attack.display();
     }
 
     private void runAwayView() {
-        //System.out.println("*** runAwayView function called ***");
+        //this.console.println("*** runAwayView function called ***");
         RunAwayView runAway = new RunAwayView();
         runAway.display();
     }

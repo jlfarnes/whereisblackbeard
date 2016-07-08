@@ -28,25 +28,26 @@ public class CommView extends View {
         choice = choice.toUpperCase(); // convert choice to upper case
         switch (choice) {
                 case "D":
-                    System.out.println("\nDiplomacy called, returning to Combat menu");
+                    this.console.println("\nDiplomacy called, returning to Combat menu");
                 //    choiceLevel = 2;
                     //this.display();
                     // this.commView();
                     break;
                 case "L":
-                    System.out.println("\nDeception called, returning to Combat menu");
+                    this.console.println("\nDeception called, returning to Combat menu");
                 //    choiceLevel = 2;
                     //this.display();
                     // this.attackView();
                     break;
                 case "T":
-                    System.out.println("\nTrade&Barter called, returning to Combat menu");
+                    this.console.println("\nTrade&Barter called, returning to Combat menu");
                 //    choiceLevel = 2;
                     //this.display();
                     // this.runAwayView();
                     break;
                 default:
-                    System.out.println("\nInvalid selection, Try again...");
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid selection, Try again...");
                     break;
             }
         return false;

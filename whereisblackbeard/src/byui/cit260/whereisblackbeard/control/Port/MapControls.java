@@ -71,7 +71,7 @@
 //        try {
 //        MapControl.moveActorToLocation(actor, coordinates);
 //        } catch (MapControlException me) {
-//            System.out.println(me.getMessage());
+//            this.console.println(me.getMessage());
 //        }
 //        return false;
 //    }

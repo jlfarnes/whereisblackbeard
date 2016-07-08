@@ -47,7 +47,8 @@ public class PortView extends View {
                 this.marketView();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -55,22 +56,22 @@ public class PortView extends View {
     }
 
     private void armoryWeapons() {
-        // System.out.println("*** armoryWeapons function called ***");
+        // this.console.println("*** armoryWeapons function called ***");
         
         ArmoryView armory = new ArmoryView();
         armory.display();
     }
 
     private void drydockRepair() {
-        System.out.println("*** drydockRepair function called ***");
+        this.console.println("*** drydockRepair function called ***");
     }
 
     private void jobsBoard() {
-        System.out.println("*** jobsBoard function called ***");
+        this.console.println("*** jobsBoard function called ***");
     }
 
     private void marketView() {
-        // System.out.println("*** marketView function called ***");
+        // this.console.println("*** marketView function called ***");
         
         MarketView market = new MarketView();
         market.display();

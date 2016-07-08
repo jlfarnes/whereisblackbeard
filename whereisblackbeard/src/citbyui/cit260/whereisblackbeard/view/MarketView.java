@@ -45,7 +45,8 @@ public class MarketView extends View {
                 //mc.setAccesories();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -53,7 +54,7 @@ public class MarketView extends View {
     }
 
     private void foodOptions() {
-        // System.out.println("*** foodOptions function called ***");
+        // this.console.println("*** foodOptions function called ***");
         
         int invFood = 1;
         int marketFood = 2;
@@ -61,14 +62,14 @@ public class MarketView extends View {
         //setFoodUnit(invFood,marketFood);
         //int total = (invFood + marketFood);
         //return total;
-        //System.out.println("\n Food = " + total);
+        //this.console.println("\n Food = " + total);
         
         FoodView fv = new FoodView();
         fv.display();
     }
 
     private void waterOptions() {
-        // System.out.println("*** waterOptions function called ***");
+        // this.console.println("*** waterOptions function called ***");
         
         int invWater= 2;
         int marketWater = 3;
@@ -76,14 +77,14 @@ public class MarketView extends View {
         //setWaterGallons(invWater,marketWater);
         //int total = (invWater + marketWater);
         //return total;
-        //System.out.println("\n Water = " + total);
+        //this.console.println("\n Water = " + total);
         
         WaterView wv = new WaterView();
         wv.display();
     }
 
     private void accessoriesOptions() {
-        System.out.println("*** accessoriesOptions function called ***");
+        this.console.println("*** accessoriesOptions function called ***");
     }
     
 }

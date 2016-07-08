@@ -207,7 +207,7 @@ public class MapControl {
         try {
         MapControl.movePlayerToLocation(player, coordinates);
         } catch (MapControlExceptions me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
         }
         return false;
     }

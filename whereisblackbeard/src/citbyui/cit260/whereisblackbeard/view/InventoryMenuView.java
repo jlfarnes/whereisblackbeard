@@ -48,13 +48,14 @@ public class InventoryMenuView extends View {
         boolean valid = false; // initialize to not valid
         
         while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.inventoryMenu);
+            this.console.println("\n" + this.inventoryMenu);
             
             value = this.keyboard.readLine();
             value = value.trim();
             
             if (value.length()  < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid value: value cannot be blank");
                 continue;
             }
             
@@ -83,7 +84,8 @@ public class InventoryMenuView extends View {
                 this.currentCannonballs();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -91,19 +93,19 @@ public class InventoryMenuView extends View {
     }
 
     private void currentGold() {
-        System.out.println("*** currentGold function called ***");
+        this.console.println("*** currentGold function called ***");
     }
 
     private void currentFood() {
-        System.out.println("*** currentFood function called ***");
+        this.console.println("*** currentFood function called ***");
     }
 
     private void currentWater() {
-        System.out.println("*** currentWater function called ***");
+        this.console.println("*** currentWater function called ***");
     }
 
     private void currentCannonballs() {
-        System.out.println("*** currentCannonballs function called ***");
+        this.console.println("*** currentCannonballs function called ***");
     }
 
     private String getPortOption() {

@@ -50,7 +50,8 @@ public class MainMenuView extends View {
                 this.displayGameMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -67,10 +68,10 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");    }
+        this.console.println("*** startExistingGame function called ***");    }
 
     private void displayHelpMenu() {
-        // System.out.println("*** startExistingGame function called ***");
+        // this.console.println("*** startExistingGame function called ***");
         //
         // display the help menue
         HelpMenuView helpMenu = new HelpMenuView();
@@ -79,7 +80,7 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");    }
+        this.console.println("*** saveGame function called ***");    }
 
     private void displayGameMenu() {
         GameMenuView gameMenu = new GameMenuView();

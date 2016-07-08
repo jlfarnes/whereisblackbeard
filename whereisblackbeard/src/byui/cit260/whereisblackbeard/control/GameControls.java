@@ -20,7 +20,7 @@ import whereisblackbeard.Whereisblackbeard;
 public class GameControls {
 
     public static Player createPlayer(String name) {
-        //System.out.println("\n*** createPlayer() function called ***");
+        //this.console.println("\n*** createPlayer() function called ***");
         //return new Player();
         
         if (name == null) {
@@ -39,7 +39,7 @@ public class GameControls {
 
     public static void createNewGame(Player player) {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // System.out.println("createNewGame called");
+        // this.console.println("createNewGame called");
         Game game = new Game();
         Whereisblackbeard.setCurrentGame(game);
         

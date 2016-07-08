@@ -28,24 +28,25 @@ public class AttackView extends View {
         choice = choice.toUpperCase(); // convert choice to upper case
         switch (choice) {
                 case "S":
-                    System.out.println("\nSingle Shot called, returning to Combat menu");
+                    this.console.println("\nSingle Shot called, returning to Combat menu");
                     //choiceLevel = 2;
                     //this.display();
                     break;
                 case "F":
-                    System.out.println("\nFire At Will called, returning to Combat menu");
+                    this.console.println("\nFire At Will called, returning to Combat menu");
                     //choiceLevel = 2;
                     //this.display();
                     //this.attackView();
                     break;
                 case "B":
-                    System.out.println("\nBroadside called, returning to Combat menu");
+                    this.console.println("\nBroadside called, returning to Combat menu");
                     //choiceLevel = 2;
                     //this.display();
                     //this.runAwayView();
                     break;
                 default:
-                    System.out.println("\nInvalid selection, Try again...");
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid selection, Try again...");
                     break;
             }
         return false;

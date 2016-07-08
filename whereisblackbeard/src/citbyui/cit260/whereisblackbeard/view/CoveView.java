@@ -26,7 +26,7 @@ public class CoveView extends View {
     @Override
     public boolean doAction(String value) {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        //System.out.println("\nImplement CoveView");
+        //this.console.println("\nImplement CoveView");
         value = value.toUpperCase();
         switch (value) {
             case "R":
@@ -39,7 +39,8 @@ public class CoveView extends View {
                 this.displayPortTravelMenu();
                 break;
             default:
-                System.out.println("\nInvalid selection, Try again...");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid selection, Try again...");
                 break;
         }
         
@@ -47,20 +48,20 @@ public class CoveView extends View {
     }
 
     private void displayInventory() {
-        //System.out.println("*** displayInventory function called ***");
+        //this.console.println("*** displayInventory function called ***");
         InventoryMenuView invMenu = new InventoryMenuView();
         invMenu.display();
     }
     
     private void displayTask() {
                
-        //System.out.println("*** displayTask function called ***");
-        System.out.println("Go sail your skiff to a Port...");
+        //this.console.println("*** displayTask function called ***");
+        this.console.println("Go sail your skiff to a Port...");
     }
     
     private void displayPortTravelMenu() {
                 
-        //System.out.println("*** displayPortTravelMenu function called ***");
+        //this.console.println("*** displayPortTravelMenu function called ***");
         
         PortView port = new PortView();
         port.display();

@@ -37,7 +37,8 @@ public class ArmoryView extends View {
                 this.defenseUpgrade();
                 break;
             default:
-                System.out.println("\n*** Invalid selction ** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selction ** Try again");
                 break;
         }
         
@@ -45,7 +46,7 @@ public class ArmoryView extends View {
     }
 
     private void accuracyUpgrade() {
-        System.out.println("*** accuracyUpgrade function called ***");
+        this.console.println("*** accuracyUpgrade function called ***");
         
         int invFood = 1;
         int marketFood = 2;
@@ -53,11 +54,11 @@ public class ArmoryView extends View {
         //setFoodUnit(invFood,marketFood);
         int total = (invFood + marketFood);
         //return total;
-        System.out.println("\n Food = " + total);
+        this.console.println("\n Food = " + total);
     }
 
     private void firepowerUpgrade() {
-        System.out.println("*** firepowerUpgrade function called ***");
+        this.console.println("*** firepowerUpgrade function called ***");
         
         int invWater= 2;
         int marketWater = 3;
@@ -65,11 +66,11 @@ public class ArmoryView extends View {
         //setWaterGallons(invWater,marketWater);
         int total = (invWater + marketWater);
         //return total;
-        System.out.println("\n Water = " + total);
+        this.console.println("\n Water = " + total);
     }
 
     private void defenseUpgrade() {
-        System.out.println("*** defenseUpgrade function called ***");
+        this.console.println("*** defenseUpgrade function called ***");
     }
     
 }
