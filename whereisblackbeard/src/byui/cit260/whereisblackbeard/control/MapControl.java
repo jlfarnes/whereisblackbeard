@@ -10,6 +10,7 @@ import byui.cit260.whereisblackbeard.model.Map;
 import byui.cit260.whereisblackbeard.model.Player;
 import byui.cit260.whereisblackbeard.model.Scene;
 import java.awt.Point;
+import whereisblackbeard.Whereisblackbeard;
 
 /**
  *
@@ -166,8 +167,9 @@ public class MapControl {
         
         for (Player player : players) {
             Point coordinates = player.getCoordinates();
-            MapControl.movePlayerToLocation(player, coordinates);
+            MapControl.movePlayerToLocation(player, coordinates);     
         }
+    
     }
     
     public static void movePlayerToLocation(Player player, Point coordinates)
@@ -185,7 +187,7 @@ public class MapControl {
                                          + " the bounds of the map.");
         }
     }
-    */
+    
         public static void movePlayerToStartingLocation(Map map) {
         // movePlayer(map, 2, 2);
         movePlayer(map, 0, 0);
