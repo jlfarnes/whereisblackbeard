@@ -195,8 +195,9 @@ public class MapControl {
 //    }
     
     public static void movePlayerToStartingLocation(Map map) {
-        // movePlayer(map, 2, 2);
-        movePlayer(map, 0, 0);
+        movePlayer(map, 2, 2);
+        // movePlayer(map, 0, 0);
+        // movePlayer(map, 3, 3);
     }
 
     public static void movePlayer(Map map, int row, int column) {
