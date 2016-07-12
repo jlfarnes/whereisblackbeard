@@ -151,44 +151,50 @@ public class MapControl {
     
 }
 
-    public static Map createMap() {
-        Map map = new Map(5, 5);
+    public static Map createMap() throws MapControlExceptions {
         
-        Scene[] scenes = createScenes();
+        try {
+            Map map = new Map(5, 5);
         
-        GameControls.assignScenesToLocation(map, scenes);
+            Scene[] scenes = createScenes();
         
-        return map;
-    }
-    /*
-    public static void movePlayerToStartingLocation(Map map)
-                            throws MapControlExceptions {
-        Player[] players = Player.values();
+            GameControls.assignScenesToLocation(map, scenes);
         
-        for (Player player : players) {
-            Point coordinates = player.getCoordinates();
-            MapControl.movePlayerToLocation(player, coordinates);     
-        }
-    
-    }
-    
-    public static void movePlayerToLocation(Player player, Point coordinates)
-                            throws MapControlExceptions {
-        
-        Map map = Whereisblackbeard.getCurrentGame().getMap();
-        int newRow = coordinates.x-1;
-        int newColumn = coordinates.y-1;
-        
-        if (newRow < 0 || newRow >= map.getNoOfRows()
-            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
-            throw new MapControlExceptions("Can not move player to location "
-                                         + coordinates.x + ", " + coordinates.y
-                                         + " because that location is outside "
-                                         + " the bounds of the map.");
+            return map;
+            
+        } catch(Exception ex) {
+            throw new MapControlExceptions(ex);
         }
     }
     
-        public static void movePlayerToStartingLocation(Map map) {
+//    public static void movePlayerToStartingLocation(Map map)
+//                            throws MapControlExceptions {
+//        Player player = Whereisblackbeard.getPlayer();
+//        
+//        (Player player : player) {
+//            Point coordinates = player.getCoordinates();
+//            MapControl.movePlayerToLocation(player, coordinates);     
+//        }
+//    
+//    }
+//    
+//    public static void movePlayerToLocation(Player player, Point coordinates)
+//                            throws MapControlExceptions {
+//        
+//        Map map = Whereisblackbeard.getCurrentGame().getMap();
+//        int newRow = coordinates.x-1;
+//        int newColumn = coordinates.y-1;
+//        
+//        if (newRow < 0 || newRow >= map.getNoOfRows()
+//            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+//            throw new MapControlExceptions("Can not move player to location "
+//                                         + coordinates.x + ", " + coordinates.y
+//                                         + " because that location is outside "
+//                                         + " the bounds of the map.");
+//        }
+//    }
+    
+    public static void movePlayerToStartingLocation(Map map) {
         // movePlayer(map, 2, 2);
         movePlayer(map, 0, 0);
     }
@@ -207,7 +213,7 @@ public class MapControl {
         Player player = null;
         
         try {
-        MapControl.movePlayerToLocation(player, coordinates);
+            MapControl.movePlayerToLocation(player, coordinates);
         } catch (MapControlExceptions me) {
             this.console.println(me.getMessage());
         }

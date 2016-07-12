@@ -6,6 +6,7 @@
 package byui.cit260.whereisblackbeard.control;
 
 import byui.cit260.whereisblackbeard.exceptions.GameControlsExceptions;
+import byui.cit260.whereisblackbeard.exceptions.MapControlExceptions;
 import byui.cit260.whereisblackbeard.model.Game;
 import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
@@ -42,7 +43,7 @@ public class GameControls {
     
     // Draw Controls at bottom
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws MapControlExceptions {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         // this.console.println("createNewGame called");
         Game game = new Game();

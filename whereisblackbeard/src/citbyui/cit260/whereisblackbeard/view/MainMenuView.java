@@ -6,6 +6,8 @@
 package citbyui.cit260.whereisblackbeard.view;
 
 import byui.cit260.whereisblackbeard.control.GameControls;
+import byui.cit260.whereisblackbeard.exceptions.GameControlsExceptions;
+import byui.cit260.whereisblackbeard.exceptions.MapControlExceptions;
 import java.util.Scanner;
 import whereisblackbeard.Whereisblackbeard;
 
@@ -60,11 +62,15 @@ public class MainMenuView extends View {
 
     private void startNewGame() {
         // create a new game
-        GameControls.createNewGame(Whereisblackbeard.getPlayer());
+        try {
+            GameControls.createNewGame(Whereisblackbeard.getPlayer());
         
-        // display the game menue
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+            // display the game menue
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.display();
+        } catch(MapControlExceptions ex) {
+            ErrorView.display("GameControls", ex.getMessage());
+        }
     }
 
     private void startExistingGame() {
@@ -102,7 +108,7 @@ public class MainMenuView extends View {
         try {
     
             GameControls.saveGame(Whereisblackbeard.getCurrentGame(), filePath);
-        } catch (Exception ex) {
+        } catch (GameControlsExceptions ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
