@@ -8,6 +8,7 @@ package citbyui.cit260.whereisblackbeard.view;
 import byui.cit260.whereisblackbeard.control.GameControls;
 import byui.cit260.whereisblackbeard.exceptions.GameControlsExceptions;
 import byui.cit260.whereisblackbeard.exceptions.MapControlExceptions;
+import byui.cit260.whereisblackbeard.model.Game;
 import java.util.Scanner;
 import whereisblackbeard.Whereisblackbeard;
 
@@ -26,7 +27,7 @@ public class MainMenuView extends View {
                   + "\nL - Load an existing game"
                   + "\nH - Get help with how to play the game"
                   + "\nS - Save game"
-                  + "\nG - Go to game menu"
+                  + "\nR - Return to current game"
                   + "\nQ - Quit"
                   + "\n----------------------------------------");
     }
@@ -48,8 +49,13 @@ public class MainMenuView extends View {
             case "S": // save the current game
                 this.saveGame();
                 break;
-            case "G": // display the game menu
-                this.displayGameMenu();
+            case "R": // display the game menu
+                Game game = Whereisblackbeard.getCurrentGame();
+                if (game != null)
+                    this.displayGameMenu();
+                else
+                    ErrorView.display("Main Menu View",
+                        "\n*** There is no game loaded ** Try again");
                 break;
             default:
                 ErrorView.display("Main Menu View",

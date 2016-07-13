@@ -8,10 +8,15 @@ package citbyui.cit260.whereisblackbeard.view;
 //import java.util.Scanner;
 
 import byui.cit260.whereisblackbeard.control.MapControl;
+import static byui.cit260.whereisblackbeard.control.MapControl.getSceneReport;
 import byui.cit260.whereisblackbeard.control.ScenePicture;
 import byui.cit260.whereisblackbeard.model.Game;
 import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import whereisblackbeard.Whereisblackbeard;
 //import byui.cit260.whereisblackbeard.model.Scene;
 
@@ -39,7 +44,8 @@ public class GameMenuView extends View {
                   + "\nG - Gold"
                   + "\nP - Port"
                   + "\nT - Test Menu"
-                  + "\nR - Report Menu"
+                  + "\nR - Display Scene Report"
+                  + "\nS - Save Scene Report"
                   + "\n----------------------------------------");
     }
 
@@ -70,7 +76,10 @@ public class GameMenuView extends View {
                 this.displayTestMenu();
                 break;
             case "R": // display the report menu
-                this.displayReportMenu();
+                this.displayReport();
+                break;
+            case "S":
+                this.saveReport();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -86,9 +95,11 @@ public class GameMenuView extends View {
         String rightIndicator;
         
         int visitedScenes = 0;
+        
+        Map map = this.getMap();
 
-        Game game = Whereisblackbeard.getCurrentGame(); // retreive the game
-        Map map = game.getMap(); // retreive the map from game
+//        Game game = Whereisblackbeard.getCurrentGame(); // retreive the game
+//        Map map = game.getMap(); // retreive the map from game
         Location[][] locations = map.getLocations(); // retreive the locations from map
         //Scene scene = scene.getScene();
         try {
@@ -160,15 +171,49 @@ public class GameMenuView extends View {
         testMenu.display();
     }
 
-    private void displayReportMenu(String filepath) {
+    private void saveReport() {
+        
+        FileWriter outFile = null;
+        Map map = this.getMap();
+        
         this.console.println("\nEnter the file path where the report "
                            + "is to be printed");
         String filePath = this.getInput();
+        
+        try {
+            outFile = new FileWriter(filePath);
+            
+            outFile.write(MapControl.getSceneReport(map));
+            
+            outFile.flush();
+            this.console.println("Success saving report");
+            
+        } 
+        catch (IOException ex) {
+            this.console.println("Unable to save report");
+            
+        } finally {
+            if (outFile != null) {
+                try {
+                    outFile.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
     }
 
-    private void displayReportMenu() {
-        ReportMenu reportMenu = new ReportMenu();
-        reportMenu.display();
+    private void displayReport() {
+        Map map = this.getMap();
+        String reportStr = MapControl.getSceneReport(map);
+        this.console.println(reportStr);
+    }
+    
+    private Map getMap() {
+        Game game = Whereisblackbeard.getCurrentGame(); // retreive the game
+        Map map = game.getMap();
+        
+        return map;
     }
     
 }

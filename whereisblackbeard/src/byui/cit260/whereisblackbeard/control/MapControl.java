@@ -6,6 +6,8 @@
 package byui.cit260.whereisblackbeard.control;
 
 import byui.cit260.whereisblackbeard.exceptions.MapControlExceptions;
+import byui.cit260.whereisblackbeard.model.Game;
+import byui.cit260.whereisblackbeard.model.Location;
 import byui.cit260.whereisblackbeard.model.Map;
 import byui.cit260.whereisblackbeard.model.Player;
 import byui.cit260.whereisblackbeard.model.Scene;
@@ -110,6 +112,7 @@ public class MapControl {
     scene = new Scene();
     scene.setDescription("quixotle scene");
     scene.setMapSymbol("QX");
+    scene.setBlackbeardIsHere(true);
     scenes[ScenePicture.quixotle.ordinal()] = scene;
     
     scene = new Scene();
@@ -233,6 +236,33 @@ public class MapControl {
     public static double calcPercentage(int sceneVisited, int totalScenes) {
         
         return ((float)sceneVisited / totalScenes) * 100;
+    }
+    
+    public static String getSceneReport(Map map) {
+        
+        String retStr = "";
+        
+        Location[][] locations = map.getLocations(); // retreive the locations from map
+        //Scene scene = scene.getScene();
+
+          retStr = String.format("\tScenes\n");
+          retStr += String.format("%20s %6s %s","Name", "Symbol", "Location\n");
+          
+          for( int row = 0; row < locations.length; row++){
+            for( int column = 0; column < locations[row].length; column++){
+                if (locations[row][column].getScene() != null) {
+                    Scene scene = locations[row][column].getScene();
+                    // retStr += String.format("%n%-20s%5s%8s","-------------------","-----","------");
+                    retStr += String.format("%20s %6s      %d/%d\n",
+                            scene.getDescription(),
+                            scene.getMapSymbol(),
+                            row,
+                            column);
+                }
+            }
+            
+          }
+          return retStr;
     }
     
 }

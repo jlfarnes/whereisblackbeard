@@ -27,8 +27,19 @@ public class Scene implements Serializable {
     
     private String description;
     private String mapSymbol;
+    
+    private boolean blackbeardIsHere;
 
     public Scene() {
+        blackbeardIsHere = false;
+    }
+
+    public boolean isBlackbeardIsHere() {
+        return blackbeardIsHere;
+    }
+
+    public void setBlackbeardIsHere(boolean blackbeardIsHere) {
+        this.blackbeardIsHere = blackbeardIsHere;
     }
 
     public String getLocType() {
